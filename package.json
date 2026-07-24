@@ -4,7 +4,7 @@
   "version": "1.0.0",
   "scripts": {
     "dev": "vite --host --open /DET%20intranet.html",
-    "build": "vite build",
+    "build": "vite build && node scripts/copy-squiz-header.mjs",
     "preview": "vite preview --host"
   },
   "devDependencies": {
