@@ -1,0 +1,13 @@
+{
+  "name": "compact-header",
+  "private": true,
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "vite --host --open /DET%20intranet.html",
+    "build": "vite build",
+    "preview": "vite preview --host"
+  },
+  "devDependencies": {
+    "vite": "^5.4.19"
+  }
+}
