@@ -79,6 +79,41 @@ npm run preview
 	- Legacy/alternate header snapshot in repo root
 	- Not used by build scripts
 
+## Current Header Baseline (Aug 2026)
+
+The current compact-header implementation intentionally diverges from legacy defaults in `DET intranet_files/main.css`.
+
+- Utility row
+	- Background: `#343741`
+	- Bottom border: `1px solid #506080`
+	- Horizontal padding: `20px`
+- Primary shell (`.container.header-wrapper.ntgc-header__primary-shell`)
+	- Background: `#343642` (explicitly opaque on shell and immediate inner rows)
+	- Uses `position: relative`, `z-index: 300`, and `isolation: isolate` so dropdown lightbox layers do not affect it
+	- Carries the full-width bottom border (`1px solid #506080`)
+- Logo and layout sizing
+	- Primary/header width baseline: `1642px` in maintained header layout rules
+	- Logo SVG width: `170px`
+	- Search bar width: `246px`
+- Intro section
+	- Top margin: `40px`
+	- Horizontal padding: `20px`
+	- Non-header-wrapper container max width: `1642px`
+- Main navigation dropdown (`.menu-wrapper`)
+	- Width: `1232px`
+	- Horizontally centered to viewport when opened (not centered to each level-one item)
+	- Desktop top offset: `calc(100% + 14px)`
+	- Lightbox pseudo-layer starts at panel top and extends downward only
+
+### Important Implementation Note
+
+Viewport-centered dropdown behavior is controlled by both:
+
+- `src/nester/header.css` (desktop positioning rules)
+- `src/nester/header.js` (`alignMainMenuPanelsToViewport` recalculates panel left offset on init/click/resize/load)
+
+If either side is changed in isolation, dropdown centering or placement can regress.
+
 ## Expected Workflow
 
 1. Edit `src/nester/header.html` for structural/header markup changes.
@@ -105,6 +140,17 @@ Header changes do not appear in preview:
 
 - Verify `DET intranet.html` is loading `./src/nester/header.css` and `./src/nester/header.js`
 - Verify your edits were made in `src/nester/` files, not only in root `header.html`
+
+Dropdown panels are no longer centered to the screen:
+
+- Confirm `src/nester/header.js` still includes `alignMainMenuPanelsToViewport`
+- Confirm that function is still called on init, menu click, resize, and load
+- Confirm desktop `.menu-wrapper` rules in `src/nester/header.css` still use the maintained `1232px` width and active-state left/right overrides
+
+Lightbox effect shades header areas above dropdowns:
+
+- Confirm `.menu-wrapper:before` in `src/nester/header.css` starts at `top: 0` (panel top) and not negative offsets
+- Confirm `.ntgc-header__primary-shell` keeps explicit background plus `position/z-index/isolation` overrides
 
 `dist/header.html` is missing or stale:
 

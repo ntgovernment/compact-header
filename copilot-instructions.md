@@ -28,6 +28,17 @@
 - Root `header.html` may be useful for historical comparison, but is not currently part of the build pipeline
 - Preserve Squiz placeholders (for example `%globals_site_url%`) in `src/nester/header.html`
 
+## Current Header Guardrails
+
+- Keep compact-header overrides in `src/nester/header.css` and behavior hooks in `src/nester/header.js`; do not reintroduce dependency on editing legacy `DET intranet_files/main.css` for maintained behavior.
+- Keep dropdown panels (`.menu-wrapper`) centered to the viewport (screen center), not to each level-one menu item.
+- Preserve the JS-based panel alignment function (`alignMainMenuPanelsToViewport`) and its init/click/resize/load hooks when editing menu behavior.
+- Keep dropdown panel width at `1232px` unless a task explicitly requests a change.
+- Keep utility row and primary-shell visual baseline unless explicitly changed by task:
+	- Utility: `#343741` with `1px solid #506080` bottom border and `20px` horizontal padding.
+	- Primary shell: opaque `#343642`, full-width border, and stacking isolation (`position: relative`, `z-index`, `isolation`) to avoid lightbox bleed.
+- Keep lightbox pseudo-layer behavior constrained so it starts at the top of `.menu-wrapper` and extends downward only.
+
 ## Validation
 
 - For runtime changes, verify with `npm run dev` or `npm run build`
