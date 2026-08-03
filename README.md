@@ -27,6 +27,8 @@ npm install
 ```bash
 npm run dev
 npm run build
+npm run build:pages
+npm run deploy:pages
 npm run preview
 ```
 
@@ -40,6 +42,32 @@ npm run preview
 	- Copies `src/nester/header.html` to `dist/header.html` unchanged
 - `npm run preview`
 	- Serves the built output from `dist/`
+- `npm run build:pages`
+	- Builds with a GitHub Pages-compatible base path
+	- Auto-detects repo name from `origin` and sets base as `/<repo>/`
+	- Writes `dist/.nojekyll`
+- `npm run deploy:pages`
+	- Runs the GitHub Pages build flow
+	- Publishes `dist/` to the `gh-pages` branch using `gh-pages`
+
+### GitHub Pages Utility
+
+The deployment utility is implemented in `scripts/deploy-github-pages.mjs`.
+
+Supported environment overrides:
+
+- `GITHUB_PAGES_REPO`
+	- Forces the repository segment used for base path detection.
+- `GITHUB_PAGES_BASE`
+	- Forces the Vite base path for pages builds (for example `/compact-header/`).
+
+Examples:
+
+```bash
+npm run build:pages
+npm run deploy:pages
+GITHUB_PAGES_BASE=/compact-header/ npm run deploy:pages
+```
 
 ## Project Structure
 
@@ -87,6 +115,13 @@ The current compact-header implementation intentionally diverges from legacy def
 	- Background: `#343741`
 	- Bottom border: `1px solid #506080`
 	- Horizontal padding: `20px`
+	- Online systems utility dropdown
+		- Trigger interaction: click-to-toggle
+		- Close behavior: outside click and Escape key
+		- Current submenu items: eLearn, myBiz, SAMS, Education Directory, Schools Central
+		- Dropdown top offset: `calc(100% + 2px)`
+		- Dropdown border radius: `0`
+		- Item hover/focus visuals: transparent background with text color `#2e979b` (matches `.ntgc-color--secondary-light`)
 - Primary shell (`.container.header-wrapper.ntgc-header__primary-shell`)
 	- Background: `#343642` (explicitly opaque on shell and immediate inner rows)
 	- Uses `position: relative`, `z-index: 300`, and `isolation: isolate` so dropdown lightbox layers do not affect it
@@ -151,6 +186,12 @@ Lightbox effect shades header areas above dropdowns:
 
 - Confirm `.menu-wrapper:before` in `src/nester/header.css` starts at `top: 0` (panel top) and not negative offsets
 - Confirm `.ntgc-header__primary-shell` keeps explicit background plus `position/z-index/isolation` overrides
+
+Online systems utility dropdown does not open or close correctly:
+
+- Confirm utility dropdown markup exists in both `src/nester/header.html` and `DET intranet.html`
+- Confirm `src/nester/header.js` still initializes `initUtilityMenuDropdowns`
+- Confirm submenu styles still target `.ntgc-navigation--utility__submenu` and open state still uses `.ntgc-utility-dropdown.is-open`
 
 `dist/header.html` is missing or stale:
 

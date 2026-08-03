@@ -162,10 +162,69 @@
     });
   }
 
+  function closeAllUtilityDropdowns(container) {
+    var dropdowns = container.querySelectorAll(".ntgc-utility-dropdown.is-open");
+    dropdowns.forEach(function (dropdown) {
+      dropdown.classList.remove("is-open");
+      var trigger = dropdown.querySelector(
+        ".ntgc-navigation--utility__trigger[aria-expanded]",
+      );
+      if (trigger) {
+        trigger.setAttribute("aria-expanded", "false");
+      }
+    });
+  }
+
+  function initUtilityMenuDropdowns() {
+    var utilityNav = document.querySelector(".ntgc-navigation--utility");
+    if (!utilityNav) {
+      return;
+    }
+
+    var dropdowns = utilityNav.querySelectorAll(".ntgc-utility-dropdown");
+    if (!dropdowns.length) {
+      return;
+    }
+
+    dropdowns.forEach(function (dropdown) {
+      var trigger = dropdown.querySelector(".ntgc-navigation--utility__trigger");
+      if (!trigger) {
+        return;
+      }
+
+      trigger.setAttribute("aria-expanded", "false");
+
+      trigger.addEventListener("click", function () {
+        var isOpen = dropdown.classList.contains("is-open");
+        closeAllUtilityDropdowns(utilityNav);
+
+        if (!isOpen) {
+          dropdown.classList.add("is-open");
+          trigger.setAttribute("aria-expanded", "true");
+        }
+      });
+    });
+
+    document.addEventListener("click", function (event) {
+      if (utilityNav.contains(event.target)) {
+        return;
+      }
+
+      closeAllUtilityDropdowns(utilityNav);
+    });
+
+    document.addEventListener("keydown", function (event) {
+      if (event.key === "Escape") {
+        closeAllUtilityDropdowns(utilityNav);
+      }
+    });
+  }
+
   function initHeaderMainMenuPlacement() {
     moveMainMenuInline();
     removeDuplicateUtilityLinksFromMainMenu();
     initMainMenuClickToggle();
+    initUtilityMenuDropdowns();
   }
 
   if (document.readyState === "loading") {

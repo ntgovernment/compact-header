@@ -54,6 +54,85 @@
   text-decoration: none;
 }
 
+.ntgc-navigation--utility__list .ntgc-utility-dropdown {
+  position: relative;
+}
+
+.ntgc-navigation--utility__trigger {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  min-height: 36px;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  cursor: pointer;
+}
+
+.ntgc-navigation--utility__trigger .fa-chevron-down {
+  transition: transform 0.18s ease;
+}
+
+.ntgc-navigation--utility__submenu {
+  position: absolute;
+  top: calc(100% + 2px);
+  right: 0;
+  z-index: 40;
+  min-width: 220px;
+  padding: 10px 0;
+  margin: 0;
+  list-style: none;
+  background: #fff;
+  border: 1px solid #d6dbe3;
+  border-radius: 0;
+  box-shadow: 0 14px 36px rgba(15, 25, 45, 0.22);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transform: translateY(-6px);
+  transition:
+    opacity 0.18s ease,
+    transform 0.18s ease,
+    visibility 0s linear 0.18s;
+}
+
+.ntgc-navigation--utility__submenu li {
+  display: block;
+  min-height: 0;
+}
+
+.ntgc-navigation--utility__submenu a {
+  display: block;
+  width: 100%;
+  color: #23354f;
+  padding: 8px 14px;
+  font-size: 13px;
+  line-height: 18px;
+}
+
+.ntgc-navigation--utility__submenu a:hover,
+.ntgc-navigation--utility__submenu a:focus-visible {
+  color: #2e979b;
+  background: transparent;
+}
+
+.ntgc-utility-dropdown.is-open > .ntgc-navigation--utility__submenu {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transform: translateY(0);
+  transition-delay: 0s;
+}
+
+.ntgc-utility-dropdown.is-open > .ntgc-navigation--utility__trigger .fa-chevron-down {
+  transform: rotate(180deg);
+}
+
 .ntgc-header__inner--primary-figma,
 .ntgc-header__inner--main-nav-figma {
   background: #343741;
