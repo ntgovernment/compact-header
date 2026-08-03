@@ -163,7 +163,9 @@
   }
 
   function closeAllUtilityDropdowns(container) {
-    var dropdowns = container.querySelectorAll(".ntgc-utility-dropdown.is-open");
+    var dropdowns = container.querySelectorAll(
+      ".ntgc-utility-dropdown.is-open",
+    );
     dropdowns.forEach(function (dropdown) {
       dropdown.classList.remove("is-open");
       var trigger = dropdown.querySelector(
@@ -187,7 +189,9 @@
     }
 
     dropdowns.forEach(function (dropdown) {
-      var trigger = dropdown.querySelector(".ntgc-navigation--utility__trigger");
+      var trigger = dropdown.querySelector(
+        ".ntgc-navigation--utility__trigger",
+      );
       if (!trigger) {
         return;
       }

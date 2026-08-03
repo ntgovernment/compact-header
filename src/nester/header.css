@@ -129,7 +129,9 @@
   transition-delay: 0s;
 }
 
-.ntgc-utility-dropdown.is-open > .ntgc-navigation--utility__trigger .fa-chevron-down {
+.ntgc-utility-dropdown.is-open
+  > .ntgc-navigation--utility__trigger
+  .fa-chevron-down {
   transform: rotate(180deg);
 }
 

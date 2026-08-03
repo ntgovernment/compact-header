@@ -1,5 +1,5 @@
 import { execSync, spawnSync } from "node:child_process";
-import { existsSync, writeFileSync } from "node:fs";
+import { existsSync, readFileSync, writeFileSync } from "node:fs";
 import { resolve } from "node:path";
 
 function run(command, options = {}) {
@@ -59,10 +59,19 @@ function main() {
     process.exit(1);
   }
 
+  const indexPath = resolve(distDir, "index.html");
+  const previewEntryPath = resolve(distDir, "DET intranet.html");
+  if (!existsSync(indexPath) && existsSync(previewEntryPath)) {
+    writeFileSync(indexPath, readFileSync(previewEntryPath, "utf8"), "utf8");
+    console.log("[pages] Created dist/index.html from DET intranet.html");
+  }
+
   writeFileSync(resolve(distDir, ".nojekyll"), "", "utf8");
 
   if (isBuildOnly) {
-    console.log("[pages] Build-only mode complete. Dist is ready for GitHub Pages.");
+    console.log(
+      "[pages] Build-only mode complete. Dist is ready for GitHub Pages.",
+    );
     return;
   }
 

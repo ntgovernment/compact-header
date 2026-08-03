@@ -33,22 +33,22 @@ npm run preview
 ```
 
 - `npm run dev`
-	- Runs Vite with host binding
-	- Opens `/DET%20intranet.html`
-	- Uses `DET intranet.html` as the active development page
+  - Runs Vite with host binding
+  - Opens `/DET%20intranet.html`
+  - Uses `DET intranet.html` as the active development page
 - `npm run build`
-	- Builds `DET intranet.html` with Vite
-	- Runs `scripts/copy-squiz-header.mjs`
-	- Copies `src/nester/header.html` to `dist/header.html` unchanged
+  - Builds `DET intranet.html` with Vite
+  - Runs `scripts/copy-squiz-header.mjs`
+  - Copies `src/nester/header.html` to `dist/header.html` unchanged
 - `npm run preview`
-	- Serves the built output from `dist/`
+  - Serves the built output from `dist/`
 - `npm run build:pages`
-	- Builds with a GitHub Pages-compatible base path
-	- Auto-detects repo name from `origin` and sets base as `/<repo>/`
-	- Writes `dist/.nojekyll`
+  - Builds with a GitHub Pages-compatible base path
+  - Auto-detects repo name from `origin` and sets base as `/<repo>/`
+  - Writes `dist/.nojekyll`
 - `npm run deploy:pages`
-	- Runs the GitHub Pages build flow
-	- Publishes `dist/` to the `gh-pages` branch using `gh-pages`
+  - Runs the GitHub Pages build flow
+  - Publishes `dist/` to the `gh-pages` branch using `gh-pages`
 
 ### GitHub Pages Utility
 
@@ -57,9 +57,9 @@ The deployment utility is implemented in `scripts/deploy-github-pages.mjs`.
 Supported environment overrides:
 
 - `GITHUB_PAGES_REPO`
-	- Forces the repository segment used for base path detection.
+  - Forces the repository segment used for base path detection.
 - `GITHUB_PAGES_BASE`
-	- Forces the Vite base path for pages builds (for example `/compact-header/`).
+  - Forces the Vite base path for pages builds (for example `/compact-header/`).
 
 Examples:
 
@@ -93,52 +93,52 @@ GITHUB_PAGES_BASE=/compact-header/ npm run deploy:pages
 ## Source Of Truth
 
 - `src/nester/header.html`
-	- Tokenized Squiz-compatible header markup
-	- Includes placeholders like `%globals_site_url%`
-	- Build source for `dist/header.html`
+  - Tokenized Squiz-compatible header markup
+  - Includes placeholders like `%globals_site_url%`
+  - Build source for `dist/header.html`
 - `src/nester/header.css`
-	- Maintained header-specific styles (utility row, nav row, responsive behavior)
+  - Maintained header-specific styles (utility row, nav row, responsive behavior)
 - `src/nester/header.js`
-	- Maintained header-specific behavior used during preview
+  - Maintained header-specific behavior used during preview
 - `DET intranet.html`
-	- Local preview shell and archived page context
-	- Includes the nester CSS/JS assets for development testing
+  - Local preview shell and archived page context
+  - Includes the nester CSS/JS assets for development testing
 - `header.html`
-	- Legacy/alternate header snapshot in repo root
-	- Not used by build scripts
+  - Legacy/alternate header snapshot in repo root
+  - Not used by build scripts
 
 ## Current Header Baseline (Aug 2026)
 
 The current compact-header implementation intentionally diverges from legacy defaults in `DET intranet_files/main.css`.
 
 - Utility row
-	- Background: `#343741`
-	- Bottom border: `1px solid #506080`
-	- Horizontal padding: `20px`
-	- Online systems utility dropdown
-		- Trigger interaction: click-to-toggle
-		- Close behavior: outside click and Escape key
-		- Current submenu items: eLearn, myBiz, SAMS, Education Directory, Schools Central
-		- Dropdown top offset: `calc(100% + 2px)`
-		- Dropdown border radius: `0`
-		- Item hover/focus visuals: transparent background with text color `#2e979b` (matches `.ntgc-color--secondary-light`)
+  - Background: `#343741`
+  - Bottom border: `1px solid #506080`
+  - Horizontal padding: `20px`
+  - Online systems utility dropdown
+    - Trigger interaction: click-to-toggle
+    - Close behavior: outside click and Escape key
+    - Current submenu items: eLearn, myBiz, SAMS, Education Directory, Schools Central
+    - Dropdown top offset: `calc(100% + 2px)`
+    - Dropdown border radius: `0`
+    - Item hover/focus visuals: transparent background with text color `#2e979b` (matches `.ntgc-color--secondary-light`)
 - Primary shell (`.container.header-wrapper.ntgc-header__primary-shell`)
-	- Background: `#343642` (explicitly opaque on shell and immediate inner rows)
-	- Uses `position: relative`, `z-index: 300`, and `isolation: isolate` so dropdown lightbox layers do not affect it
-	- Carries the full-width bottom border (`1px solid #506080`)
+  - Background: `#343642` (explicitly opaque on shell and immediate inner rows)
+  - Uses `position: relative`, `z-index: 300`, and `isolation: isolate` so dropdown lightbox layers do not affect it
+  - Carries the full-width bottom border (`1px solid #506080`)
 - Logo and layout sizing
-	- Primary/header width baseline: `1642px` in maintained header layout rules
-	- Logo SVG width: `170px`
-	- Search bar width: `246px`
+  - Primary/header width baseline: `1642px` in maintained header layout rules
+  - Logo SVG width: `170px`
+  - Search bar width: `246px`
 - Intro section
-	- Top margin: `40px`
-	- Horizontal padding: `20px`
-	- Non-header-wrapper container max width: `1642px`
+  - Top margin: `40px`
+  - Horizontal padding: `20px`
+  - Non-header-wrapper container max width: `1642px`
 - Main navigation dropdown (`.menu-wrapper`)
-	- Width: `1232px`
-	- Horizontally centered to viewport when opened (not centered to each level-one item)
-	- Desktop top offset: `calc(100% + 14px)`
-	- Lightbox pseudo-layer starts at panel top and extends downward only
+  - Width: `1232px`
+  - Horizontally centered to viewport when opened (not centered to each level-one item)
+  - Desktop top offset: `calc(100% + 14px)`
+  - Lightbox pseudo-layer starts at panel top and extends downward only
 
 ### Important Implementation Note
 
