@@ -128,7 +128,7 @@ The local fixture implements a compact two-band header:
 - `.ntgc-header__navigation-band` contains the logo, main menu, search, and profile panel.
 - `.ntgc-header__inner--utility`, `--main`, and `--profile` identify each header layer without positional selectors.
 
-The bands own the full-width charcoal background and divider lines; their inner `.container` elements retain the page alignment. [`src/styles/compact-header.scss`](src/styles/compact-header.scss) is imported last and provides the desktop-only layout, logo/menu contrast, widened menu space, and the rule that hides the secondary-nav mobile accordion copy at `769px` and above.
+The bands own the full-width charcoal background and divider lines; their inner `.container` elements retain the page alignment. [`src/styles/compact-header.scss`](src/styles/compact-header.scss) is imported last and provides the desktop-only layout, logo/menu contrast, widened menu space, and the rule that hides the secondary-nav mobile accordion copy at `769px` and above. It also fixes the two-band split's header z-index stacking, pins the mega-menu flyout flush below the navigation band, and reworks its open/close animation to grow downward instead of sliding through the bars — see [src/styles/SQUIZ_MATRIX_ASSET_MAPPING.md](src/styles/SQUIZ_MATRIX_ASSET_MAPPING.md) for the full breakdown.
 
 Before deploying, create `compact-header.scss` as a new editable Matrix CSS asset, replace its local import in [`src/styles/main.scss`](src/styles/main.scss) with the Matrix asset path, and apply the matching band/modifier markup to header nester `#989753`. Keep the secondary-nav accordion markup: it is hidden on desktop but used by the mobile navigation cloning script.
 

@@ -3,6 +3,11 @@
  * asset before deploying; replace the import in main.scss with its asset path.
  */
 
+/* Guarantees the header paints above body.shaded's dim overlay (z-index: 100) as one stacking unit. */
+.ntgc-header {
+  z-index: 10001;
+}
+
 .ntgc-header__utility-band,
 .ntgc-header__navigation-band {
   background-color: #343741;
@@ -18,15 +23,16 @@
   background-color: #343741;
 }
 
-.ntgc-header .ntgc-header__inner--utility {
+/* Extra .ntgc-header__*-band ancestor raises specificity to tie/beat header-style.scss's nth-of-type z-index rules. */
+.ntgc-header .ntgc-header__utility-band .ntgc-header__inner--utility {
   z-index: 10000;
 }
 
-.ntgc-header .ntgc-header__inner--main {
+.ntgc-header .ntgc-header__navigation-band .ntgc-header__inner--main {
   z-index: 9999;
 }
 
-.ntgc-header .ntgc-header__inner--profile {
+.ntgc-header .ntgc-header__navigation-band .ntgc-header__inner--profile {
   z-index: 9998;
 }
 
@@ -65,6 +71,14 @@
     flex: 1 1 auto;
     min-width: 0;
     max-width: none;
+    align-self: stretch;
+  }
+
+  .ntgc-header .ntgc-header__inner--main .ntgc-navigation--main {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    box-sizing: border-box;
   }
 
   .ntgc-header .ntgc-header__inner--main .ntgc-header__search {
@@ -116,6 +130,10 @@
   }
 
   .ntgc-header .ntgc-header__inner--main .ntgc-navigation--main .menu-wrapper {
+    top: 100%;
+    /* Grow downward from the bar's bottom edge instead of the read-only translateY hack sliding up through it. */
+    transform: scaleY(0);
+    transform-origin: top;
     pointer-events: none;
     visibility: hidden;
   }
@@ -123,6 +141,7 @@
   .ntgc-header .ntgc-header__inner--main .ntgc-navigation--main ul.level-one > li.active .menu-wrapper {
     left: -12rem;
     right: -12rem;
+    transform: scaleY(1);
     pointer-events: auto;
     visibility: visible;
   }

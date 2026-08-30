@@ -208,6 +208,27 @@ search/avatar):
   `.ntgc-avatar__title a { display: flex; align-items: center; white-space: nowrap; }` so the
   profile name and icon render side-by-side instead of wrapping/stacking, plus
   `.ntgc-avatar__icon { border: 2px solid #FFFFFF; }` for a white icon border.
+- **Band z-index stacking (2026-08-30 fix)**: read-only `[411402] - header-style.scss` assigns
+  z-index via `.ntgc-header .ntgc-header__inner:nth-of-type(n)`, which now matches per-band-parent
+  instead of once globally (the two-band split gives `--main` the same `nth-of-type(1)` as
+  `--utility`, and outranks compact-header.scss's own lower-specificity rules). Fixed by qualifying
+  each z-index selector with its band wrapper class (`.ntgc-header__utility-band`/
+  `.ntgc-header__navigation-band`), raising specificity to tie (then win on import order) instead
+  of using `!important`. Also added `.ntgc-header { z-index: 10001; }` so the whole header stacks
+  as one unit above the `body.shaded:before` dim overlay (`z-index: 100`, read-only
+  `[264180] - body.scss`, toggled by the nester's `handleDropdownClick()`), which was otherwise
+  dimming the header bands themselves when a mega-menu opened.
+- **Mega-menu flyout positioning/animation (2026-08-30 fix)**: `.ntgc-header__main-nav` gets
+  `align-self: stretch` and `.ntgc-navigation--main` gets `display: flex; align-items: center;
+  height: 100%; box-sizing: border-box;` so the nav's own box spans the full row height (the
+  `box-sizing: border-box` is required so nav's own `1rem` top/bottom padding, read-only
+  `[305340] - nav-main.scss`, doesn't add on top of the 100% height and push the nav down). This
+  lets `.menu-wrapper` be pinned with `top: 100%`, flush with the row's actual bottom edge instead
+  of nav's shorter content-only box. The read-only open/close animation
+  (`transform: translateY(-100%)` &rarr; `translateY(0)`) is also overridden to
+  `transform: scaleY(0)` &rarr; `scaleY(1)` with `transform-origin: top`, so the flyout's top edge
+  stays fixed at the bar's bottom edge and only grows downward, instead of sliding up through/over
+  the navigation bars during the open transition.
 
 ---
 
