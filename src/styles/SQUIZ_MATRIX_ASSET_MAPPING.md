@@ -26,7 +26,7 @@ This directory structure recreates the individual modular stylesheets from Squiz
 | `846104` | `[846097] - CSS/[846100] - base/[846104] - mixins.scss` | AUDS mixins (replace, svguri, math, luminance, focus) |
 | `846105` | `[846097] - CSS/[846100] - base/[846105] - custom.scss` | Agency project specific overrides (document search, onboarding) |
 | `989747` | `[846097] - CSS/[846100] - base/[989747] - secondary-navigation.css` | Secondary navigation dropdowns & sub-menus |
-| `inline` | `[846097] - CSS/custom-header-overrides.scss` | Inline custom header rules from parse file |
+| `989777` | `[846097] - CSS/custom-header-overrides.scss` | Custom header overrides (real parse file imports this LAST, after `989747`) |
 
 ---
 
@@ -146,6 +146,30 @@ This directory structure recreates the individual modular stylesheets from Squiz
 | `303774` | `[264175] - Components/[303774] - top-page-alerts.scss` | NTG Top banner urgent site alert messages (Levels 1-5) |
 | `306980` | `[264175] - Components/[306980] - video-embed-html5.scss` | NTG HTML5 embedded video player with transcript captions |
 | `311857` | `[264175] - Components/[311857] - video-embed.scss` | NTG Video embed wrapper & modal trigger button |
+
+---
+
+### 7. Header Nester (Squiz Matrix server-side markup — not mirrored as a file here)
+The `<header>` DOM structure and its inline dropdown/mobile JS come from a Squiz Matrix nester, not
+from any file in this repo. `DET intranet.html` only contains its compiled/rendered output, so treat
+the nester as read-only in the same sense as the folders above — edits happen in Matrix, not here.
+
+| Asset ID | Description |
+|---|---|
+| `989753` | Header nester — top-level `<header>` markup + inline secondary-nav dropdown/mobile JS |
+| `846112` | `secondary-navigation.links` metadata (JSON list of links/folders for the top secondary nav) |
+| `895508` | Shared REST resource: main navigation menu content (row 2) |
+| `482977` | Shared REST resource component definition for the main navigation menu |
+| `463759` | My Profile megamenu content (mobile) |
+| `264264` | Breadcrumbs snippet (non-homepage pages) |
+
+Key structural/behavioural notes (see `/memories/repo/squiz-matrix-header-nester.md` for full detail):
+- Secondary nav links render from asset `#846112` metadata JSON; only shown if it has entries.
+- Inline JS clones the secondary nav's links into a `li.common-links` "Common links" dropdown inside
+  the main mobile nav (`secondaryNavMobile()`), and toggles `.dropdown.active` on click
+  (`secondaryNavDropdown()`) — both matched by CSS already in `[989747] - secondary-navigation.css`.
+- Main nav content (row 2) loads asynchronously via `#895508`; a `MutationObserver` waits for it
+  before wiring up the above behaviours.
 
 ---
 

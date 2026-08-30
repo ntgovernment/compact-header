@@ -14680,7 +14680,7 @@ textarea.ntgc-text-input {
 }
 
 /* ==========================================================================
-   Squiz Matrix Asset ID: #inline-parse-header
+   Squiz Matrix Asset ID: #989777
    Filename: custom-header-overrides.scss
    Description: Custom header overrides defined directly in parse file
    ========================================================================== */
@@ -14700,6 +14700,30 @@ textarea.ntgc-text-input {
 .ntgc-header--graphic {
   background-position-x: 105%;
   background-position-y: 40px;
+}
+
+.ntgc-header .ntgc-header__inner:nth-of-type(1) {
+  border-bottom: none;
+}
+
+.ntgc-header .ntgc-navigation--secondary {
+  background-color: #343741;
+}
+
+.ntgc-header .ntgc-navigation--secondary > ul {
+  justify-content: flex-end;
+}
+
+.ntgc-header .ntgc-navigation--secondary > ul > li > a,
+.ntgc-header .ntgc-navigation--secondary a.dropdown {
+  color: #FFFFFF;
+  font-weight: 400;
+}
+
+.ntgc-header .ntgc-navigation--secondary > ul > li > a:hover,
+.ntgc-header .ntgc-navigation--secondary a.dropdown:hover,
+.ntgc-header .ntgc-navigation--secondary a.dropdown.active {
+  color: #E35205;
 }
 
 /* ==========================================================================
