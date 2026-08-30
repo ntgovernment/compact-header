@@ -15007,6 +15007,11 @@ textarea.ntgc-text-input {
   background-color: transparent;
 }
 
+/* Matches header-style.scss's margin-bottom: 2.5rem (was 5.625rem). */
+.ntgc-header__intro {
+  margin-top: 2.5rem;
+}
+
 @media (min-width: 769px) {
   .ntgc-header .ntgc-navigation--secondary > ul > .au-accordion {
     display: none;
@@ -15016,6 +15021,11 @@ textarea.ntgc-text-input {
     max-width: 1530px;
   }
   .ntgc-header .ntgc-header__navigation-band .header-wrapper {
+    width: 100%;
+    max-width: 1530px;
+  }
+  /* Only .container without a .header-wrapper sibling class is the intro's un-banded wrapper. */
+  .ntgc-header > .container {
     width: 100%;
     max-width: 1530px;
   }

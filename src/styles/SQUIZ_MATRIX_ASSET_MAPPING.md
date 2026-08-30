@@ -208,6 +208,15 @@ search/avatar):
   `.ntgc-avatar__title a { display: flex; align-items: center; white-space: nowrap; }` so the
   profile name and icon render side-by-side instead of wrapping/stacking, plus
   `.ntgc-avatar__icon { border: 2px solid #FFFFFF; }` for a white icon border.
+- **Intro container width**: `.ntgc-header > .container` (the un-banded wrapper around
+  `.ntgc-header__intro`/`h1.ntgc-header__title`, a direct child of `.ntgc-header` unlike the two
+  band `.container.header-wrapper` elements) is forced to `width: 100%; max-width: 1530px;` so its
+  edges align with the utility/navigation band rows above it.
+
+Outside the media query (applies at all breakpoints):
+- **Intro top margin**: `.ntgc-header__intro { margin-top: 2.5rem; }` overrides
+  `header-style.scss`'s `margin-top: 5.625rem` so it matches that same rule's
+  `margin-bottom: 2.5rem`.
 - **Band z-index stacking (2026-08-30 fix)**: read-only `[411402] - header-style.scss` assigns
   z-index via `.ntgc-header .ntgc-header__inner:nth-of-type(n)`, which now matches per-band-parent
   instead of once globally (the two-band split gives `--main` the same `nth-of-type(1)` as
