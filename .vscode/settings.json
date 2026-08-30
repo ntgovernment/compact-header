@@ -1,0 +1,10 @@
+{
+  "files.readonlyInclude": {
+    "src/styles/\\[264064\\] - AUDS/**": true,
+    "src/styles/\\[264175\\] - Components/**": true,
+    "src/styles/\\[264304\\] - base/**": true,
+    "src/styles/\\[305442\\] - Base/**": true,
+    "src/styles/\\[407329\\] - CSS/**": true,
+    "src/styles/\\[846097\\] - CSS/**": true
+  }
+}

@@ -2,6 +2,8 @@
 
 This directory structure recreates the individual modular stylesheets from Squiz Matrix so you can surgically pinpoint edits to individual files and upload overrides back to Matrix individually.
 
+> **Read-only folders**: `[264064] - AUDS`, `[264175] - Components`, `[264304] - base`, `[305442] - Base`, `[407329] - CSS`, and `[846097] - CSS` are marked read-only in the editor. To change behavior from a file in these folders, create a new custom override asset in Squiz Matrix, then update the `@import` in `main.scss` to point to it once the asset ID is known.
+
 ---
 
 ## Master Entry Point & Compiled Output

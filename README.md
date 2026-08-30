@@ -102,6 +102,23 @@ The stylesheet is broken down into modular SCSS/CSS partials matching the Squiz 
 - **Compile output**: Run `npm run build:css` to generate both `src/styles/compiled-main.css` and `DET intranet_files/main.css`.
 - **Deploying to Matrix**: Refer to [src/styles/SQUIZ_MATRIX_ASSET_MAPPING.md](src/styles/SQUIZ_MATRIX_ASSET_MAPPING.md) to copy the exact modified file contents directly into the matching asset ID in Squiz Matrix.
 
+### Read-only source folders
+
+The following folders are direct mirrors of existing Squiz Matrix assets and are marked read-only in the editor (`.vscode/settings.json` → `files.readonlyInclude`):
+
+- `src/styles/[264064] - AUDS/`
+- `src/styles/[264175] - Components/`
+- `src/styles/[264304] - base/`
+- `src/styles/[305442] - Base/`
+- `src/styles/[407329] - CSS/`
+- `src/styles/[846097] - CSS/`
+
+Do not edit files inside them directly. To change behavior sourced from one of these files:
+
+1. Create a new custom override `.scss` file as a new asset in Squiz Matrix (following the existing custom-file convention, e.g. `[264312] - custom.scss` or `[846105] - custom.scss`).
+2. Once the asset is created in Matrix, add or update the corresponding `@import` in [`src/styles/main.scss`](src/styles/main.scss) to reference the new `[assetID] - name.scss` file.
+3. Update [`src/styles/SQUIZ_MATRIX_ASSET_MAPPING.md`](src/styles/SQUIZ_MATRIX_ASSET_MAPPING.md) with the new asset ID and description.
+
 ## Important implementation notes
 
 - Keep the asset folder name as `DET intranet_files` unless you also update every reference in the HTML.
