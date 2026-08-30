@@ -187,6 +187,28 @@ The secondary navigation's sibling `.au-accordion` remains in its server output:
 header hides it only at desktop widths because the mobile navigation script clones it into the
 main-menu drawer.
 
+Current `@media (min-width: 769px)` overrides in `compact-header.scss` (Row 1 = logo/main-nav/
+search/avatar):
+- **Band width**: both `.ntgc-header__utility-band` and `.ntgc-header__navigation-band`
+  `.header-wrapper` are forced to `width: 100%; max-width: 1530px;` — the `width: 100%` is
+  required because AUDS's `.au-grid .container` sets an explicit `width: 1256px` at the
+  `min-width: 1280px` breakpoint, which plain `max-width` alone cannot override.
+- **Logo column**: `.row > div:first-child` (positional selector — it shares `col-md-2` with the
+  search column, so no unique class exists) is set to `flex: 0 1 auto; width: auto; max-width: none;
+  margin-right: 16px;` so it shrinks to the logo SVG's actual width instead of Bootstrap's fixed
+  grid percentage, freeing the space for the main nav.
+- **Main nav**: `flex: 1 1 auto; min-width: 0;` (the `min-width: 0` lets it actually shrink instead
+  of overflowing past its neighbours) and `ul.level-one { justify-content: flex-start; gap: clamp(...); }`
+  so menu items pack to the left instead of spreading across the widened row.
+- **Search**: `flex: 1 1 220px; min-width: 200px; max-width: 300px;` (shrinkable, not rigid) and
+  `.ntgc-search__text-input { box-sizing: border-box; width: 100%; }` — the `box-sizing` fix is
+  required because the base component's input is `content-box` by default, so a plain `width: 100%`
+  override would overflow past the wrapper by its own padding/border width and overlap the avatar.
+- **Avatar**: widened to `flex: 0 0 150px; min-width: 150px; max-width: 150px;` (was 72px) with
+  `.ntgc-avatar__title a { display: flex; align-items: center; white-space: nowrap; }` so the
+  profile name and icon render side-by-side instead of wrapping/stacking, plus
+  `.ntgc-avatar__icon { border: 2px solid #FFFFFF; }` for a white icon border.
+
 ---
 
 ## How to Edit & Override in Squiz Matrix
