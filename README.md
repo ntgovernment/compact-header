@@ -73,6 +73,7 @@ npm run preview
 ├── src/
 │   └── styles/
 │       ├── main.scss                                      # Master SCSS parse file replicate
+│       ├── compact-header.scss                             # Local compact header prototype override
 │       ├── compiled-main.css                              # Compiled stylesheet referenced by HTML
 │       ├── SQUIZ_MATRIX_ASSET_MAPPING.md                  # Squiz Matrix Asset ID to file mapping
 │       ├── [846097] - CSS/                                # Agency project specific assets
@@ -98,7 +99,7 @@ npm run preview
 
 The stylesheet is broken down into modular SCSS/CSS partials matching the Squiz Matrix asset tree:
 
-- **Targeted edits**: Modify individual component partials (e.g. `src/styles/[264175] - Components/[411402] - header-style.scss` or `src/styles/[264175] - Components/[305340] - nav-main.scss`).
+- **Targeted overrides**: Add an editable custom override after the mirrored component imports. Do not edit the read-only Matrix mirrors directly.
 - **Compile output**: Run `npm run build:css` to generate both `src/styles/compiled-main.css` and `DET intranet_files/main.css`.
 - **Deploying to Matrix**: Refer to [src/styles/SQUIZ_MATRIX_ASSET_MAPPING.md](src/styles/SQUIZ_MATRIX_ASSET_MAPPING.md) to copy the exact modified file contents directly into the matching asset ID in Squiz Matrix.
 
@@ -118,6 +119,18 @@ Do not edit files inside them directly. To change behavior sourced from one of t
 1. Create a new custom override `.scss` file as a new asset in Squiz Matrix (following the existing custom-file convention, e.g. `[264312] - custom.scss` or `[846105] - custom.scss`).
 2. Once the asset is created in Matrix, add or update the corresponding `@import` in [`src/styles/main.scss`](src/styles/main.scss) to reference the new `[assetID] - name.scss` file.
 3. Update [`src/styles/SQUIZ_MATRIX_ASSET_MAPPING.md`](src/styles/SQUIZ_MATRIX_ASSET_MAPPING.md) with the new asset ID and description.
+
+### Compact header prototype
+
+The local fixture implements a compact two-band header:
+
+- `.ntgc-header__utility-band` contains the secondary navigation.
+- `.ntgc-header__navigation-band` contains the logo, main menu, search, and profile panel.
+- `.ntgc-header__inner--utility`, `--main`, and `--profile` identify each header layer without positional selectors.
+
+The bands own the full-width charcoal background and divider lines; their inner `.container` elements retain the page alignment. [`src/styles/compact-header.scss`](src/styles/compact-header.scss) is imported last and provides the desktop-only layout, logo/menu contrast, widened menu space, and the rule that hides the secondary-nav mobile accordion copy at `769px` and above.
+
+Before deploying, create `compact-header.scss` as a new editable Matrix CSS asset, replace its local import in [`src/styles/main.scss`](src/styles/main.scss) with the Matrix asset path, and apply the matching band/modifier markup to header nester `#989753`. Keep the secondary-nav accordion markup: it is hidden on desktop but used by the mobile navigation cloning script.
 
 ## Important implementation notes
 

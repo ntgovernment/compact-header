@@ -1,0 +1,116 @@
+/*
+ * Local prototype override. Publish this as a new final-import Squiz Matrix
+ * asset before deploying; replace the import in main.scss with its asset path.
+ */
+
+.ntgc-header__utility-band,
+.ntgc-header__navigation-band {
+  background-color: #343741;
+  border-bottom: 1px solid #506080;
+}
+
+.ntgc-header .ntgc-header__inner--utility,
+.ntgc-header .ntgc-header__inner--profile {
+  background-color: transparent;
+}
+
+.ntgc-header .ntgc-header__inner--main {
+  background-color: #343741;
+}
+
+.ntgc-header .ntgc-header__inner--utility {
+  z-index: 10000;
+}
+
+.ntgc-header .ntgc-header__inner--main {
+  z-index: 9999;
+}
+
+.ntgc-header .ntgc-header__inner--profile {
+  z-index: 9998;
+}
+
+.ntgc-header .ntgc-header__inner--utility .ntgc-navigation--secondary {
+  background-color: transparent;
+}
+
+@media (min-width: 769px) {
+  .ntgc-header .ntgc-navigation--secondary > ul > .au-accordion {
+    display: none;
+  }
+
+  .ntgc-header .ntgc-header__navigation-band .header-wrapper {
+    max-width: 1440px;
+  }
+
+  .ntgc-header .ntgc-header__inner--main > .row {
+    align-items: center;
+    flex-wrap: nowrap;
+  }
+
+  .ntgc-header .ntgc-header__inner--main .ntgc-header__main-nav {
+    flex: 1 1 auto;
+    max-width: none;
+  }
+
+  .ntgc-header .ntgc-header__inner--main .ntgc-header__search {
+    flex: 0 0 300px;
+    max-width: 300px;
+  }
+
+  .ntgc-header .ntgc-header__inner--main .ntgc-header__avatar {
+    flex: 0 0 72px;
+    max-width: 72px;
+  }
+
+  .ntgc-header .ntgc-header__inner--main .ntgc-logo svg path,
+  .ntgc-header .ntgc-header__inner--main .ntgc-logo svg text {
+    fill: #FFFFFF !important;
+  }
+
+  .ntgc-header .ntgc-header__inner--main .ntgc-navigation--main,
+  .ntgc-header .ntgc-header__inner--main .ntgc-navigation--main::before,
+  .ntgc-header .ntgc-header__inner--main .ntgc-navigation--main::after {
+    background-color: #343741;
+  }
+
+  .ntgc-header .ntgc-header__inner--main .ntgc-navigation--main ul.level-one {
+    justify-content: space-between;
+    gap: clamp(0.75rem, 1.5vw, 1.5rem);
+  }
+
+  .ntgc-header .ntgc-header__inner--main .ntgc-navigation--main ul.level-one > li > a,
+  .ntgc-header .ntgc-header__inner--main .ntgc-navigation--main ul.level-one > li > a.dropdown::before {
+    color: #FFFFFF;
+  }
+
+  .ntgc-header .ntgc-header__inner--main .ntgc-navigation--main ul.level-one > li > a {
+    margin-right: 0;
+    white-space: nowrap;
+  }
+
+  .ntgc-header .ntgc-header__inner--main .ntgc-navigation--main .menu-wrapper {
+    pointer-events: none;
+    visibility: hidden;
+  }
+
+  .ntgc-header .ntgc-header__inner--main .ntgc-navigation--main ul.level-one > li.active .menu-wrapper {
+    left: -12rem;
+    right: -12rem;
+    pointer-events: auto;
+    visibility: visible;
+  }
+
+  .ntgc-header .ntgc-header__inner--main .ntgc-search__wrapper {
+    margin: 0;
+  }
+
+  .ntgc-header .ntgc-header__inner--main .ntgc-search__text-input {
+    width: 100%;
+  }
+
+  .ntgc-header .ntgc-header__inner--main .ntgc-avatar--current-user .ntgc-avatar__title a,
+  .ntgc-header .ntgc-header__inner--main .profile-firstname {
+    color: #FFFFFF;
+  }
+}

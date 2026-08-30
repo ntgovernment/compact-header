@@ -11,6 +11,7 @@ This directory structure recreates the individual modular stylesheets from Squiz
 - **Master SCSS Entry Point**: [`src/styles/main.scss`](./main.scss) *(Replicates the Squiz Matrix parse file)*
 - **Matrix Root Copy**: [`src/styles/[846097] - CSS/[846098] - main.scss`](./%5B846097%5D%20-%20CSS/%5B846098%5D%20-%20main.scss)
 - **Local Compiled CSS**: [`src/styles/compiled-main.css`](./compiled-main.css)
+- **Local Compact Header Override**: [`src/styles/compact-header.scss`](./compact-header.scss) *(prototype only; publish as a new editable Matrix asset before deployment)*
 
 ---
 
@@ -27,6 +28,7 @@ This directory structure recreates the individual modular stylesheets from Squiz
 | `846105` | `[846097] - CSS/[846100] - base/[846105] - custom.scss` | Agency project specific overrides (document search, onboarding) |
 | `989747` | `[846097] - CSS/[846100] - base/[989747] - secondary-navigation.css` | Secondary navigation dropdowns & sub-menus |
 | `989777` | `[846097] - CSS/custom-header-overrides.scss` | Custom header overrides (real parse file imports this LAST, after `989747`) |
+| Pending | `compact-header.scss` | Local final-import prototype override for full-width header bands, compact desktop navigation, and secondary accordion desktop suppression |
 
 ---
 
@@ -158,7 +160,7 @@ the nester as read-only in the same sense as the folders above — edits happen 
 |---|---|
 | `989753` | Header nester — top-level `<header>` markup + inline secondary-nav dropdown/mobile JS |
 | `846112` | `secondary-navigation.links` metadata (JSON list of links/folders for the top secondary nav) |
-| `895508` | Shared REST resource: main navigation menu content (row 2) |
+| `989788` | Shared REST resource: lightweight main navigation menu content, embedded in the Row 1 header layout |
 | `482977` | Shared REST resource component definition for the main navigation menu |
 | `463759` | My Profile megamenu content (mobile) |
 | `264264` | Breadcrumbs snippet (non-homepage pages) |
@@ -168,14 +170,28 @@ Key structural/behavioural notes (see `/memories/repo/squiz-matrix-header-nester
 - Inline JS clones the secondary nav's links into a `li.common-links` "Common links" dropdown inside
   the main mobile nav (`secondaryNavMobile()`), and toggles `.dropdown.active` on click
   (`secondaryNavDropdown()`) — both matched by CSS already in `[989747] - secondary-navigation.css`.
-- Main nav content (row 2) loads asynchronously via `#895508`; a `MutationObserver` waits for it
+- Main nav content loads asynchronously via `#989788`; a `MutationObserver` waits for it
   before wiring up the above behaviours.
+
+### Compact Header Deployment
+
+The local header fixture includes `.ntgc-header__utility-band` and
+`.ntgc-header__navigation-band` wrappers, plus `--utility`, `--main`, and `--profile` inner
+modifiers. The bands provide the full-width header background and divider borders while their
+inner `.container` elements retain page alignment.
+
+Before release, apply this structural markup to nester `#989753`. Publish
+`compact-header.scss` as a new editable Matrix CSS asset, update the pending mapping entry with
+its asset ID, and replace the local final import in `main.scss` with the matching Matrix path.
+The secondary navigation's sibling `.au-accordion` remains in its server output: the compact
+header hides it only at desktop widths because the mobile navigation script clones it into the
+main-menu drawer.
 
 ---
 
 ## How to Edit & Override in Squiz Matrix
 
-1. **Locate the component**: Use the table above to find the file for what you want to edit (e.g. `[411402] - header-style.scss` or `[305340] - nav-main.scss`).
-2. **Edit locally**: Make your changes in that specific `.scss` file.
-3. **Live preview**: Vite will instantly reload the page via HMR.
-4. **Deploy to Squiz Matrix**: Copy the edited file contents directly into the matching Squiz Matrix asset `#ID` (e.g., Asset `#411402`).
+1. **Locate the source**: Use the table above to identify whether the behavior is in a read-only mirror or an editable custom Matrix asset.
+2. **Create an override when needed**: For a mirrored source, create a new custom Matrix asset and add its import after the source it overrides.
+3. **Live preview**: Run `npm run build:css`; Vite then reloads the local page via HMR.
+4. **Deploy to Squiz Matrix**: Copy the override into its new Matrix asset and update its import to use that asset ID.
