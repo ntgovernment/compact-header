@@ -1,0 +1,260 @@
+/* ==========================================================================
+   Squiz Matrix Asset ID: #264206
+   Filename: [264206] - table.scss
+   Description: NTG Tables, DataTables sorting headers, and table animations
+   ========================================================================== */
+
+.ntgc-table {
+  font-size: 16px;
+  font-size: 1rem;
+  line-height: 1.5;
+  font-family: "Roboto", arial, sans-serif;
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+  margin: 0 0 1.5rem 0;
+  color: #454347;
+}
+.ntgc-table .ntgc-table__caption {
+  font-size: 20px;
+  font-size: 1.25rem;
+  line-height: 1.6;
+  font-weight: bold;
+  text-align: left;
+  display: table-caption;
+  padding-bottom: 8px;
+  padding-bottom: 0.5 rem;
+}
+.ntgc-table .ntgc-table__head {
+  display: table-header-group;
+  border-bottom: 1px solid #F0EFEE;
+}
+.ntgc-table .ntgc-table__head .ntgc-table__header, .ntgc-table .ntgc-table__head .ntgc-table__cell {
+  font-size: 0.875rem;
+  font-weight: 700;
+  text-align: left;
+  padding: 1rem 1rem 1rem 0;
+  text-transform: uppercase;
+}
+.ntgc-table .ntgc-table__head .ntgc-table__header.ntgc-table__header--width-10, .ntgc-table .ntgc-table__head .ntgc-table__cell.ntgc-table__header--width-10 {
+  width: 10%;
+}
+.ntgc-table .ntgc-table__head .ntgc-table__header.ntgc-table__header--width-15, .ntgc-table .ntgc-table__head .ntgc-table__cell.ntgc-table__header--width-15 {
+  width: 15%;
+}
+.ntgc-table .ntgc-table__head .ntgc-table__header.ntgc-table__header--width-20, .ntgc-table .ntgc-table__head .ntgc-table__cell.ntgc-table__header--width-20 {
+  width: 20%;
+}
+.ntgc-table .ntgc-table__head .ntgc-table__header.ntgc-table__header--width-25, .ntgc-table .ntgc-table__head .ntgc-table__cell.ntgc-table__header--width-25 {
+  width: 25%;
+}
+.ntgc-table .ntgc-table__head .ntgc-table__header.ntgc-table__header--width-33, .ntgc-table .ntgc-table__head .ntgc-table__cell.ntgc-table__header--width-33 {
+  width: 33%;
+}
+.ntgc-table .ntgc-table__head .ntgc-table__header.ntgc-table__header--width-50, .ntgc-table .ntgc-table__head .ntgc-table__cell.ntgc-table__header--width-50 {
+  width: 50%;
+}
+.ntgc-table .ntgc-table__head .ntgc-table__header.ntgc-table__header--width-75, .ntgc-table .ntgc-table__head .ntgc-table__cell.ntgc-table__header--width-75 {
+  width: 75%;
+}
+.ntgc-table .ntgc-table__head .ntgc-table__header.ntgc-table__header--numeric, .ntgc-table .ntgc-table__head .ntgc-table__cell.ntgc-table__header--numeric {
+  text-align: right;
+}
+.ntgc-table.striped .ntgc-table__body .ntgc-table__row:nth-last-child(odd) {
+  background-color: #F0EFEE;
+}
+.ntgc-table.striped .ntgc-table__header, .ntgc-table.striped .ntgc-table__cell {
+  padding-left: 0.25rem;
+}
+.ntgc-table .ntgc-table__row {
+  display: table-row;
+}
+.ntgc-table .ntgc-table__body {
+  display: table-row-group;
+}
+.ntgc-table .ntgc-table__body .ntgc-table__header {
+  padding: 1rem 1rem 1rem 0;
+  text-align: left;
+  border-bottom: 1px solid #F0EFEE;
+  font-weight: bold;
+}
+.ntgc-table .ntgc-table__cell {
+  padding: 1.5rem 1.5rem 1.5rem 0;
+  text-align: left;
+  border-bottom: 1px solid #ededed;
+  font-size: 16px;
+  font-weight: 400;
+  vertical-align: top;
+}
+.ntgc-table .ntgc-table__cell.ntgc-table__cell--numeric {
+  text-align: right;
+  font-variant: tabular-nums;
+}
+.ntgc-table .ntgc-table__cell.vertical-middle {
+  display: flex;
+}
+.ntgc-table.ntgc-table--striped .ntgc-table__body .ntgc-table__row:nth-last-child(odd) {
+  background-color: #F0EFEE;
+}
+.ntgc-table.ntgc-table--hover tbody tr:hover {
+  background: #F0EFEE;
+}
+.ntgc-table__filters th:after {
+  font-family: "Font Awesome 5 Pro";
+  content: "";
+  font-size: 0.75rem;
+  padding: 0 0 0 0.25rem;
+  position: relative;
+  top: -2px;
+  cursor: pointer;
+}
+.ntgc-table__filters th:first-child:after {
+  content: "";
+  top: 0;
+}
+.ntgc-table ul:not([class]) {
+  margin: 0;
+}
+.ntgc-table ul:not([class]) li {
+  margin: 0;
+}
+.ntgc-table.ntgc-table__contact .ntgc-table__cell {
+  vertical-align: middle;
+}
+.ntgc-table.ntgc-table__contact .ntgc-table__cell .ntgc-avatar__icon {
+  float: left;
+  margin-top: -0.125rem;
+}
+.ntgc-table.ntgc-table__contact .ntgc-table__cell strong {
+  font-size: 1rem;
+  color: #343741;
+}
+.ntgc-table.ntgc-table__contact .ntgc-table__cell > span {
+  display: block;
+}
+.ntgc-table.ntgc-table__contact .ntgc-table__cell.ntgc-table__contact--bookmark {
+  text-align: right;
+}
+.ntgc-table.ntgc-table__contact .ntgc-table__cell.ntgc-table__contact--bookmark input.bookmark-checkbox[type="checkbox"] {
+  display: none;
+}
+.ntgc-table.ntgc-table__contact .ntgc-table__cell.ntgc-table__contact--bookmark label.bookmark-label::before {
+  font-family: "Font Awesome 5 Pro";
+  content: "";
+  font-size: 1rem;
+  cursor: pointer;
+  color: #2E979B;
+  display: inline-block;
+  font-weight: 400;
+}
+.ntgc-table.ntgc-table__contact .ntgc-table__cell.ntgc-table__contact--bookmark input.bookmark-checkbox[type="checkbox"]:checked + label::before {
+  content: "";
+  font-weight: 700;
+}
+.ntgc-table__wrapper {
+  overflow-x: auto;
+}
+.ntgc-table__wrapper.contacts-table {
+  overflow-x: initial;
+}
+@-webkit-keyframes moving-gradient {
+  0% {
+    background-position: -250px 0;
+  }
+  100% {
+    background-position: 250px 0;
+  }
+}
+.ntgc-table-loader-animation {
+  width: 100%;
+}
+.ntgc-table-loader-animation tr {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+.ntgc-table-loader-animation tr td {
+  height: 50px;
+  vertical-align: middle;
+  padding: 8px;
+}
+.ntgc-table-loader-animation tr td span {
+  display: block;
+}
+.ntgc-table-loader-animation tr td.td-1 {
+  width: 50px;
+}
+.ntgc-table-loader-animation tr td.td-1 span {
+  background-color: #DEDEDA;
+  opacity: 0.15;
+  width: 50px;
+  height: 50px;
+}
+.ntgc-table-loader-animation tr td.td-2 {
+  width: 20px;
+}
+.ntgc-table-loader-animation tr td.td-2 span {
+  width: 20px;
+  height: 20px;
+}
+.ntgc-table-loader-animation tr td.td-3 {
+  width: 400px;
+}
+.ntgc-table-loader-animation tr td.td-3 span {
+  height: 12px;
+  background: linear-gradient(to right, #DEDEDA 20%, #F0EFEE 50%, #DEDEDA 80%);
+  background-size: 500px 100px;
+  animation-name: moving-gradient;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+.ntgc-table-loader-animation tr td.td-5 {
+  width: 100px;
+}
+.ntgc-table-loader-animation tr td.td-5 span {
+  background-color: #DEDEDA;
+  opacity: 0.15;
+  width: 100%;
+  height: 30px;
+}
+.ntgc-table--key-contacts a[href^="mailto:"] {
+  color: currentColor;
+  text-decoration: underline;
+}
+.ntgc-table--key-contacts a:hover[href^="mailto:"] {
+  color: #208820;
+  text-decoration: none;
+}
+.ntgc-table-bio-management {
+  display: none;
+}
+table.dataTable thead th {
+  position: relative;
+}
+table.dataTable thead th.sorting:after, table.dataTable thead th.sorting_asc:after, table.dataTable thead th.sorting_desc:after {
+  font-family: "Font Awesome 5 Pro";
+  font-weight: 600;
+  display: inline;
+  font-size: 12px;
+  color: #304060;
+  margin-left: 0.5rem;
+}
+table.dataTable thead th.sorting:after {
+  content: "";
+}
+table.dataTable thead th.sorting_asc:after {
+  content: "";
+}
+table.dataTable thead th.sorting_desc:after {
+  content: "";
+}
+table.dataTable thead th.sorting_disabled {
+  content: "";
+}
+table.dataTable td.nowrap {
+  white-space: nowrap;
+}
+table.dataTable .ntgc-search__submit .fal.fa-times:hover {
+  cursor: pointer;
+  color: #208820;
+}

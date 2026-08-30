@@ -1,0 +1,257 @@
+/* ==========================================================================
+   Squiz Matrix Asset ID: #264157
+   Filename: [264157] - side-nav-module.scss
+   Description: @gov.au/side-nav v5.0.7
+   ========================================================================== */
+
+/*! @gov.au/side-nav v5.0.7 */
+/**
+ * AU-side-nav-indent - Mixin for creating indent based off depth
+ *
+ * @param  {number} $depth         - How deep the menu goes
+ * @param  {string} $element       - The element to add the ul in front of
+ * @param  {number} $indent-size   - Size of the indent in units
+ *
+ * @return {number}          - The indented menu items
+ */
+@media print {
+  .au-side-nav {
+    background: transparent !important;
+  }
+  .au-side-nav a {
+    color: #000 !important;
+    text-decoration: underline !important;
+  }
+  .au-side-nav a:hover {
+    background: transparent !important;
+  }
+  .au-side-nav .au-accordion__title {
+    display: none;
+  }
+  .au-side-nav__content ul ul ul a:before {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath fill='%23000' d='M2 10h12v1H2zM2 5h1v5H2z'/%3E%3C/svg%3E") !important;
+  }
+  .au-side-nav__content > ul > li {
+    border-color: #000 !important;
+  }
+}
+.au-side-nav {
+  font-size: 16px;
+  font-size: 1rem;
+  line-height: 1.5;
+  font-family: "Roboto", arial, sans-serif;
+  background-color: #ebebeb;
+  border-radius: 4px;
+  overflow: hidden;
+  border: 0;
+}
+.au-side-nav a, .au-side-nav .active > span {
+  padding: 16px;
+  padding: 1 rem;
+  font-size: 14px;
+  font-size: 0.875rem;
+  line-height: 1.4285714286;
+  color: #9a9ba0;
+  display: block;
+}
+.au-side-nav a {
+  text-decoration: none;
+}
+.au-side-nav a:hover {
+  text-decoration: underline;
+  text-decoration-skip-ink: auto;
+  background-color: #e0e0e0;
+}
+.au-side-nav a:focus {
+  outline: 3px solid #fd7cb1;
+  outline-offset: 2px;
+}
+.au-side-nav a::-moz-focus-inner {
+  border: 0;
+}
+.au-side-nav .au-link-list {
+  padding: 0;
+  margin: 0;
+}
+.au-side-nav .au-link-list li {
+  margin: 0;
+}
+.au-side-nav .au-accordion__body {
+  overflow: visible;
+}
+.au-side-nav .au-accordion__title {
+  font-size: 16px;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #343741;
+  font-weight: normal;
+  text-decoration: underline;
+  text-decoration-skip-ink: auto;
+  background-color: inherit;
+}
+.au-side-nav .au-accordion__title:hover {
+  text-decoration: none;
+}
+.au-side-nav .au-accordion__title:focus {
+  outline-offset: -3px;
+}
+.no-js .au-side-nav .au-accordion__title {
+  display: none;
+}
+.au-side-nav .au-accordion__body-wrapper {
+  border: 0;
+  padding: 0;
+}
+@media (min-width: 768px) {
+  .au-side-nav {
+    background: transparent;
+    border-radius: 0;
+    overflow: visible;
+  }
+  .au-side-nav .au-accordion__body.au-accordion--closed {
+    display: block;
+    height: auto;
+  }
+  .au-side-nav a:hover {
+    background-color: whitesmoke;
+  }
+  .au-side-nav .au-accordion__title {
+    display: none;
+  }
+}
+.au-side-nav__content {
+  margin: 0 16px;
+  margin: 0  1 rem;
+}
+.au-side-nav__content ul ul a {
+  padding-left: 32px;
+  padding-left: 2 rem;
+}
+.au-side-nav__content ul ul ul a {
+  padding-left: 60px;
+  padding-left: 3.75 rem;
+}
+.au-side-nav__content ul ul ul ul a {
+  padding-left: 80px;
+  padding-left: 5 rem;
+}
+.au-side-nav__content ul ul .active > span {
+  padding-left: 32px;
+  padding-left: 2 rem;
+}
+.au-side-nav__content ul ul ul .active > span {
+  padding-left: 60px;
+  padding-left: 3.75 rem;
+}
+.au-side-nav__content ul ul ul ul .active > span {
+  padding-left: 80px;
+  padding-left: 5 rem;
+}
+.au-side-nav__content .active > span {
+  font-weight: bold;
+  color: #343741;
+}
+.au-side-nav__content ul ul ul a:before, .au-side-nav__content ul ul ul .active > span:before {
+  content: " ";
+  width: 16px;
+  width: 1 rem;
+  height: 16px;
+  height: 1 rem;
+  background-size: 16px;
+  background-size: 1 rem;
+  margin-left: -24px;
+  margin-left: -1.5 rem;
+  display: block;
+  float: left;
+  background-repeat: no-repeat;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath fill='%239a9ba0' d='M2 10h12v1H2zM2 5h1v5H2z'/%3E%3C/svg%3E");
+}
+.au-side-nav__content > ul > li {
+  border-bottom: 1px solid #9a9ba0;
+}
+.au-side-nav__content > ul > li:last-of-type {
+  border: none;
+}
+@media (min-width: 768px) {
+  .au-side-nav__content {
+    margin: 0;
+  }
+}
+.au-sidenav__title {
+  margin: 0;
+}
+.au-sidenav__title a {
+  font-size: 16px;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #343741;
+  border-bottom: 2px solid #9a9ba0;
+}
+.au-side-nav.au-side-nav--alt {
+  background: #ffffff;
+}
+.au-side-nav.au-side-nav--alt a:hover {
+  background: whitesmoke;
+}
+@media (min-width: 768px) {
+  .au-side-nav.au-side-nav--alt {
+    background: transparent;
+  }
+  .au-side-nav.au-side-nav--alt a:hover {
+    background-color: #e0e0e0;
+  }
+}
+.au-side-nav.au-side-nav--dark {
+  background: #312f32;
+}
+.au-side-nav.au-side-nav--dark .au-accordion__title {
+  color: #FFFFFF;
+  background-color: inherit;
+}
+.au-side-nav.au-side-nav--dark a {
+  color: #a2a1a3;
+}
+.au-side-nav.au-side-nav--dark a:hover {
+  background: #262528;
+}
+.au-side-nav.au-side-nav--dark a:focus {
+  outline: 3px solid #fd7cb1;
+}
+.au-side-nav.au-side-nav--dark a::-moz-focus-inner {
+  border: 0;
+}
+.au-side-nav.au-side-nav--dark .au-side-nav__content .active > span {
+  color: #FFFFFF;
+}
+.au-side-nav.au-side-nav--dark .au-side-nav__content ul ul ul a:before, .au-side-nav.au-side-nav--dark .au-side-nav__content ul ul ul .active > span:before {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath fill='%23a2a1a3' d='M2 10h12v1H2zM2 5h1v5H2z'/%3E%3C/svg%3E");
+}
+.au-side-nav.au-side-nav--dark .au-side-nav__content > ul > li {
+  border-color: #a2a1a3;
+}
+.au-side-nav.au-side-nav--dark .au-sidenav__title a {
+  border-color: #a2a1a3;
+  color: #FFFFFF;
+}
+@media (min-width: 768px) {
+  .au-side-nav.au-side-nav--dark {
+    background: transparent;
+  }
+  .au-side-nav.au-side-nav--dark a:hover {
+    background-color: #3b393d;
+  }
+}
+.au-side-nav.au-side-nav--dark.au-side-nav--alt {
+  background: #454347;
+}
+.au-side-nav.au-side-nav--dark.au-side-nav--alt a:hover {
+  background: #3b393d;
+}
+@media (min-width: 768px) {
+  .au-side-nav.au-side-nav--dark.au-side-nav--alt {
+    background: transparent;
+  }
+  .au-side-nav.au-side-nav--dark.au-side-nav--alt a:hover {
+    background-color: #262528;
+  }
+}

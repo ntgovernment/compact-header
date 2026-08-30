@@ -1,0 +1,137 @@
+/* ==========================================================================
+   Squiz Matrix Asset ID: #264089
+   Filename: [264089] - card-module.scss
+   Description: @gov.au/card v0.3.2
+   ========================================================================== */
+
+/*! @gov.au/card v0.3.2 */
+.au-card {
+  display: block;
+  width: 100%;
+  border-radius: 4px;
+  border: 1px solid lightgray;
+  font-family: "Roboto", arial, sans-serif;
+  position: relative;
+  background: #ffffff;
+  overflow: hidden;
+}
+.au-card.au-card--shadow {
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+.au-card.au-card--shadow:hover {
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
+}
+.au-card.au-card--clickable:focus-within {
+  outline: 3px solid #fd7cb1;
+  outline-offset: 2px;
+}
+.au-card.au-card--clickable .au-card--clickable__link:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+.au-card.au-card--clickable .au-card--clickable__link:focus {
+  outline: none;
+}
+.lt-ie9 .au-card.au-card--clickable .au-card--clickable__link:focus {
+  outline: 3px solid #fd7cb1;
+  outline-offset: 2px;
+}
+.au-card * + .au-card__divider, .au-card * + .au-card__body, .au-card * + .au-card__footer {
+  margin-top: 16px;
+  margin-top: 1 rem;
+}
+.au-card .au-card__divider {
+  border: lightgray 0.5px solid;
+  margin-bottom: 0;
+}
+.au-card .au-card__title {
+  margin: 0 0 16px 0;
+  margin: 0 0  1 rem 0;
+}
+.au-card .au-card__header {
+  font-weight: bold;
+  margin: 0;
+  border-bottom: solid 1px lightgray;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  padding: 16px;
+  padding: 1 rem;
+}
+.au-card .au-card__footer {
+  padding: 16px;
+  padding: 1 rem;
+  margin: 0;
+  border-top: solid 1px lightgray;
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+.au-card .au-card__inner {
+  padding: 16px;
+  padding: 1 rem;
+}
+.lt-ie9 .au-card {
+  border: solid 1px #9a9ba0;
+}
+.au-card.au-card--centred, .au-card .au-card--centred {
+  text-align: center;
+}
+a.au-card {
+  color: #343741;
+  cursor: pointer;
+  text-decoration: none;
+}
+a.au-card .au-card__title {
+  color: #343741;
+  text-decoration: underline;
+  text-decoration-skip-ink: auto;
+}
+a.au-card:hover .au-card__title {
+  text-decoration: none;
+  color: #343741;
+}
+a.au-card:focus {
+  outline: 3px solid #fd7cb1;
+  outline-offset: 2px;
+}
+a.au-card.au-card--shadow:focus {
+  border-radius: 0;
+}
+a.au-card.au-card--shadow:hover {
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
+}
+.au-card-list {
+  list-style: none;
+  padding: 0;
+}
+.au-card-list:before, .au-card-list:after {
+  content: " ";
+  display: table;
+}
+.au-card-list:after {
+  clear: both;
+}
+.au-card-list:before {
+  display: none;
+}
+.au-card-list li {
+  list-style: none;
+  padding: 0;
+  margin-top: 24px;
+  margin-top: 1.5 rem;
+}
+.au-card-list.au-card-list--matchheight {
+  display: flex;
+  flex-wrap: wrap;
+}
+.au-card-list.au-card-list--matchheight li {
+  display: flex;
+}
+.au-card-list.au-card-list--matchheight .au-card {
+  display: block;
+  flex-direction: column;
+}

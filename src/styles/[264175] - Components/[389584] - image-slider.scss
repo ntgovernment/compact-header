@@ -1,0 +1,16 @@
+/* ==========================================================================
+   Squiz Matrix Asset ID: #389584
+   Filename: [389584] - image-slider.scss
+   Description: NTG Image slider heading styles
+   ========================================================================== */
+
+/*NTGC Image slider*/
+.ntgc-image-slider {
+  width: 100%;
+}
+.ntgc-image-slider__title, .ntgc-image-slider > h2 {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 1.5rem;
+  padding-bottom: 0.5rem;
+}

@@ -1,0 +1,33 @@
+/* ==========================================================================
+   Squiz Matrix Asset ID: #264200
+   Filename: [264200] - progress-bar.scss
+   Description: NTG HTML5 progress bar styling
+   ========================================================================== */
+
+progress.ntgc-progress-bar {
+  width: 100%;
+  height: 0.5rem;
+  border: none;
+  background: #F0EFEE;
+  color: #2E979B;
+}
+progress.ntgc-progress-bar::-moz-progress-bar {
+  background: #2E979B;
+}
+progress.ntgc-progress-bar::-webkit-progress-value {
+  background: #2E979B;
+}
+progress.ntgc-progress-bar::-webkit-progress-bar {
+  background: #F0EFEE;
+}
+progress.ntgc-progress-bar.ntgc-progress-bar--alt {
+  background: #FFFFFF;
+}
+progress.ntgc-progress-bar.ntgc-progress-bar--alt::-webkit-progress-bar {
+  background: #FFFFFF;
+}
+@media (max-width: 767.98px) {
+  .au-responsive-media-img {
+    width: 100%;
+  }
+}

@@ -1,0 +1,58 @@
+/* ==========================================================================
+   Squiz Matrix Asset ID: #264179
+   Filename: [264179] - banners.scss
+   Description: NTG Dynamic banner & carousel banner styles
+   ========================================================================== */
+
+.ntg-dynamic-banner__item {
+  height: 600px;
+  width: 100%;
+  text-align: center;
+}
+.ntg-dynamic-banner__item.is-selected a, .ntg-dynamic-banner__item.is-selected input {
+  display: inline;
+}
+.ntg-dynamic-banner__item a, .ntg-dynamic-banner__item input {
+  display: none;
+}
+.ntg-dynamic-banner__heading {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.ntg-dynamic-banner__heading h1 {
+  margin-top: 0;
+  color: #fff;
+}
+.ntg-dynamic-banner__background {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: -10;
+}
+.ntg-dynamic-banner__background:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.3);
+}
+.ntg-dynamic-banner .flickity-page-dots {
+  bottom: 50px;
+}
+.ntg-dynamic-banner .flickity-page-dots .dot {
+  border: 3px solid #fff;
+  border-radius: 100%;
+  height: 15px;
+  width: 15px;
+  opacity: 1;
+  background-color: transparent;
+}
+.ntg-dynamic-banner .flickity-page-dots .dot.is-selected {
+  background-color: #fff;
+}

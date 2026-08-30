@@ -1,0 +1,56 @@
+/* ==========================================================================
+   Squiz Matrix Asset ID: #264195
+   Filename: [264195] - keyword-list.scss
+   Description: NTG Data list definitions and responsive layouts
+   ========================================================================== */
+
+dl.ntgc-data-list {
+  margin: 1rem 0 3rem;
+  padding: 1rem 2rem 2rem 0;
+  border-bottom: 1px solid #BABBB8;
+  display: flex;
+  flex-wrap: wrap;
+}
+dl.ntgc-data-list dt {
+  font-weight: 600;
+  min-width: 100%;
+}
+@media (min-width: 768px) {
+  dl.ntgc-data-list dt {
+    min-width: 33%;
+    width: 33%;
+  }
+}
+@media (min-width: 1024px) {
+  dl.ntgc-data-list dt {
+    min-width: 35%;
+    width: 35%;
+  }
+}
+dl.ntgc-data-list dt.data-pt-32 {
+  padding-top: 2rem;
+}
+dl.ntgc-data-list dd {
+  margin-left: auto;
+  padding-bottom: 0.5rem;
+  min-width: 100%;
+}
+@media (min-width: 768px) {
+  dl.ntgc-data-list dd {
+    min-width: 66%;
+    width: 66%;
+  }
+}
+@media (min-width: 1024px) {
+  dl.ntgc-data-list dd {
+    min-width: 65%;
+    width: 65%;
+  }
+}
+.data-icon {
+  color: #2E979B;
+  width: 1.5rem;
+}
+.show-dollar-sign:before {
+  content: "$";
+}

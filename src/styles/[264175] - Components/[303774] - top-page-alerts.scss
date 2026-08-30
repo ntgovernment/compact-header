@@ -1,0 +1,107 @@
+/* ==========================================================================
+   Squiz Matrix Asset ID: #303774
+   Filename: [303774] - top-page-alerts.scss
+   Description: NTG Top banner urgent site alert messages (Levels 1-5)
+   ========================================================================== */
+
+.top-page-alert-wrapper {
+  position: relative;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 10001;
+  display: none;
+}
+.top-page-alert-wrapper.active {
+  display: block;
+}
+.top-page-alert-wrapper .close-btn {
+  position: absolute;
+  top: 12px;
+  right: 24px;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 2rem;
+  cursor: pointer;
+}
+.top-page-alert-wrapper[data-alert-level="top-page-alert--level-3"] .close-btn {
+  color: #343741;
+}
+.top-page-alert-wrapper .top-page-alert {
+  font-family: "Roboto", arial, sans-serif;
+  background-color: #107810;
+  color: #FFFFFF;
+  padding: 1.25rem 0;
+  font-size: 0.875rem;
+  letter-spacing: 0.024em;
+  line-height: 1.5rem;
+}
+.top-page-alert-wrapper .top-page-alert p {
+  padding: 0;
+  margin: 0;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  max-width: none;
+}
+.top-page-alert-wrapper .top-page-alert__title {
+  font-weight: 700;
+  line-height: 1.5rem;
+  padding-bottom: 0.5rem;
+  margin-top: 1.25rem;
+  margin-top: 0;
+  font-size: 1.125rem;
+}
+.top-page-alert-wrapper .top-page-alert__text {
+  font-weight: 400;
+  line-height: 1.25rem;
+  font-size: 1rem;
+}
+.top-page-alert-wrapper .top-page-alert a {
+  color: #FFFFFF;
+  text-decoration: underline;
+}
+.top-page-alert-wrapper .top-page-alert a:hover {
+  color: #FFFFFF;
+  text-decoration: underline;
+}
+.top-page-alert-wrapper .top-page-alert--level-1 {
+  background-color: #c43004;
+}
+.top-page-alert-wrapper .top-page-alert--level-2 {
+  background-color: #e47024;
+}
+.top-page-alert-wrapper .top-page-alert--level-3 {
+  background-color: #fcc000;
+  color: #343741;
+}
+.top-page-alert-wrapper .top-page-alert--level-3 p {
+  color: #343741;
+}
+.top-page-alert-wrapper .top-page-alert--level-3 p.top-page-alert__title {
+  color: #343741;
+}
+.top-page-alert-wrapper .top-page-alert--level-3 p.top-page-alert__text {
+  color: #304060;
+}
+.top-page-alert-wrapper .top-page-alert--level-3 a {
+  color: #343741;
+}
+.top-page-alert-wrapper .top-page-alert--level-3 a:hover {
+  color: #343741;
+}
+.top-page-alert-wrapper .top-page-alert--level-4 {
+  background-color: #107cc0;
+}
+.top-page-alert-wrapper .top-page-alert--level-5 {
+  background-color: #107810;
+}
+@media (max-width: 768px) {
+  .top-page-alert-wrapper .close-btn {
+    top: -4px;
+    right: 4px;
+  }
+  .top-page-alert-wrapper .top-page-alert {
+    padding: 1.25rem;
+  }
+}

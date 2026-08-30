@@ -1,0 +1,291 @@
+@charset "UTF-8";
+
+/* ==========================================================================
+   Squiz Matrix Parse File: #[846098] - main.css
+   Recreated Modular SCSS Entry Point
+   ========================================================================== */
+
+// Asset #846107: Agency SVGs & graphic overrides
+@import '[846097] - CSS/[846100] - base/[846107] - svgs-agency.scss';
+
+// Asset #846102: Variables, typography scales, spacing & breakpoints
+@import '[846097] - CSS/[846100] - base/[846102] - variables.scss';
+
+// Asset #846103: NTG colour palettes and text/bg utility classes
+@import '[846097] - CSS/[846100] - base/[846103] - colours.scss';
+
+// Asset #846104: AUDS mixins (replace, svguri, math, luminance, space, focus, fontgrid)
+@import '[846097] - CSS/[846100] - base/[846104] - mixins.scss';
+
+// Asset #264069: @gov.au/accordion v7.0.8
+@import '[264064] - AUDS/[264069] - accordions-module.scss';
+
+// Asset #264077: @gov.au/breadcrumbs v3.0.5
+@import '[264064] - AUDS/[264077] - breadcrumbs-module.scss';
+
+// Asset #264085: @gov.au/callout v3.0.2
+@import '[264064] - AUDS/[264085] - callout-module.scss';
+
+// Asset #264089: @gov.au/card v0.3.2
+@import '[264064] - AUDS/[264089] - card-module.scss';
+
+// Asset #264093: @gov.au/control-input v3.0.1
+@import '[264064] - AUDS/[264093] - control-input-module.scss';
+
+// Asset #264097: @gov.au/cta-link v2.2.0
+@import '[264064] - AUDS/[264097] - cta-module.scss';
+
+// Asset #264101: @gov.au/direction-links v3.0.0
+@import '[264064] - AUDS/[264101] - direction-links-module.scss';
+
+// Asset #264105: @gov.au/footer v3.0.5
+@import '[264064] - AUDS/[264105] - footer-module.scss';
+
+// Asset #264113: @gov.au/grid-12 v2.1.0
+@import '[264064] - AUDS/[264113] - grid-12-module.scss';
+
+// Asset #264121: @gov.au/headings v2.0.11
+@import '[264064] - AUDS/[264121] - headings-module.scss';
+
+// Asset #264125: @gov.au/inpage-nav v3.0.6
+@import '[264064] - AUDS/[264125] - inpage-nav-module.scss';
+
+// Asset #264129: @gov.au/keyword-list v3.0.5
+@import '[264064] - AUDS/[264129] - keyword-list-module.scss';
+
+// Asset #264133: @gov.au/link-list v3.0.8
+@import '[264064] - AUDS/[264133] - link-list-module.scss';
+
+// Asset #264141: @gov.au/page-alerts v2.1.3
+@import '[264064] - AUDS/[264141] - page-alerts-module.scss';
+
+// Asset #264149: @gov.au/responsive-media v2.0.14
+@import '[264064] - AUDS/[264149] - responsive-media-module.scss';
+
+// Asset #264153: @gov.au/select v2.0.11
+@import '[264064] - AUDS/[264153] - select-module.scss';
+
+// Asset #264157: @gov.au/side-nav v5.0.7
+@import '[264064] - AUDS/[264157] - side-nav-module.scss';
+
+// Asset #264161: @gov.au/skip-link v2.0.16
+@import '[264064] - AUDS/[264161] - skip-links-module.scss';
+
+// Asset #264173: @gov.au/text-inputs v2.1.2
+@import '[264064] - AUDS/[264173] - text-inputs-module.scss';
+
+// Asset #264312: Custom base styles, body resets, grid rows
+@import '[407329] - CSS/[264312] - custom.scss';
+
+// Asset #392760: Custom agency intranet styles (landing-header, etc.)
+@import '[407329] - CSS/[392760] - custom-agency-intranet.scss';
+
+// Asset #846105: Agency project specific styles (doc search, onboarding, colour helper classes)
+@import '[846097] - CSS/[846100] - base/[846105] - custom.scss';
+
+// Asset #264213: Bootstrap Grid v4.1.3 spacing utility classes (m-*, p-*)
+@import '[305442] - Base/[264213] - bootstrap-spacing.scss';
+
+// Asset #264309: Utils (w-*, h-*, flex, float, display)
+@import '[264304] - base/[264309] - utils.scss';
+
+// Asset #313423: NTGC padding/margin scales (ntgc-p-*, ntgc-m-*), responsive orders, font weights, filetype icons
+@import '[305442] - Base/[313423] - bootstrap-custom.scss';
+
+// Asset #264176: NTG Accordion overrides
+@import '[264175] - Components/[264176] - accordions.scss';
+
+// Asset #264177: NTG Animation keyframes (fadein)
+@import '[264175] - Components/[264177] - animate.scss';
+
+// Asset #303580: NTG Avatar sizes and user info
+@import '[264175] - Components/[303580] - avatar.scss';
+
+// Asset #264178: NTG Badge component styles
+@import '[264175] - Components/[264178] - badges.scss';
+
+// Asset #264179: NTG Dynamic banner & carousel banner styles
+@import '[264175] - Components/[264179] - banners.scss';
+
+// Asset #264180: NTG Body typography, list styles, and blockquotes
+@import '[264175] - Components/[264180] - body.scss';
+
+// Asset #264181: NTG Breadcrumbs component overrides
+@import '[264175] - Components/[264181] - breadcrumbs.scss';
+
+// Asset #264182: NTG Button styles, variants & hover interactions
+@import '[264175] - Components/[264182] - buttons.scss';
+
+// Asset #264183: NTG Callout component overrides
+@import '[264175] - Components/[264183] - callout.scss';
+
+// Asset #264184: NTG CTA link overrides
+@import '[264175] - Components/[264184] - call-to-action.scss';
+
+// Asset #304051: NTG Card component overrides, masonry grid, mini cards
+@import '[264175] - Components/[304051] - cards.scss';
+
+// Asset #264186: NTG Carousel image overrides
+@import '[264175] - Components/[264186] - carousel.scss';
+
+// Asset #264187: NTG Radio and checkbox input controls
+@import '[264175] - Components/[264187] - control-input.scss';
+
+// Asset #409203: NTG Contacts list, blocks & persons pattern styles
+@import '[264175] - Components/[409203] - contacts.scss';
+
+// Asset #315132: NTG Phone directory contacts search, results & favourites
+@import '[264175] - Components/[315132] - contacts-grid.scss';
+
+// Asset #303820: NTG Counter badge styles
+@import '[264175] - Components/[303820] - counter.scss';
+
+// Asset #264188: NTG Back-to-top and floating feedback buttons
+@import '[264175] - Components/[264188] - direction-links.scss';
+
+// Asset #311031: NTG Decision Tree wizard styles & form questions
+@import '[264175] - Components/[311031] - decision-tree.scss';
+
+// Asset #421923: NTG Document list component
+@import '[264175] - Components/[421923] - document-list.scss';
+
+// Asset #264189: NTG Fancybox lightbox overrides
+@import '[264175] - Components/[264189] - fancybox.scss';
+
+// Asset #306408: NTG Featured content blocks, responsive hero cards & credits
+@import '[264175] - Components/[306408] - featured-content.scss';
+
+// Asset #313424: NTG Filter popup modal component
+@import '[264175] - Components/[313424] - filter-popup.scss';
+
+// Asset #264302: NTG Footer navigation and layout
+@import '[264175] - Components/[264302] - footer.scss';
+
+// Asset #264190: NTG Form question, field, and file upload styles
+@import '[264175] - Components/[264190] - form.scss';
+
+// Asset #303430: NTG Form alerts & validation message styles
+@import '[264175] - Components/[303430] - form-alerts.scss';
+
+// Asset #311698: NTG Embedded map styles
+@import '[264175] - Components/[311698] - google-map.scss';
+
+// Asset #264196: NTG Grouped links and job listings
+@import '[264175] - Components/[264196] - grouped-links.scss';
+
+// Asset #411402: NTG Agency Header structure, logos, search bar & mobile menu
+@import '[264175] - Components/[411402] - header-style.scss';
+
+// Asset #264191: NTG Petal animations for heading backgrounds
+@import '[264175] - Components/[264191] - headings.scss';
+
+// Asset #307277: NTG Homepage alert card & tools quick-access lockup
+@import '[264175] - Components/[307277] - homepage-alert-tools-lockup.scss';
+
+// Asset #303372: NTG Petal icons, Font Awesome helpers, and favourites icons
+@import '[264175] - Components/[303372] - icons.scss';
+
+// Asset #315686: NTG Image embed component
+@import '[264175] - Components/[315686] - image-embed.scss';
+
+// Asset #311858: NTG Image gallery modal and slider
+@import '[264175] - Components/[311858] - image-gallery.scss';
+
+// Asset #389584: NTG Image slider heading styles
+@import '[264175] - Components/[389584] - image-slider.scss';
+
+// Asset #306004: NTG Inpage filter bar (grid/list switcher, dropdowns)
+@import '[264175] - Components/[306004] - inpage-filter.scss';
+
+// Asset #264194: NTG Image filters, aspect ratios, and masks
+@import '[264175] - Components/[264194] - image-treatment.scss';
+
+// Asset #264195: NTG Data list definitions and responsive layouts
+@import '[264175] - Components/[264195] - keyword-list.scss';
+
+// Asset #315207: NTG List links styling
+@import '[264175] - Components/[315207] - list-links.scss';
+
+// Asset #326289: NTG User profile page, favorites, and avatar changer
+@import '[264175] - Components/[326289] - my-profile.scss';
+
+// Asset #305340: NTG Primary main mega-menu navigation
+@import '[264175] - Components/[305340] - nav-main.scss';
+
+// Asset #264193: NTG Jump menu and in-page navigation
+@import '[264175] - Components/[264193] - nav-inpage-menus.scss';
+
+// Asset #264198: NTG News listings, articles, pagination, and masonry
+@import '[264175] - Components/[264198] - news.scss';
+
+// Asset #325792: NTG Online systems grid and bookmarks
+@import '[264175] - Components/[325792] - online-system-grid.scss';
+
+// Asset #264199: NTG In-page contextual alert boxes
+@import '[264175] - Components/[264199] - page-alerts.scss';
+
+// Asset #305464: NTG Pagination controls and page numbers
+@import '[264175] - Components/[305464] - pagination.scss';
+
+// Asset #303467: NTG Pill tags & filter checkboxes
+@import '[264175] - Components/[303467] - pill.scss';
+
+// Asset #264200: NTG HTML5 progress bar styling
+@import '[264175] - Components/[264200] - progress-bar.scss';
+
+// Asset #264201: NTG Responsive video spacing
+@import '[264175] - Components/[264201] - responsive-media.scss';
+
+// Asset #264202: NTG Search input, submit buttons, facets, and search results
+@import '[264175] - Components/[264202] - search.scss';
+
+// Asset #264203: NTG Custom dropdown select element
+@import '[264175] - Components/[264203] - select.scss';
+
+// Asset #264204: NTG Side navigation accordion & menu styling
+@import '[264175] - Components/[264204] - side-nav.scss';
+
+// Asset #323916: NTG Skeleton animated placeholder loader
+@import '[264175] - Components/[323916] - skeleton-loader.scss';
+
+// Asset #467780: NTG Loading spinner animation
+@import '[264175] - Components/[467780] - spinner.scss';
+
+// Asset #313058: NTG Numbered vertical step list
+@import '[264175] - Components/[313058] - step-list.scss';
+
+// Asset #392700: NTG Sticky horizontal scroll navigation bar
+@import '[264175] - Components/[392700] - sticky-nav.scss';
+
+// Asset #304428: NTG Toggle switch slider
+@import '[264175] - Components/[304428] - switch.scss';
+
+// Asset #264206: NTG Tables, DataTables sorting headers, and table animations
+@import '[264175] - Components/[264206] - table.scss';
+
+// Asset #304653: NTG Tabs navigation header
+@import '[264175] - Components/[304653] - tabs.scss';
+
+// Asset #264207: NTG Tag and agency badges
+@import '[264175] - Components/[264207] - tag.scss';
+
+// Asset #264208: NTG Text input controls, currency inputs, and date pickers
+@import '[264175] - Components/[264208] - text-inputs.scss';
+
+// Asset #303774: NTG Top banner urgent site alert messages (Levels 1-5)
+@import '[264175] - Components/[303774] - top-page-alerts.scss';
+
+// Asset #306980: NTG HTML5 embedded video player with transcript captions
+@import '[264175] - Components/[306980] - video-embed-html5.scss';
+
+// Asset #311857: NTG Video embed wrapper & modal trigger button
+@import '[264175] - Components/[311857] - video-embed.scss';
+
+// Asset #inline-parse-header: Custom header overrides defined directly in parse file
+@import '[846097] - CSS/custom-header-overrides.scss';
+
+// Asset #400319: Print media styles
+@import '[305442] - Base/[400319] - print.scss';
+
+// Asset #989747: Agency secondary sub-navigation styles & header inner fix
+@import '[846097] - CSS/[846100] - base/[989747] - secondary-navigation.css';

@@ -1,0 +1,46 @@
+/* ==========================================================================
+   Squiz Matrix Asset ID: #467780
+   Filename: [467780] - spinner.scss
+   Description: NTG Loading spinner animation
+   ========================================================================== */
+
+.ntgc-spinner {
+  background: #FFFFFF;
+  color: #7E807B;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  z-index: 5000;
+  top: 0;
+  left: 0;
+  float: left;
+  text-align: center;
+  padding-top: 1.5rem;
+  opacity: 0.8;
+  margin-top: 7rem;
+}
+.ntgc-spinner .spinner {
+  margin: 0 auto;
+  height: 4rem;
+  width: 4rem;
+  animation: rotate 0.8s infinite linear;
+  border: 5px solid #2E979B;
+  border-right-color: transparent;
+  border-radius: 50%;
+}
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@media (max-width: 768px) {
+  .ntgc-spinner {
+    margin-top: 15rem;
+    left: 60px !important;
+    height: 55%;
+    width: 65%;
+  }
+}

@@ -1,0 +1,61 @@
+/* ==========================================================================
+   Squiz Matrix Asset ID: #264176
+   Filename: [264176] - accordions.scss
+   Description: NTG Accordion overrides
+   ========================================================================== */
+
+.au-accordion {
+  border: 0;
+  border-bottom: 1px solid #DEDEDA;
+  max-width: 48rem;
+  color: #454347;
+}
+.au-accordion h3 {
+  margin-top: 1.5rem !important;
+}
+.au-accordion .au-accordion__title h3 {
+  margin: 0 !important;
+}
+.au-accordion .au-accordion__title {
+  padding: 16px 40px 16px 0px;
+  padding: 1 rem  2.5 rem  1 rem  0 rem;
+  background-color: transparent !important;
+  text-decoration: none;
+}
+.au-accordion .au-accordion__title:after {
+  right: 1rem;
+}
+.au-accordion .au-accordion__title:hover {
+  text-decoration: underline;
+}
+.au-accordion .au-accordion__title:hover:after {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 128 128'%3E%3Cpath fill='%23208820' d='M64 0l64 64-16 16-64-64'/%3E%3Cpath fill='%23208820' d='M64 0l16 16-64 64L0 64'/%3E%3C/svg%3E");
+}
+.au-accordion .au-accordion__title:after {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 128 128'%3E%3Cpath fill='%23102040' d='M64 0l64 64-16 16-64-64'/%3E%3Cpath fill='%23102040' d='M64 0l16 16-64 64L0 64'/%3E%3C/svg%3E");
+}
+.au-accordion .au-accordion__title:disabled {
+  background-color: #F0EFEE !important;
+  color: #BABBB8;
+  cursor: default;
+}
+.au-accordion .au-accordion__title:disabled:after {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 128 128'%3E%3Cpath fill='%23acb0b4' d='M64 0l64 64-16 16-64-64'/%3E%3Cpath fill='%23acb0b4' d='M64 0l16 16-64 64L0 64'/%3E%3C/svg%3E");
+}
+.au-accordion .au-accordion__title:disabled:hover {
+  text-decoration: none;
+}
+.au-accordion .au-accordion__title:disabled:hover:after {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 128 128'%3E%3Cpath fill='%23acb0b4' d='M64 0l64 64-16 16-64-64'/%3E%3Cpath fill='%23acb0b4' d='M64 0l16 16-64 64L0 64'/%3E%3C/svg%3E");
+}
+.au-accordion .au-accordion__body-wrapper {
+  border: 0;
+  padding: 16px 16px 16px 0px;
+  padding: 1 rem  1 rem  1 rem  0 rem;
+}
+.au-accordion.au-accordion--dark {
+  border-color: #a2a1a3;
+}
+.au-accordion-group li:first-child .au-accordion__title {
+  border-top: 1px solid #DEDEDA;
+}

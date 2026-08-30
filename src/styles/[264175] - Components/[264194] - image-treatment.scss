@@ -1,0 +1,91 @@
+/* ==========================================================================
+   Squiz Matrix Asset ID: #264194
+   Filename: [264194] - image-treatment.scss
+   Description: NTG Image filters, aspect ratios, and masks
+   ========================================================================== */
+
+.ntgc-image-treatment {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+}
+.ntgc-image-treatment__filter {
+  position: relative;
+  margin-bottom: 20px;
+  filter: saturate(1.5) contrast(1.5) saturate(0.6);
+}
+.ntgc-image-treatment__filter img {
+  display: block;
+}
+.ntgc-image-treatment__filter:before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(228, 112, 36, 0.3);
+  transition: background 0.3s linear;
+}
+.ntgc-image-ratio {
+  position: relative;
+  display: block;
+  height: 0;
+  padding: 0;
+  overflow: hidden;
+}
+.ntgc-image-ratio.compat-object-fit {
+  background-size: cover;
+  background-position: center center;
+}
+.ntgc-image-ratio.compat-object-fit .ntgc-image-ratio__content {
+  opacity: 0;
+}
+.ntgc-image-ratio > .ntgc-image-ratio__content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  border: 0;
+  object-fit: cover;
+}
+.ntgc-image-ratio > .ntgc-image-ratio__content[data-type="illustration"] {
+  width: 90%;
+  height: 90%;
+  top: 5%;
+  left: 5%;
+}
+.ntgc-image-ratio > .ntgc-image-ratio__content[data-type="illustration"].contain {
+  object-fit: contain;
+}
+.ntgc-image-ratio--1x1 {
+  padding-bottom: 100%;
+}
+.ntgc-image-ratio--2x1 {
+  padding-bottom: 50%;
+}
+.ntgc-image-ratio--3x2 {
+  padding-bottom: 66.6666666667%;
+}
+.ntgc-image-mask {
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: center center;
+}
+.ntgc-image-mask--petal {
+  -webkit-mask-image: url("/?a=303371");
+  -webkit-mask-size: contain;
+}
+.ntgc-image-mask--blob-a {
+  -webkit-mask-image: url("/?a=485886");
+  -webkit-mask-size: 100%;
+}
+.ntgc-image-mask--blob-b {
+  -webkit-mask-image: url("/?a=485938");
+  -webkit-mask-size: 110%;
+}
+.ntgc-image-mask--blob-c {
+  -webkit-mask-image: url("/?a=485939");
+  -webkit-mask-size: 120%;
+}

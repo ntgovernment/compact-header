@@ -1,0 +1,168 @@
+/* ==========================================================================
+   Squiz Matrix Asset ID: #264182
+   Filename: [264182] - buttons.scss
+   Description: NTG Button styles, variants & hover interactions
+   ========================================================================== */
+
+.ntgc-btn {
+  display: inline-block;
+  appearance: none;
+  background: #343741;
+  color: #FFFFFF;
+  min-width: 6.125rem;
+  padding: 0.75rem 1.75rem;
+  border: 4px solid transparent;
+  border-radius: 1.75rem;
+  cursor: pointer;
+  vertical-align: middle;
+  transition: background 200ms ease;
+  -moz-background-clip: padding;
+  /* Firefox 3.6 */
+  -webkit-background-clip: padding;
+  background-clip: padding-box;
+  /* Safari 4? Chrome 6? */
+  /* Firefox 4, Safari 5, Opera 10, IE 9 */
+}
+.ntgc-btn:hover {
+  background-color: #304060;
+  -moz-background-clip: padding;
+  /* Firefox 3.6 */
+  -webkit-background-clip: padding;
+  background-clip: padding-box;
+  /* Safari 4? Chrome 6? */
+  /* Firefox 4, Safari 5, Opera 10, IE 9 */
+}
+.ntgc-btn:focus {
+  border-color: #fd7cb1;
+  outline: 0;
+}
+.ntgc-btn:active {
+  background: #343741;
+  border: 4px solid transparent;
+  -moz-background-clip: padding;
+  /* Firefox 3.6 */
+  -webkit-background-clip: padding;
+  background-clip: padding-box;
+  /* Safari 4? Chrome 6? */
+  /* Firefox 4, Safari 5, Opera 10, IE 9 */
+}
+.ntgc-btn:disabled {
+  border: 4px solid transparent;
+  cursor: default;
+  background: #F0EFEE;
+  color: #7E807B;
+  -moz-background-clip: padding;
+  /* Firefox 3.6 */
+  -webkit-background-clip: padding;
+  background-clip: padding-box;
+  /* Safari 4? Chrome 6? */
+  /* Firefox 4, Safari 5, Opera 10, IE 9 */
+}
+.ntgc-btn--center {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  display: block;
+  width: 50%;
+}
+.ntgc-btn.ntgc-btn--secondary {
+  background: #FFFFFF;
+  color: #343741;
+  box-shadow: 0px 0px 0px 1px #343741 inset;
+  transition: color 200ms ease;
+  -moz-background-clip: padding;
+  /* Firefox 3.6 */
+  -webkit-background-clip: padding;
+  background-clip: padding-box;
+  /* Safari 4? Chrome 6? */
+  /* Firefox 4, Safari 5, Opera 10, IE 9 */
+}
+.ntgc-btn.ntgc-btn--secondary:hover {
+  background-color: #304060;
+  color: #FFFFFF;
+}
+.ntgc-btn.ntgc-btn--secondary:focus {
+  border: 4px solid #fd7cb1;
+}
+.ntgc-btn.ntgc-btn--secondary:active {
+  background: #FFFFFF;
+  color: #343741;
+  border: 4px solid transparent;
+}
+.ntgc-btn.ntgc-btn--tertiary {
+  background: none;
+  color: #343741;
+  padding: 0.5rem 1rem;
+  height: auto;
+  border: none;
+  border-radius: 0;
+  min-width: auto;
+  transition: color 200ms ease;
+  position: relative;
+}
+.ntgc-btn.ntgc-btn--tertiary:hover {
+  color: #2E979B;
+}
+.ntgc-btn.ntgc-btn--tertiary:hover::before {
+  right: -16px;
+  transition: right 300ms ease;
+}
+.ntgc-btn.ntgc-btn--tertiary:focus {
+  outline: 4px solid #fd7cb1;
+}
+.ntgc-btn.ntgc-btn--tertiary:active {
+  color: #343741;
+  outline: 0;
+}
+.ntgc-btn.ntgc-btn--tertiary:disabled {
+  color: #7E807B;
+}
+.ntgc-btn.ntgc-btn--tertiary:disabled::after {
+  color: #BABBB8;
+  right: -8px;
+}
+.ntgc-btn.ntgc-btn--tertiary::before {
+  font-family: "Font Awesome 5 Pro";
+  content: "";
+  color: #2E979B;
+  font-weight: 400;
+  position: absolute;
+  right: -8px;
+  top: 0.5rem;
+  transition: right 300ms ease;
+}
+a.ntgc-btn {
+  text-decoration: none;
+  color: #FFFFFF;
+  min-width: auto;
+}
+a.ntgc-btn:hover {
+  color: #FFFFFF;
+}
+a.ntgc-btn:focus {
+  outline: none;
+}
+a.ntgc-btn[href^="mailto:"] {
+  color: #FFFFFF;
+}
+a.ntgc-btn.ntgc-btn--secondary[href^="mailto:"], a.ntgc-btn.ntgc-btn--tertiary[href^="mailto:"] {
+  color: #343741;
+}
+.ntgc-btn__file {
+  border-radius: 0;
+  border: 1px solid #DEDEDA;
+  background: #FFFFFF;
+  min-width: 3.5rem;
+  padding: 0.94rem 0;
+  margin: 0.625rem 0 0 0;
+  cursor: pointer;
+}
+.ntgc-btn__file:hover {
+  border-color: #343741;
+}
+.ntgc-btn__file:focus {
+  outline: 3px solid #fd7cb1;
+}
+/**
+ * The generic callout.
+ */

@@ -1,0 +1,111 @@
+/* ==========================================================================
+   Squiz Matrix Asset ID: #846104
+   Filename: [846104] - mixins.scss
+   Description: AUDS mixins (replace, svguri, math, luminance, space, focus, fontgrid)
+   ========================================================================== */
+
+/**
+ * AU-replace - Replace a string with a string
+ * http://codepen.io/jakob-e/pen/doMoML
+ *
+ * @author @eriksen_dk <https://twitter.com/eriksen_dk>
+ *
+ * @param  {string} $string  - The haystack string to be manipulated
+ * @param  {string} $search  - The needle to be replace
+ * @param  {string} $replace - The replacement
+ *
+ * @return {string}          - The manipulated string with replaced values
+ */
+/**
+ * AU-svguri - Generate an optimized SVG data-uri
+ * https://codepen.io/tigt/post/optimizing-svgs-in-data-uris
+ * http://codepen.io/jakob-e/pen/doMoML
+ *
+ * @author @eriksen_dk <https://twitter.com/eriksen_dk>
+ *
+ * @param  {string} $svg - The SVG to be converted
+ *
+ * @return {string}      - An optimized data-uri
+ */
+/**
+ * AU-factorial - Returns the factorial of a non-negative integer.
+ * https://github.com/terkel/mathsass
+ *
+ * @author Pascal Duez @pascalduez <http://pascalduez.me/>
+ *
+ * @param  {integer} $number - A non-negative integer.
+ *
+ * @return {integer}         - The factorial log
+ */
+/**
+ * AU-pow - Returns base to the exponent power.
+ * https://github.com/terkel/mathsass
+ *
+ * @author Pascal Duez @pascalduez <http://pascalduez.me/>
+ *
+ * @param  {integers} $base     - The base number
+ * @param  {integers} $exponent - The exponent to which to raise base
+ *
+ * @return {integers}           - The result of the math
+ */
+/**
+ * AU-color-luminance - Calculate color luminance
+ *
+ * https://github.com/voxpelli/sass-color-helpers/blob/master/stylesheets/color-helpers/_contrast.scss
+ * Adapted from: https://github.com/LeaVerou/contrast-ratio/blob/gh-pages/color.js
+ * Formula: http://www.w3.org/TR/2008/REC-WCAG20-20081211/#relativeluminancedef
+ *
+ * @author Pelle Wessman @voxpelli <http://kodfabrik.se/>
+ *
+ * @param  {string} $color - The color to calculate the luminance from
+ *
+ * @return {float}          - The luminance
+ */
+/**
+ * AU-space - Mixin for setting a properties value to snap to the grid, with a fallback for REM.
+ *
+ * @param  {string} $property - The css property to apply the spacing ( padding, margin )
+ * @param  {number} $values   - The values of the property ( 0, 20px, 1unit, 5% )
+ *
+ * @return {number}           - The space in px and rems
+ */
+/**
+ * AU-clearfix - Clearing floats
+ */
+/**
+ * AU-media - Create media queries and wraps the @content code inside of it
+ *
+ * @param  {keywords} $breakpoint - Either one of the following keywords: xs, sm, md, lg
+ *
+ * @return {string}               - The code passed in via @content wrapped inside a media query
+ */
+/**
+ * AU-sronly - Hide an element from the screen but not a screen reader
+ */
+/**
+ * AU-outline - Create outline based on the theme the user is using.
+ *
+ * @param  {keywords} $theme - `dark` or default ( `light` )
+ *
+ * @return {string}          - The code
+ */
+/**
+ * AU-focus - Add the outline to focus
+ */
+/**
+ * AU-fontgrid Mixin for setting font-size and line-height that snaps to the grid.
+ *
+ * @param  {keywords} $fontsize-key   -  Either one of the following keywords: xs, sm, md, lg, xl, xxl, xxxl
+ * @param  {keywords} $lineheight-key -  Either one of the following keywords: heading, nospace, default
+ *
+ * @return {string}                   - The code; fontsize in REM, with PX fallback, and unitless line-height which matches vertical grid
+*/
+/**
+ * Sass versioning
+ *
+ * @description  Version your scss modules and test them at compile time
+ * @author       @dominikwilkowski
+ * @website      https://dominikwilkowski.github.io/sass-versioning/sassdoc/
+ * @repository   https://github.com/dominikwilkowski/sass-versioning
+ * @license      https://raw.githubusercontent.com/dominikwilkowski/sass-versioning/master/LICENSE GPL-3.0
+ */

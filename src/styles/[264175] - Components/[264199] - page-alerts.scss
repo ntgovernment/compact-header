@@ -1,0 +1,111 @@
+/* ==========================================================================
+   Squiz Matrix Asset ID: #264199
+   Filename: [264199] - page-alerts.scss
+   Description: NTG In-page contextual alert boxes
+   ========================================================================== */
+
+.ntgc-inpage-alert {
+  font-size: 16px;
+  font-size: 1rem;
+  line-height: 1.5;
+  font-family: "Roboto", arial, sans-serif;
+  color: #304060;
+  background-color: #FFFFFF;
+  word-wrap: break-word;
+  max-width: 42rem;
+  padding: 1.5rem 2rem;
+  border-left-width: 0.375rem !important;
+  position: relative;
+}
+* + .ntgc-inpage-alert {
+  margin-top: 32px;
+  margin-top: 2 rem;
+}
+.ntgc-inpage-alert p, .ntgc-inpage-alert h2, .ntgc-inpage-alert h3, .ntgc-inpage-alert h4, .ntgc-inpage-alert h5, .ntgc-inpage-alert li {
+  margin: 0;
+  margin-left: 3rem;
+  color: #304060 !important;
+}
+.ntgc-inpage-alert > p:nth-of-type(1), .ntgc-inpage-alert > h2:nth-of-type(1), .ntgc-inpage-alert > h3:nth-of-type(1), .ntgc-inpage-alert > h4:nth-of-type(1) {
+  margin-top: 12px;
+  margin-top: 0.75 rem;
+}
+.ntgc-inpage-alert * + p, .ntgc-inpage-alert * + h2, .ntgc-inpage-alert * + h3, .ntgc-inpage-alert * + h4, .ntgc-inpage-alert * + h5 {
+  margin-top: 16px;
+  margin-top: 1 rem;
+  margin-left: 48px;
+  margin-left: 3 rem;
+}
+.ntgc-inpage-alert + p, .ntgc-inpage-alert + h2, .ntgc-inpage-alert + h3, .ntgc-inpage-alert + h4, .ntgc-inpage-alert + h5 {
+  margin-top: 32px;
+  margin-top: 2 rem;
+  margin-left: 48px;
+  margin-left: 3 rem;
+}
+.ntgc-inpage-alert ul:not([class]) {
+  margin-top: 1rem;
+}
+.ntgc-inpage-alert ul:not([class]) > li {
+  margin-top: 0;
+}
+.ntgc-inpage-alert__icon {
+  font-size: 1.75rem;
+  position: absolute;
+  top: 1rem;
+  left: 2rem;
+}
+.ntgc-inpage-alert--success {
+  color: #107810;
+  border: 1.25px solid currentColor;
+  background-color: rgba(16, 120, 16, 0.05);
+}
+.ntgc-inpage-alert--success ul:not([class]) > li::before, .ntgc-inpage-alert--success ol:not([class]) > li::before {
+  color: #107810;
+}
+.ntgc-inpage-alert--info {
+  color: #107cc0;
+  border: 1.25px solid currentColor;
+  background-color: rgba(16, 124, 192, 0.05);
+}
+.ntgc-inpage-alert--info ul:not([class]) > li::before, .ntgc-inpage-alert--info ol:not([class]) > li::before {
+  color: #107cc0;
+}
+.ntgc-inpage-alert--alert {
+  color: #fcc000;
+  border: 1.25px solid currentColor;
+  background-color: rgba(252, 192, 0, 0.05);
+}
+.ntgc-inpage-alert--alert ul:not([class]) > li::before, .ntgc-inpage-alert--alert ol:not([class]) > li::before {
+  color: #fcc000;
+}
+.ntgc-inpage-alert--alert-critical {
+  color: #e47024;
+  border: 1.25px solid currentColor;
+  background-color: rgba(228, 112, 36, 0.05);
+}
+.ntgc-inpage-alert--alert-critical ul:not([class]) > li::before, .ntgc-inpage-alert--alert-critical ol:not([class]) > li::before {
+  color: #e47024;
+}
+.ntgc-inpage-alert--warning {
+  color: #c43004;
+  border: 0.1rem solid currentColor;
+  background-color: rgba(196, 48, 4, 0.05);
+}
+.ntgc-inpage-alert--warning ul:not([class]) > li::before, .ntgc-inpage-alert--warning ol:not([class]) > li::before {
+  color: #c43004;
+}
+.ntgc-persona-message {
+  background: #F0EFEE;
+  border-left: 4px solid #2E979B;
+  padding: 1.5rem 2rem;
+  margin-bottom: 3rem;
+  display: none;
+}
+.ntgc-persona-message.active {
+  display: flex;
+}
+.ntgc-persona-message .fal {
+  color: #2E979B;
+  margin-right: 1rem;
+  font-size: 1.5rem;
+}

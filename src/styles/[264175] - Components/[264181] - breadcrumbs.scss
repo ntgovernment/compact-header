@@ -1,0 +1,71 @@
+/* ==========================================================================
+   Squiz Matrix Asset ID: #264181
+   Filename: [264181] - breadcrumbs.scss
+   Description: NTG Breadcrumbs component overrides
+   ========================================================================== */
+
+.ntgc-breadcrumbs {
+  max-width: 56rem;
+}
+.ntgc-breadcrumbs > ul {
+  padding: 0;
+}
+.ntgc-breadcrumbs li.breadcrumb, .ntgc-breadcrumbs li.breadcrumb > a {
+  color: #d0e0e0;
+  font-weight: 400;
+  font-size: 0.875rem;
+  letter-spacing: 0.024em;
+  line-height: 1.25rem;
+}
+.ntgc-breadcrumbs li.breadcrumb {
+  padding: 0;
+  padding-right: 1.5rem;
+  margin: 0;
+  display: inline-block;
+  position: relative;
+}
+.ntgc-breadcrumbs li.breadcrumb > a {
+  transition: color 200ms ease;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+}
+.ntgc-breadcrumbs li.breadcrumb > a:hover {
+  color: #2E979B;
+  border-bottom: 1px solid #2E979B;
+}
+.ntgc-breadcrumbs li.breadcrumb > a:focus, .ntgc-breadcrumbs li.breadcrumb > a:active {
+  outline: none;
+  color: #FFFFFF;
+}
+.ntgc-breadcrumbs li.breadcrumb::before {
+  font-family: "Font Awesome 5 Pro";
+  content: "";
+  font-weight: 600;
+  position: absolute;
+  right: 0.5rem;
+  font-size: 0.75rem;
+  top: 1px;
+  opacity: 0.52;
+}
+.ntgc-breadcrumbs li.breadcrumb:last-child::before {
+  display: none;
+}
+.ntgc-breadcrumbs.ntgc-breadcrumbs--dark li.breadcrumb, .ntgc-breadcrumbs.ntgc-breadcrumbs--dark li.breadcrumb > a {
+  color: white;
+}
+.ntgc-breadcrumbs.ntgc-breadcrumbs--dark li.breadcrumb > a {
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+}
+.ntgc-breadcrumbs.ntgc-breadcrumbs--dark li.breadcrumb > a:hover {
+  color: white;
+  border-bottom: 1px solid currentcolor;
+}
+.ntgc-breadcrumbs.ntgc-breadcrumbs--dark li.breadcrumb > a:focus, .ntgc-breadcrumbs.ntgc-breadcrumbs--dark li.breadcrumb > a:active {
+  outline: none;
+  color: white;
+}
+.ntgc-breadcrumbs.ntgc-breadcrumbs--dark li.breadcrumb::before {
+  color: #848CA0;
+  opacity: 0.52;
+}

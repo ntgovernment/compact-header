@@ -1,0 +1,167 @@
+/* ==========================================================================
+   Squiz Matrix Asset ID: #264069
+   Filename: [264069] - accordions-module.scss
+   Description: @gov.au/accordion v7.0.8
+   ========================================================================== */
+
+/*! @gov.au/accordion v7.0.8 */
+@media print {
+  .au-accordion {
+    border-color: #000 !important;
+    color: #000 !important;
+  }
+  .au-accordion__title {
+    background: #fff !important;
+    color: #000 !important;
+    border: 1px !important;
+  }
+  .au-accordion__title:after {
+    display: none;
+  }
+  .au-accordion__body-wrapper {
+    border-color: #000 !important;
+  }
+  .au-accordion__body {
+    height: auto !important;
+    display: block !important;
+  }
+}
+.au-accordion {
+  font-size: 16px;
+  font-size: 1rem;
+  line-height: 1.5;
+  display: block;
+  border: 1px solid #9a9ba0;
+  font-family: "Roboto", arial, sans-serif;
+  color: #343741;
+  padding: 0;
+}
+* + .au-accordion {
+  margin-top: 16px;
+  margin-top: 1 rem;
+}
+.au-accordion .au-accordion__title {
+  background-color: whitesmoke;
+}
+.au-accordion.au-accordion--dark {
+  border-color: #a2a1a3;
+  color: #FFFFFF;
+}
+.au-accordion.au-accordion--dark .au-accordion__title {
+  background-color: #3b393d;
+}
+.au-accordion + .au-accordion {
+  margin-top: 0;
+  border-top: 0;
+}
+.au-body .au-accordion__title, .au-accordion__title {
+  font-size: 20px;
+  font-size: 1.25rem;
+  line-height: 1.2;
+  padding: 16px 40px 16px 16px;
+  padding: 1 rem  2.5 rem  1 rem  1 rem;
+  width: 100%;
+  display: block;
+  color: #343741;
+  text-decoration: underline;
+  text-decoration-skip-ink: auto;
+  font-weight: bold;
+  position: relative;
+  box-sizing: border-box;
+  margin: 0;
+  cursor: pointer;
+  border: none;
+  text-align: left;
+  font-family: inherit;
+}
+.au-body .au-accordion__title:hover, .au-accordion__title:hover {
+  text-decoration: none;
+  color: #343741;
+}
+.au-body .au-accordion__title:hover:after, .au-accordion__title:hover:after {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 128 128'%3E%3Cpath fill='%23343741' d='M64 0l64 64-16 16-64-64'/%3E%3Cpath fill='%23343741' d='M64 0l16 16-64 64L0 64'/%3E%3C/svg%3E");
+}
+.au-body .au-accordion__title:focus, .au-accordion__title:focus {
+  outline: 3px solid #fd7cb1;
+  outline-offset: 2px;
+}
+.au-body .au-accordion__title::-moz-focus-inner, .au-accordion__title::-moz-focus-inner {
+  border: 0;
+}
+.au-body .au-accordion__title:focus, .au-accordion__title:focus {
+  z-index: 100;
+}
+.au-body .au-accordion__title::-webkit-details-marker, .au-accordion__title::-webkit-details-marker {
+  display: none;
+}
+.au-body .au-accordion__title:after, .au-accordion__title:after {
+  content: " ";
+  position: absolute;
+  top: 50%;
+  margin-top: -8px;
+  margin-top: -0.5 rem;
+  right: 16px;
+  right: 1 rem;
+  width: 16px;
+  width: 1 rem;
+  height: 16px;
+  height: 1 rem;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 128 128'%3E%3Cpath fill='%23343741' d='M64 0l64 64-16 16-64-64'/%3E%3Cpath fill='%23343741' d='M64 0l16 16-64 64L0 64'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: center;
+  z-index: 101;
+  transition: transform 0.25s ease-in;
+}
+.au-body .au-accordion__title.au-accordion--closed:after, .au-accordion__title.au-accordion--closed:after {
+  transform: rotate(-180deg);
+}
+.ie8 .au-body .au-accordion__title:after, .lt-ie8 .au-body .au-accordion__title:after, .ie8 .au-accordion__title:after, .lt-ie8 .au-accordion__title:after {
+  content: " ▼ ";
+}
+.ie8 .au-body .au-accordion__title.au-accordion--open:after, .lt-ie8 .au-body .au-accordion__title.au-accordion--open:after, .ie8 .au-accordion__title.au-accordion--open:after, .lt-ie8 .au-accordion__title.au-accordion--open:after {
+  content: " ▲ ";
+}
+.au-body.au-body--dark .au-accordion__title, .au-accordion.au-accordion--dark .au-accordion__title {
+  color: #FFFFFF;
+}
+.au-body.au-body--dark .au-accordion__title:hover, .au-accordion.au-accordion--dark .au-accordion__title:hover {
+  color: #FFFFFF;
+}
+.au-body.au-body--dark .au-accordion__title:hover:after, .au-accordion.au-accordion--dark .au-accordion__title:hover:after {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 128 128'%3E	%3Cpath fill='%23FFFFFF' d='M64 0l64 64-16 16-64-64'/%3E	%3Cpath fill='%23FFFFFF' d='M64 0l16 16-64 64L0 64'/%3E%3C/svg%3E");
+}
+.au-body.au-body--dark .au-accordion__title:focus, .au-accordion.au-accordion--dark .au-accordion__title:focus {
+  outline: 3px solid #fd7cb1;
+}
+.au-body.au-body--dark .au-accordion__title::-moz-focus-inner, .au-accordion.au-accordion--dark .au-accordion__title::-moz-focus-inner {
+  border: 0;
+}
+.au-body.au-body--dark .au-accordion__title:after, .au-accordion.au-accordion--dark .au-accordion__title:after {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 128 128'%3E	%3Cpath fill='%23FFFFFF' d='M64 0l64 64-16 16-64-64'/%3E	%3Cpath fill='%23FFFFFF' d='M64 0l16 16-64 64L0 64'/%3E%3C/svg%3E");
+}
+.au-accordion__body {
+  font-size: 16px;
+  font-size: 1rem;
+  line-height: 1.5;
+  overflow: hidden;
+}
+.js .au-accordion__body.au-accordion--open {
+  display: block;
+  height: auto;
+}
+.js .au-accordion__body.au-accordion--closed {
+  display: none;
+  height: 0;
+}
+.au-accordion__body-wrapper {
+  padding: 16px;
+  padding: 1 rem;
+  border-top: 1px solid #9a9ba0;
+}
+.au-accordion--dark .au-accordion__body-wrapper {
+  border-top: 1px solid #a2a1a3;
+}
+.au-accordion-group {
+  list-style: none;
+  padding: 0;
+}

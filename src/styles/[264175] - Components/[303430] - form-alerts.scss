@@ -1,0 +1,68 @@
+/* ==========================================================================
+   Squiz Matrix Asset ID: #303430
+   Filename: [303430] - form-alerts.scss
+   Description: NTG Form alerts & validation message styles
+   ========================================================================== */
+
+.ntgc-form-alerts {
+  padding: 11px;
+  padding: 0.69 rem;
+  font-size: 16px;
+  font-size: 1rem;
+  line-height: 1.5;
+  position: relative;
+  border: solid 0.0625rem #357CBB;
+  border-left-color: #107cc0;
+  border-left-width: 48px;
+  border-left-width: 3 rem;
+  border-radius: 0;
+  word-wrap: break-word;
+  margin: 0 0 1.5rem 0;
+}
+* + .ntgc-form-alerts {
+  margin-top: 16px;
+  margin-top: 1 rem;
+}
+.ntgc-form-alerts:after {
+  position: absolute;
+  top: 50%;
+  left: -36px;
+  left: -2.25 rem;
+  width: 24px;
+  width: 1.5 rem;
+  height: 24px;
+  height: 1.5 rem;
+  margin-top: -14px;
+  margin-top: -0.9 rem;
+  border-left-width: -12px;
+  border-left-width: -0.75 rem;
+  font-family: "Font Awesome 5 Pro";
+  color: #FFFFFF;
+  font-size: 1.25rem;
+  text-align: center;
+  font-weight: 300;
+  content: "";
+}
+.ntgc-form-alerts--success {
+  border-color: #4D9C41;
+  border-left-color: #2E979B;
+}
+.ntgc-form-alerts--success:after {
+  content: "";
+}
+.ntgc-form-alerts--error {
+  border-color: #D50101;
+}
+.ntgc-form-alerts--error:after {
+  content: "";
+}
+.ntgc-form-alerts__sronly {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}

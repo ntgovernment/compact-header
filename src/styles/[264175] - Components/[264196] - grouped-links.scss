@@ -1,0 +1,171 @@
+/* ==========================================================================
+   Squiz Matrix Asset ID: #264196
+   Filename: [264196] - grouped-links.scss
+   Description: NTG Grouped links and job listings
+   ========================================================================== */
+
+.ntgc-box-shadow {
+  box-shadow: 0px 4px 8px rgba(16, 32, 64, 0.16);
+}
+.ntgc-grouped-links {
+  padding: 3rem;
+  border: 1px solid #DEDEDA;
+  color: #454347;
+  /**
+      * Job listings
+    */
+}
+.ntgc-grouped-links .flex > li, .ntgc-grouped-links .flex > div {
+  flex: 100%;
+  flex-direction: column;
+}
+.ntgc-grouped-links__title {
+  max-width: 48rem;
+}
+.ntgc-grouped-links--two-col .flex > ul, .ntgc-grouped-links--two-col .flex > li, .ntgc-grouped-links--two-col .flex > div {
+  flex: 45%;
+  flex-direction: row;
+}
+.ntgc-grouped-links--two-col .flex > ul:nth-child(2n+1), .ntgc-grouped-links--two-col .flex > li:nth-child(2n+1), .ntgc-grouped-links--two-col .flex > div:nth-child(2n+1) {
+  margin-right: 32px;
+}
+.ntgc-grouped-links--two-col .flex > ul:last-child, .ntgc-grouped-links--two-col .flex > li:last-child, .ntgc-grouped-links--two-col .flex > div:last-child {
+  margin-right: 0;
+}
+.ntgc-grouped-links a {
+  text-decoration: none;
+}
+.ntgc-grouped-links a:hover {
+  text-decoration: underline;
+}
+.ntgc-grouped-links li > a {
+  color: #304060;
+}
+.ntgc-grouped-links h2, .ntgc-grouped-links h3, .ntgc-grouped-links h4, .ntgc-grouped-links p, .ntgc-grouped-links span {
+  margin: 0;
+}
+.ntgc-grouped-links h2.ntgc-grouped-links__title, .ntgc-grouped-links h2 > a, .ntgc-grouped-links h3.ntgc-grouped-links__title, .ntgc-grouped-links h3 > a, .ntgc-grouped-links h4.ntgc-grouped-links__title, .ntgc-grouped-links h4 > a, .ntgc-grouped-links p.ntgc-grouped-links__title, .ntgc-grouped-links p > a, .ntgc-grouped-links span.ntgc-grouped-links__title, .ntgc-grouped-links span > a {
+  margin-bottom: 1.5rem;
+  color: #343741;
+  font-weight: 700;
+}
+.ntgc-grouped-links h2 + p, .ntgc-grouped-links h3 + p, .ntgc-grouped-links h4 + p, .ntgc-grouped-links p + p, .ntgc-grouped-links span + p {
+  margin-top: 1.5rem;
+}
+.ntgc-grouped-links .ntgc-btn {
+  margin-left: 0;
+  margin-right: 0;
+  margin-top: 2.75rem;
+}
+.ntgc-grouped-links p + ul.au-link-list {
+  margin-top: 1.25rem;
+}
+.ntgc-grouped-links .au-link-list > li {
+  margin: 0;
+  padding: 0;
+  border-bottom: 1px solid #d3dfe0;
+}
+.ntgc-grouped-links .au-link-list > li > a {
+  padding: 1rem 3rem 1rem 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  text-decoration: none;
+  position: relative;
+}
+.ntgc-grouped-links .au-link-list > li > a:hover, .ntgc-grouped-links .au-link-list > li > a:active, .ntgc-grouped-links .au-link-list > li > a.au-link-list__item--active {
+  text-decoration: none;
+}
+.ntgc-grouped-links .au-link-list > li > a:hover::after, .ntgc-grouped-links .au-link-list > li > a:active::after, .ntgc-grouped-links .au-link-list > li > a.au-link-list__item--active::after {
+  transition: right 300ms ease;
+  right: 0;
+}
+.ntgc-grouped-links .au-link-list > li > a::after {
+  font-family: "Font Awesome 5 Pro";
+  content: "";
+  font-size: 0.9375rem;
+  color: #2E979B;
+  position: absolute;
+  top: 1.1rem;
+  right: 1.5rem;
+  transition: right 300ms ease;
+}
+.ntgc-grouped-links--jobs {
+  padding: 0;
+  border: none;
+}
+.ntgc-grouped-links--jobs ul {
+  padding: 0;
+}
+.ntgc-grouped-links--jobs .au-link-list > li {
+  display: block;
+}
+.ntgc-grouped-links--jobs .au-link-list > li > a {
+  padding: 2.25rem 2rem 2.5rem;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.ntgc-grouped-links--jobs .au-link-list > li > a > span.ntgc-grouped-links__title {
+  margin-bottom: 0;
+  font-size: 1.125rem;
+}
+.ntgc-grouped-links--jobs .au-link-list > li > a:hover {
+  text-decoration: none;
+}
+.ntgc-grouped-links--jobs .au-link-list > li > a:hover .ntgc-grouped-links__title {
+  text-decoration: underline;
+}
+.ntgc-grouped-links--jobs .au-link-list > li > a::after {
+  content: "";
+}
+/**
+  * Job listings - download arrow override
+*/
+.ntgc-grouped-links--homepage-eoi .au-link-list > li > a::after {
+  content: "";
+  font-size: 1rem;
+  top: 0;
+  right: 0;
+}
+.ntgc-grouped-links--homepage-eoi .au-link-list > li::after {
+  content: "";
+}
+.data-icon--view-job {
+  width: 0.875rem !important;
+}
+/**
+  * Responsive layout - makes a one column-layout instead of a two-column layout
+  */
+@media (max-width: 768px) {
+  .ntgc-grouped-links {
+    padding: 2rem;
+  }
+  .ntgc-grouped-links--jobs {
+    padding: 0;
+    border: none;
+  }
+  .ntgc-grouped-links--jobs ul {
+    padding: 0;
+  }
+  .ntgc-grouped-links--two-col .flex > ul, .ntgc-grouped-links--two-col .flex > li, .ntgc-grouped-links--two-col .flex > div {
+    flex: 100%;
+    flex-direction: column;
+  }
+  .ntgc-grouped-links--two-col .flex > ul:nth-child(2n+1), .ntgc-grouped-links--two-col .flex > li:nth-child(2n+1), .ntgc-grouped-links--two-col .flex > div:nth-child(2n+1) {
+    margin-right: 0;
+  }
+  .ntgc-grouped-links h2.ntgc-grouped-links__title, .ntgc-grouped-links h3.ntgc-grouped-links__title, .ntgc-grouped-links h4.ntgc-grouped-links__title, .ntgc-grouped-links p.ntgc-grouped-links__title, .ntgc-grouped-links span.ntgc-grouped-links__title {
+    margin-bottom: 0.75rem;
+  }
+  .ntgc-grouped-links h2 + p, .ntgc-grouped-links h3 + p, .ntgc-grouped-links h4 + p, .ntgc-grouped-links p + p, .ntgc-grouped-links span + p {
+    margin-top: 1.25rem;
+  }
+  .ntgc-grouped-links h2 + ul, .ntgc-grouped-links h3 + ul, .ntgc-grouped-links h4 + ul, .ntgc-grouped-links p + ul, .ntgc-grouped-links span + ul {
+    margin-top: 0.75rem;
+  }
+  .ntgc-grouped-links .ntgc-btn {
+    margin-top: 1.75rem;
+    margin-bottom: 1.25rem;
+  }
+}

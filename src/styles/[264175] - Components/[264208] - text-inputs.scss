@@ -1,0 +1,141 @@
+/* ==========================================================================
+   Squiz Matrix Asset ID: #264208
+   Filename: [264208] - text-inputs.scss
+   Description: NTG Text input controls, currency inputs, and date pickers
+   ========================================================================== */
+
+.ntgc-text-input {
+  box-sizing: border-box;
+  font-size: 16px;
+  font-size: 1rem;
+  line-height: 1;
+  padding: 8px 16px;
+  padding: 0.5 rem  1 rem;
+  height: 48px;
+  height: 3 rem;
+  border: 1px solid #DEDEDA;
+  border-radius: 0;
+  vertical-align: middle;
+  appearance: none;
+  width: 100%;
+  max-width: 480px;
+  max-width: 30 rem;
+  font-family: "Roboto", arial, sans-serif;
+  outline: 0;
+}
+.ntgc-text-input--block {
+  display: block;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.ntgc-text-input--help {
+  font-size: 0.875rem;
+  display: block;
+  color: #506080;
+  font-style: normal !important;
+}
+.ntgc-text-input--white {
+  background: #FFFFFF;
+}
+.ntgc-text-input:hover {
+  border-color: #343741;
+}
+.ntgc-text-input:focus {
+  outline: 3px solid #fd7cb1;
+  border-color: #2E979B;
+}
+.ntgc-text-input:active {
+  border-color: #DEDEDA;
+}
+.ntgc-text-input:invalid {
+  border-color: #c43004;
+}
+.ntgc-text-input:disabled {
+  background: #F0EFEE;
+  border-color: #BABBB8;
+  color: #506080;
+}
+.ntgc-text-input[type="date"] {
+  position: relative;
+}
+.ntgc-text-input[type="date"]::-webkit-calendar-picker-indicator {
+  color: transparent;
+  background: none;
+  z-index: 1;
+}
+.ntgc-text-input[type="date"]:before {
+  color: #304060;
+  background: none;
+  display: block;
+  font-family: "Font Awesome 5 Pro";
+  content: "";
+  position: absolute;
+  right: 1rem;
+}
+/* clears the 'X' from Internet Explorer and EDGE */
+input[type=search]::-ms-clear {
+  display: none;
+  width: 0;
+  height: 0;
+}
+input[type=search]::-ms-reveal {
+  display: none;
+  width: 0;
+  height: 0;
+}
+/* clears the 'X' from Chrome */
+input[type="search"]::-webkit-search-decoration, input[type="search"]::-webkit-search-cancel-button, input[type="search"]::-webkit-search-results-button, input[type="search"]::-webkit-search-results-decoration {
+  display: none;
+}
+/* clears the 'X' from Internet Explorer and EDGE */
+input[type=text]::-ms-clear {
+  display: none;
+  width: 0;
+  height: 0;
+}
+input[type=text]::-ms-reveal {
+  display: none;
+  width: 0;
+  height: 0;
+}
+/* clears the 'X' from Chrome */
+input[type="text"]::-webkit-search-decoration, input[type="text"]::-webkit-search-cancel-button, input[type="text"]::-webkit-search-results-button, input[type="text"]::-webkit-search-results-decoration {
+  display: none;
+}
+textarea.ntgc-text-input {
+  height: auto;
+  line-height: 1.25rem;
+}
+.currency-input-wrapper {
+  position: relative;
+  display: inline;
+}
+.currency-input-wrapper::before {
+  content: "$";
+  position: absolute;
+  top: 2.125rem;
+  left: -1rem;
+  z-index: 1;
+  color: #506080;
+}
+.currency-input-wrapper > .ntgc-text-input {
+  padding-left: 2.125rem;
+}
+.ntgc-text-input--help + .currency-input-wrapper::before, form[form-type="ntgc-form"] .currency-input-wrapper::before {
+  top: 0.75rem;
+  left: 1rem;
+}
+@-moz-document url-prefix() {
+  .ntgc-text-input--help + .currency-input-wrapper::before {
+    top: 1.75rem;
+  }
+}
+@media (max-width: 768px) {
+  .ntgc-text-input--block {
+    width: 100%;
+    max-width: 100%;
+  }
+  textarea.ntgc-text-input--block {
+    width: 100% !important;
+  }
+}

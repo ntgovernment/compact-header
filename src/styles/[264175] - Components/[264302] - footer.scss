@@ -1,0 +1,126 @@
+/* ==========================================================================
+   Squiz Matrix Asset ID: #264302
+   Filename: [264302] - footer.scss
+   Description: NTG Footer navigation and layout
+   ========================================================================== */
+
+.ntgc-footer {
+  position: relative;
+  background: #343741;
+  font-size: 0.875rem;
+}
+.ntgc-footer ul, .ntgc-footer span, .ntgc-footer .au-accordion__title {
+  font-size: 0.875rem;
+  color: white;
+}
+.ntgc-footer a {
+  text-decoration: none;
+  color: #FFFFFF;
+}
+.ntgc-footer a:hover {
+  text-decoration: underline;
+  color: #2E979B;
+}
+.ntgc-footer__navigation {
+  padding-top: 2.5rem;
+  padding-bottom: 1.75rem;
+}
+.ntgc-footer__logo {
+  margin-bottom: 0.75rem;
+  padding: 0 0.25rem;
+}
+.ntgc-footer .au-accordion {
+  border: none;
+}
+.ntgc-footer .au-accordion__link-group {
+  display: none;
+}
+.ntgc-footer .au-accordion__title {
+  padding: 0.5rem 0.25rem;
+}
+.ntgc-footer .au-accordion__title:hover {
+  text-decoration: none;
+}
+.ntgc-footer .au-accordion__title:after {
+  background: none !important;
+  font-family: "Font Awesome 5 Pro";
+  content: "";
+  font-size: 0.875rem;
+  width: 0.75rem;
+  height: 0.875rem;
+}
+.ntgc-footer .au-accordion__body-wrapper {
+  padding: 0 0.25rem 1rem;
+}
+.ntgc-footer .au-accordion .au-link-list {
+  padding: 0;
+}
+.ntgc-footer .au-accordion .au-link-list > li {
+  margin: 0.5rem 0;
+}
+.ntgc-footer__end {
+  padding: 1.875rem 0.25rem 2.75rem;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  align-content: flex-start;
+  border-top: 1px solid #506080;
+}
+.ntgc-footer__end > ul, .ntgc-footer__end ul:not([class]) {
+  display: block;
+  list-style-type: none;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.ntgc-footer__end > ul > li, .ntgc-footer__end ul:not([class]) > li {
+  margin: 0.5rem 0;
+}
+.ntgc-footer__end > ul > li::before, .ntgc-footer__end ul:not([class]) > li::before {
+  content: "";
+}
+.ntgc-footer__end > span {
+  margin-top: 1.25rem;
+}
+@media (min-width: 768px) {
+  .ntgc-footer__navigation {
+    padding-top: 3.75rem;
+    padding-bottom: 3.75rem;
+  }
+  .ntgc-footer .au-accordion-group > div > section {
+    padding-left: 0.25rem;
+    padding-right: 0.25rem;
+  }
+  .ntgc-footer .au-accordion__link-group {
+    display: block;
+    font-weight: 700;
+    padding: 0 0.25rem;
+  }
+  .ntgc-footer .au-accordion--closed {
+    display: block !important;
+    height: auto !important;
+  }
+  .ntgc-footer .au-accordion__title {
+    display: none !important;
+  }
+  .ntgc-footer__end {
+    padding: 1rem 0.25rem;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .ntgc-footer__end > ul, .ntgc-footer__end ul:not([class]) {
+    padding: 0;
+  }
+  .ntgc-footer__end > ul li, .ntgc-footer__end ul:not([class]) li {
+    display: inline-block;
+  }
+  .ntgc-footer__end > ul li:not(:first-child), .ntgc-footer__end ul:not([class]) li:not(:first-child) {
+    margin-left: 1.25rem;
+  }
+  .ntgc-footer__end > span {
+    margin-top: 0;
+  }
+}

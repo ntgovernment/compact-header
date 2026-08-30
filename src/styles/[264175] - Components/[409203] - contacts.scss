@@ -1,0 +1,140 @@
+/* ==========================================================================
+   Squiz Matrix Asset ID: #409203
+   Filename: [409203] - contacts.scss
+   Description: NTG Contacts list, blocks & persons pattern styles
+   ========================================================================== */
+
+.ntgc-contacts a {
+  color: #2E979B;
+  text-decoration: none;
+  word-break: break-word;
+  word-wrap: break-word;
+}
+.ntgc-contacts a:hover {
+  text-decoration: underline;
+}
+.ntgc-contacts__item {
+  padding-bottom: 1.5rem;
+}
+.ntgc-contacts__item strong {
+  display: block;
+}
+.ntgc-contacts__icon .ntgc-icon {
+  display: block;
+}
+.ntgc-contacts__icon .ntgc-icon i {
+  font-size: 1.75rem;
+}
+.ntgc-contacts__details > a {
+  color: #2E979B;
+}
+.ntgc-contacts--single .ntgc-contacts__item {
+  display: flex;
+}
+.ntgc-contacts--single .ntgc-contacts__icon {
+  margin-right: 1rem;
+  min-width: 28px;
+}
+.ntgc-contacts--landing-with-links {
+  margin-top: 3rem;
+}
+.ntgc-card-list-contacts__item {
+  padding-bottom: 1.5rem;
+}
+.ntgc-card-list-contacts__item li {
+  display: block !important;
+}
+.ntgc-card-list-contacts__item .ntgc-contacts__icon {
+  padding-bottom: 0.25rem;
+  min-width: 2.5rem;
+  margin-right: 1rem;
+}
+.ntgc-card-list-contacts a {
+  color: #2E979B;
+}
+/* NTGC Contacts block (Component template #472893 and content page contacts block styles*/
+.ntgc-contacts-block__item {
+  font-size: 1rem;
+}
+.ntgc-contacts-block__item strong {
+  display: block;
+  color: #343741;
+}
+.ntgc-contacts-block__icon {
+  min-width: 2rem;
+  text-align: center;
+}
+.ntgc-contacts-block__icon .ntgc-icon {
+  display: block;
+}
+.ntgc-contacts-block__icon .ntgc-icon i {
+  font-size: 2rem;
+}
+.ntgc-contacts-block a {
+  color: #2E979B;
+  text-decoration: none;
+  word-break: break-word;
+  word-wrap: break-word;
+}
+.ntgc-contacts-block a:hover {
+  text-decoration: underline;
+}
+.ntgc-contacts-block__single .ntgc-contacts-block__item {
+  display: flex;
+}
+.ntgc-contacts-block__single .ntgc-contacts-block__item .ntgc-contacts-block__icon {
+  margin-right: 1rem;
+}
+.ntgc-contacts-block__multiple .ntgc-contacts-block__item .ntgc-contacts-block__details .ntgc-icon {
+  margin-right: 0.5rem;
+  display: inline-block;
+  min-width: 16px;
+}
+.ntgc-contacts-block__multiple .ntgc-contacts-block__item .ntgc-contacts-block__details .ntgc-icon i {
+  font-size: 1rem;
+}
+.ntgc-contacts-block__icon .ntgc-icon {
+  display: block;
+}
+.ntgc-contacts-block__icon .ntgc-icon i {
+  font-size: 2rem;
+}
+.ntgc-contacts-block .au-card-list.au-card-list--matchheight li {
+  flex: 1;
+}
+@media (max-width: 768px) {
+  .ntgc-contacts-block .au-card-list.au-card-list--matchheight li {
+    flex: auto;
+  }
+}
+/* NTGC Persons Pattern (Component template #478959) */
+.ntgc-contacts--list .row {
+  border-bottom: 1px solid #d3dfe0;
+}
+.ntgc-contacts--list .row:only-of-type {
+  border-bottom: none;
+}
+.ntgc-contacts--list .ntgc-contacts__item {
+  font-size: 1rem;
+}
+.ntgc-contacts--list .ntgc-contacts__item--image .ntgc-contacts__image {
+  margin-bottom: 0.5rem;
+}
+.ntgc-contacts--list .ntgc-contacts__item--image .ntgc-contacts__image img {
+  border-radius: 50%;
+}
+.ntgc-contacts--list .ntgc-contacts__icon {
+  margin-bottom: 0.5rem;
+}
+.ntgc-contacts--list .ntgc-contacts__icon .ntgc-icon i {
+  font-size: 1.5rem;
+}
+@media (min-width: 768px) {
+  .ntgc-contacts--list .ntgc-contacts__item--image {
+    display: flex;
+  }
+  .ntgc-contacts--list .ntgc-contacts__item--image .ntgc-contacts__image {
+    margin-bottom: 0;
+    margin-right: 1rem;
+  }
+}

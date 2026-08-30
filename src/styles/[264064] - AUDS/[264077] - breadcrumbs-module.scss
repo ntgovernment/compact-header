@@ -1,0 +1,60 @@
+/* ==========================================================================
+   Squiz Matrix Asset ID: #264077
+   Filename: [264077] - breadcrumbs-module.scss
+   Description: @gov.au/breadcrumbs v3.0.5
+   ========================================================================== */
+
+/*! @gov.au/breadcrumbs v3.0.5 */
+@media print {
+  .au-breadcrumbs > .au-link-list > li:after {
+    content: ">" !important;
+    background-image: none !important;
+  }
+}
+.au-breadcrumbs {
+  font-size: 14px;
+  font-size: 0.875rem;
+  line-height: 1.1428571429;
+  width: 100%;
+  margin: 0;
+  color: #343741;
+  font-family: "Roboto", arial, sans-serif;
+}
+* + .au-breadcrumbs {
+  margin-top: 16px;
+  margin-top: 1 rem;
+}
+@media (min-width: 768px) {
+  .au-breadcrumbs {
+    display: inline-block;
+  }
+}
+.au-breadcrumbs > .au-link-list > li {
+  margin: 0;
+}
+.au-breadcrumbs > .au-link-list > li:after {
+  content: " ";
+  display: inline-block;
+  width: 8px;
+  width: 0.5 rem;
+  height: 8px;
+  height: 0.5 rem;
+  margin: 0 8px;
+  margin: 0  0.5 rem;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 128 128'%3E%3Cpath fill='%239a9ba0' d='M128 64l-64 64-16-16 64-64'/%3E%3Cpath fill='%239a9ba0' d='M128 64l-16 16-64-64L64 0'/%3E%3C/svg%3E");
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+.au-breadcrumbs > .au-link-list > li:last-child:after {
+  display: none;
+}
+.ie8 .au-breadcrumbs > .au-link-list > li:after, .lt-ie8 .au-breadcrumbs > .au-link-list > li:after {
+  content: " > ";
+  display: inline-block;
+}
+.au-breadcrumbs.au-breadcrumbs--dark {
+  color: #FFFFFF;
+}
+.au-breadcrumbs.au-breadcrumbs--dark > .au-link-list > li:not(:last-child):after {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 128 128'%3E%3Cpath fill='%23a2a1a3' d='M128 64l-64 64-16-16 64-64'/%3E%3Cpath fill='%23a2a1a3' d='M128 64l-16 16-64-64L64 0'/%3E%3C/svg%3E");
+}

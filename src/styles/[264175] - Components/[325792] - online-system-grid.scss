@@ -1,0 +1,53 @@
+/* ==========================================================================
+   Squiz Matrix Asset ID: #325792
+   Filename: [325792] - online-system-grid.scss
+   Description: NTG Online systems grid and bookmarks
+   ========================================================================== */
+
+.ntgc-online-system-list {
+  margin-top: 3.75rem;
+}
+.ntgc-online-system-list .ntgc-search__text-input {
+  background: #F5F7F7;
+}
+.ntgc-online-system-list .pill-wrapper .ntgc-pill {
+  padding-left: 0.75rem;
+}
+.ntgc-online-system-list__results .system-list {
+  padding-left: 0;
+}
+.ntgc-online-system-list__results .system-list--item {
+  display: flex;
+  padding: 2rem 0;
+  list-style: none;
+  border-bottom: 1px solid #F0EFEE;
+}
+.ntgc-online-system-list__results .system-list--item .system-name {
+  display: inline-block;
+}
+.ntgc-online-system-list__results .system-list--item .system-icon {
+  font-size: 2rem;
+  margin-right: 1rem;
+  width: 1.5rem;
+  color: #2E979B;
+}
+.ntgc-online-system-list__results .system-list--item .system-list--bookmark {
+  text-align: right;
+}
+.ntgc-online-system-list__results .system-list--item .system-list--bookmark span {
+  cursor: pointer;
+}
+.ntgc-online-system-list__results .system-list--item .system-list--bookmark *[data-toggle="favourite"][data-status="checked"] .fal, .ntgc-online-system-list__results .system-list--item .system-list--bookmark *[data-toggle="favourites"][data-status="checked"] .fal {
+  color: #2E979B;
+}
+.ntgc-online-system-list__results .system-list--item .system-list--info .system-info-url {
+  padding-right: 0.5rem;
+}
+@media (max-width: 1023px) {
+  .ntgc-online-system-list .pill-wrapper {
+    padding: 0.75rem 0 0 0 !important;
+  }
+  .ntgc-online-system-list .pill-wrapper .ntgc-pill {
+    padding: 0;
+  }
+}

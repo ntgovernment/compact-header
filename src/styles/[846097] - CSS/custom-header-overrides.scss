@@ -1,0 +1,20 @@
+/* ==========================================================================
+   Squiz Matrix Asset ID: #inline-parse-header
+   Filename: custom-header-overrides.scss
+   Description: Custom header overrides defined directly in parse file
+   ========================================================================== */
+
+.ntgc-header__title {
+  font-size: 2.25rem;
+  line-height: 2.75rem;
+}
+.ntgc-header__title span {
+  display: block;
+}
+.ntgc-header .ntgc-header__inner .ntgc-logo {
+  height: 44px;
+}
+.ntgc-header--graphic {
+  background-position-x: 105%;
+  background-position-y: 40px;
+}

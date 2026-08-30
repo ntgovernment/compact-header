@@ -1,0 +1,30 @@
+/* ==========================================================================
+   Squiz Matrix Asset ID: #311698
+   Filename: [311698] - google-map.scss
+   Description: NTG Embedded map styles
+   ========================================================================== */
+
+.ntgc-map__inner {
+  display: flex;
+}
+@media (min-width: 1024px) {
+  .au-grid .ntgc-map__text--left, .ntgc-map__text--left {
+    flex-flow: row nowrap;
+  }
+  .au-grid .ntgc-map__text--right, .ntgc-map__text--right {
+    flex-flow: row-reverse nowrap;
+    justify-content: flex-end;
+  }
+  .au-grid .ntgc-map__text--top, .ntgc-map__text--top {
+    flex-flow: column wrap;
+  }
+  .au-grid .ntgc-map__text--top .ntgc-map__map-embed, .ntgc-map__text--top .ntgc-map__map-embed {
+    margin-top: 1.75rem;
+  }
+  .au-grid .ntgc-map__text--bottom, .ntgc-map__text--bottom {
+    flex-flow: column-reverse wrap;
+  }
+  .au-grid .ntgc-map__text--bottom .ntgc-map__map-embed, .ntgc-map__text--bottom .ntgc-map__map-embed {
+    margin-bottom: 1.75rem;
+  }
+}

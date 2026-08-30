@@ -1,0 +1,47 @@
+/* ==========================================================================
+   Squiz Matrix Asset ID: #392760
+   Filename: [392760] - custom-agency-intranet.scss
+   Description: Custom agency intranet styles (landing-header, etc.)
+   ========================================================================== */
+
+.landing-header {
+  max-width: 30rem;
+  color: #343741;
+  position: relative;
+  padding: 0 0 2rem 0;
+}
+.landing-header:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 3rem;
+  height: 2px;
+  background: #E35205;
+}
+.au-show {
+  display: block;
+}
+.au-hide {
+  display: none;
+}
+.relpos {
+  position: relative;
+}
+.abspos {
+  position: absolute;
+}
+ul.unstyled {
+  list-style: none !important;
+  padding: 0 !important;
+}
+.ntgc-body .caption, .ntgc-body .caption-right {
+  font-size: 0.85em;
+  text-align: right;
+  margin-top: 0.25rem;
+}
+.ntgc-body .caption-left {
+  font-size: 0.85em;
+  text-align: left;
+  margin-top: 0.25rem;
+}

@@ -1,0 +1,47 @@
+/* ==========================================================================
+   Squiz Matrix Asset ID: #323916
+   Filename: [323916] - skeleton-loader.scss
+   Description: NTG Skeleton animated placeholder loader
+   ========================================================================== */
+
+.skeleton {
+  position: relative;
+  overflow: hidden;
+}
+.skeleton .heading {
+  background-color: #F0EFEE;
+  height: 150px;
+}
+.skeleton .line {
+  background-color: #F0EFEE;
+  height: 16px;
+}
+.skeleton .line:first-child {
+  width: 50%;
+}
+.skeleton .line.date {
+  width: 80%;
+}
+.skeleton .line.button {
+  width: 30%;
+}
+.skeleton .heading::before, .skeleton .line::before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: -150px;
+  top: 0;
+  height: 100%;
+  width: 40px;
+  opacity: 0.2;
+  background: linear-gradient(to right, transparent 0%, #FFFFFF 75%, transparent 100%);
+  animation: load 1s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+@keyframes load {
+  from {
+    left: -150px;
+  }
+  to {
+    left: 100%;
+  }
+}

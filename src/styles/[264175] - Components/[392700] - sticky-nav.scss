@@ -1,0 +1,78 @@
+/* ==========================================================================
+   Squiz Matrix Asset ID: #392700
+   Filename: [392700] - sticky-nav.scss
+   Description: NTG Sticky horizontal scroll navigation bar
+   ========================================================================== */
+
+div[data-component="ntgc-sticky-nav"] {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+.ntgc-sticky-nav-wrapper {
+  margin: auto -12px;
+  background: #FFFFFF;
+  border-bottom: 2px solid #F0EFEE;
+  position: relative;
+  transition: background 300ms ease-in-out;
+}
+.ntgc-sticky-nav {
+  position: relative;
+  margin: 0;
+  padding: 0 12px;
+}
+.ntgc-sticky-nav__item {
+  list-style: none;
+  display: inline-block;
+  padding: 0 2.5rem 0 0;
+}
+.ntgc-sticky-nav__item a {
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 1.5rem 0 1.5rem 0;
+  display: block;
+  position: relative;
+  transition: border 300ms ease;
+}
+.ntgc-sticky-nav__item a:before {
+  position: absolute;
+  content: "";
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 5px;
+  background: none;
+}
+.ntgc-sticky-nav__item.active a:before {
+  background-color: #2E979B;
+}
+.ntgc-sticky-nav + .ntgc-btn {
+  margin: 0.5rem 0;
+  white-space: nowrap;
+}
+.ntgc-sticky-nav-active {
+  padding-top: 76px;
+}
+.ntgc-sticky-nav-active .ntgc-sticky-nav-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 99;
+  border-bottom: none;
+  background-color: #343741;
+}
+.ntgc-sticky-nav-active .ntgc-sticky-nav__item a {
+  color: #FFFFFF;
+}
+.ntgc-sticky-nav-active .ntgc-sticky-nav + .ntgc-btn {
+  background: none;
+  color: #FFF;
+  border: 2px solid #FFF;
+  background: none;
+}
+.ntgc-sticky-nav-active .ntgc-sticky-nav + .ntgc-btn:hover {
+  background: rgba(255, 255, 255, 0.2);
+}

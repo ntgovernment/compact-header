@@ -1,0 +1,357 @@
+/* ==========================================================================
+   Squiz Matrix Asset ID: #305340
+   Filename: [305340] - nav-main.scss
+   Description: NTG Primary main mega-menu navigation
+   ========================================================================== */
+
+.profile-firstname {
+  padding-right: 1.5rem !important;
+  display: inline-block;
+  position: relative;
+}
+.profile-firstname:before {
+  font-family: "Font Awesome 5 Pro";
+  content: "";
+  position: absolute;
+  right: 6px;
+  top: 2px;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+.profileopen .profile-firstname:before {
+  transition: all 500ms ease;
+  transform: rotate(180deg);
+}
+.text-lowercase {
+  text-transform: lowercase;
+}
+.ntgc-navigation--main {
+  padding: 1rem 0;
+  position: relative;
+  background: #FFF;
+}
+.ntgc-navigation--main:before, .ntgc-navigation--main:after {
+  content: "";
+  position: absolute;
+  background: #FFF;
+  top: 0;
+  bottom: 0;
+  width: 2rem;
+}
+.ntgc-navigation--main:before {
+  left: -2rem;
+}
+.ntgc-navigation--main:after {
+  right: -2rem;
+}
+.ntgc-navigation--main ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: 0;
+}
+.ntgc-navigation--main ul.level-one {
+  display: flex;
+  z-index: 400;
+}
+.ntgc-navigation--main ul li.mobile-nav-back-link {
+  display: none !important;
+}
+.ntgc-navigation--main ul.level-one > li {
+  display: inline-block;
+}
+.ntgc-navigation--main ul.level-one > li.active {
+  color: #2E979B;
+}
+.ntgc-navigation--main ul.level-one > li.active a.dropdown, .ntgc-navigation--main ul.level-one > li.active a.dropdown:before {
+  color: #2E979B;
+  top: 0;
+  transition: all 350ms ease;
+}
+.ntgc-navigation--main ul.level-one > li.active a.dropdown:before {
+  -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=2)";
+  transform: rotate(180deg);
+}
+.ntgc-navigation--main ul.level-one > li.active .menu-wrapper {
+  left: -2rem;
+  right: -2rem;
+  transform: translateY(0);
+  transition: transform 350ms cubic-bezier(0.65, 0.24, 0.32, 0.92);
+}
+.ntgc-navigation--main ul.level-one > li > a {
+  color: #142840;
+  font-size: 0.875rem;
+  margin-right: 1.25rem;
+  font-weight: 600;
+  text-decoration: none;
+  position: relative;
+  line-height: 1.5rem;
+  display: inline-block;
+}
+.ntgc-navigation--main ul.level-one > li > a.dropdown {
+  padding-right: 1rem;
+}
+.ntgc-navigation--main ul.level-one > li > a.dropdown:before {
+  font-family: "Font Awesome 5 Pro";
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 0;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+.ntgc-navigation--main .menu-wrapper {
+  position: absolute;
+  display: flex;
+  left: -2rem;
+  right: -2rem;
+  background: #FFFFFF;
+  font-size: 1rem;
+  padding: 1.3125rem 2rem;
+  z-index: -9999;
+  transform: translateY(-100%);
+  transition: transform 300ms cubic-bezier(0.65, 0.24, 0.32, 0.92);
+}
+.ntgc-navigation--main .menu-wrapper:before {
+  content: "";
+  top: -1000px;
+  left: 0;
+  right: 0;
+  height: 1000px;
+  position: absolute;
+}
+.ntgc-navigation--main .menu-wrapper .column-one {
+  display: block;
+  width: 32%;
+}
+.ntgc-navigation--main .menu-wrapper .column-two {
+  display: block;
+  width: 32%;
+}
+.ntgc-navigation--main .menu-wrapper .column-three {
+  display: block;
+  width: 36%;
+}
+.ntgc-navigation--main ul.level-two > li, .ntgc-navigation--main ul.level-three > li {
+  display: block;
+  position: relative;
+  padding: 0.75rem 2rem 0.75rem 0;
+  line-height: 1.5rem;
+}
+.ntgc-navigation--main ul.level-two > li > a, .ntgc-navigation--main ul.level-three > li > a {
+  color: #343741;
+  height: 100%;
+  display: block;
+  font-size: 1.125rem;
+  font-weight: 600;
+  text-decoration: none;
+  position: relative;
+  transition: color 300ms ease;
+  padding-right: 1.25rem;
+}
+.ntgc-navigation--main ul.level-two > li > a:hover, .ntgc-navigation--main ul.level-three > li > a:hover {
+  transition: color 300ms ease;
+  color: #2E979B;
+}
+.ntgc-navigation--main ul.level-two > li > a + span, .ntgc-navigation--main ul.level-three > li > a + span {
+  font-size: 0.875rem;
+  display: block;
+  color: #506080;
+}
+.ntgc-navigation--main ul.level-two > li [class*=" fa-"], .ntgc-navigation--main ul.level-three > li [class*=" fa-"] {
+  font-size: 1rem;
+  color: #2E979B;
+  position: absolute;
+  right: 2rem;
+  top: 1rem;
+  transition: right 300ms ease;
+}
+.ntgc-navigation--main ul.level-two > li:hover [class*=" fa-"], .ntgc-navigation--main ul.level-three > li:hover [class*=" fa-"] {
+  right: 1.5rem;
+  transition: right 300ms ease;
+}
+.ntgc-navigation--main .dropdown-skinny {
+  position: relative;
+}
+.ntgc-navigation--main .dropdown-skinny li {
+  margin-top: 0 !important;
+  padding: 0.75rem 1rem 0.75rem 0;
+  line-height: 1.5rem;
+  position: relative;
+}
+.ntgc-navigation--main .dropdown-skinny li [class*=" fa-"] {
+  font-size: 1rem;
+  color: #2E979B;
+  position: absolute;
+  right: 0.25rem;
+  top: 1rem;
+  transition: right 300ms ease;
+}
+.ntgc-navigation--main .dropdown-skinny li:hover [class*=" fa-"] {
+  right: 0;
+  transition: right 300ms ease;
+}
+.ntgc-navigation--main .dropdown-skinny ul {
+  padding: 0.25rem 2rem 1.25rem 2rem;
+  z-index: -10000;
+  position: absolute;
+  left: -10rem;
+  right: -2rem;
+  background: #FFF;
+  top: -100%;
+  transform: translateY(-100%);
+  transition: transform 300ms cubic-bezier(0.65, 0.24, 0.32, 0.92);
+  top: 1rem;
+}
+.ntgc-navigation--main .dropdown-skinny ul a {
+  display: block;
+  color: #343741;
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  position: relative;
+}
+.ntgc-navigation--main .dropdown-skinny ul a:hover {
+  transition: color 300ms ease;
+  color: #2E979B;
+}
+.ntgc-navigation--main .dropdown-skinny.active ul {
+  transform: translateY(0);
+}
+@media (max-width: 768px) {
+  .ntgc-navigation--main {
+    padding: 0 0;
+    margin: 0;
+    position: absolute;
+    width: 200vw;
+    left: 0;
+    top: 0;
+  }
+  .ntgc-navigation--main ul {
+    flex-direction: column;
+    width: 100vw;
+  }
+  .ntgc-navigation--main ul li.ml-auto {
+    margin-left: 0 !important;
+  }
+  .ntgc-navigation--main ul li.mobile-nav-back-link {
+    display: block !important;
+    padding-left: 2rem !important;
+    background: #F0EFEE !important;
+    color: #343741 !important;
+  }
+  .ntgc-navigation--main ul li.mobile-nav-back-link span.fal {
+    left: 1rem !important;
+    color: #343741 !important;
+    top: 50%;
+    margin-top: -0.5rem;
+    font-weight: 600;
+  }
+  .ntgc-navigation--main ul.level-one {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: all 200ms ease;
+    width: 100vw;
+  }
+  .ntgc-navigation--main ul.level-one > li {
+    background: #FFFFFF;
+    display: block;
+    padding: 1rem;
+    border-bottom: 1px solid #F6F6FC;
+  }
+  .ntgc-navigation--main ul.level-one > li.hide-mobile {
+    display: none;
+  }
+  .ntgc-navigation--main ul.level-one > li a, .ntgc-navigation--main ul.level-one > li a.dropdown {
+    display: block;
+    position: relative;
+    margin: 0;
+    padding-right: 2rem;
+    font-size: 1rem;
+  }
+  .ntgc-navigation--main ul.level-one > li a.dropdown:before {
+    content: "";
+    position: absolute;
+    right: 1rem;
+    top: 2px;
+    font-weight: 600;
+    font-size: 1rem;
+  }
+  .ntgc-navigation--main ul.level-one > li.active .menu-wrapper {
+    transform: none;
+    left: calc(100vw);
+    width: 100vw;
+    z-index: 1;
+    display: block;
+  }
+  .ntgc-navigation--main ul.level-one > li .menu-wrapper {
+    display: flex;
+    flex-direction: column;
+    top: 0;
+    left: 100%;
+    right: 200%;
+    width: 100vw;
+    height: 100%;
+    transform: none;
+    z-index: 0;
+    display: none;
+    background: #FFFFFF;
+    font-size: 1rem;
+    transform: none;
+    padding: 0;
+    margin: 0;
+  }
+  .ntgc-navigation--main ul.level-one > li .menu-wrapper:before {
+    content: none;
+  }
+  .ntgc-navigation--main ul.level-one > li .menu-wrapper .column-one {
+    position: relative;
+    display: block;
+    width: 100%;
+  }
+  .ntgc-navigation--main ul.level-one > li .menu-wrapper .column-two {
+    position: relative;
+    display: block;
+    width: 100%;
+  }
+  .ntgc-navigation--main ul.level-one > li .menu-wrapper .column-three {
+    display: block;
+    width: 100%;
+  }
+  .ntgc-navigation--main ul.level-two {
+    position: relative;
+    width: 100vw;
+    height: 100%;
+    background: #FFF;
+  }
+  .ntgc-navigation--main ul.level-two li {
+    background: #FFFFFF;
+    display: block;
+    padding: 1rem;
+    border-bottom: 1px solid #F6F6FC;
+  }
+  .ntgc-navigation--main ul .ntgc-card {
+    margin: 0;
+    padding: 1rem;
+    background: #FFF !important;
+    width: calc(100% - 2rem);
+  }
+  .ntgc-navigation--main ul .ntgc-card.ntgc-card--neutral .ntgc-card__inner {
+    background: #F0EFEE;
+  }
+  body.menuopen .ntgc-navigation--main ul.level-one {
+    top: 0;
+    left: 0;
+    transition: left 200ms ease;
+    display: block;
+  }
+  body.menuopen .ntgc-navigation--main[data-mobile-showlevel=levelone] {
+    transition: left 200ms ease;
+  }
+  body.menuopen .ntgc-navigation--main[data-mobile-showlevel=leveltwo] {
+    left: -100%;
+    transition: left 200ms ease;
+  }
+}

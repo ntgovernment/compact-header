@@ -1,0 +1,79 @@
+/* ==========================================================================
+   Squiz Matrix Asset ID: #264178
+   Filename: [264178] - badges.scss
+   Description: NTG Badge component styles
+   ========================================================================== */
+
+.ntg-badge {
+  border-radius: 50%;
+  display: inline-block;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  text-align: center;
+}
+.ntg-badge__primary {
+  background-color: #1F1F5F;
+  color: #FFFFFF;
+}
+.ntg-badge__secondary {
+  background-color: #E35205;
+  color: #FFFFFF;
+}
+.ntg-badge__success {
+  background-color: #0b996c;
+  color: #FFFFFF;
+}
+.ntg-badge__danger {
+  background-color: #d60000;
+  color: #FFFFFF;
+}
+.ntg-badge__warning {
+  background-color: #f69900;
+  color: #FFFFFF;
+}
+.ntg-badge__info {
+  background-color: #00bfe9;
+  color: #FFFFFF;
+}
+.ntg-badge__light {
+  background-color: #2E979B;
+  color: #000;
+}
+.ntg-badge__dark {
+  background-color: #000;
+  color: #FFFFFF;
+}
+.ntg-badge__size--0x {
+  font-size: 0.625rem;
+  padding: 0 0.25rem;
+}
+.ntg-badge__size--2x {
+  font-size: 20px;
+  padding: 0 0.625rem;
+}
+.ntg-badge__size--3x {
+  font-size: 22px;
+  padding: 0 0.625rem;
+}
+.ntg-badge__size--4x {
+  font-size: 26px;
+  padding: 0 0.625rem;
+}
+.ntg-badge__size--5x {
+  font-size: 30px;
+  padding: 0 0.625rem;
+}
+.ntg-badge__size--6x {
+  font-size: 36px;
+  padding: 0 0.625rem;
+}
+.ntg-badge__two-digits {
+  padding: 0.375rem 0.5rem;
+  height: 1.5em;
+  width: 1.5em;
+}
+.ntg-badge__three-digits {
+  padding: 0.875rem 1rem;
+  height: 1.6em;
+  width: 1.6em;
+}

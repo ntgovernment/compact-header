@@ -1,0 +1,58 @@
+/* ==========================================================================
+   Squiz Matrix Asset ID: #264183
+   Filename: [264183] - callout.scss
+   Description: NTG Callout component overrides
+   ========================================================================== */
+
+.ntgc-callout {
+  font-size: 16px;
+  font-size: 1rem;
+  line-height: 1.5;
+  padding: 32px;
+  padding: 2 rem;
+  border-left: 6px solid #7E807B;
+  border-left: 0.375 rem solid #7E807B;
+  font-family: "Roboto", arial, sans-serif;
+  color: #304060;
+  background-color: #F0EFEE;
+  word-wrap: break-word;
+  max-width: 42rem;
+}
+* + .ntgc-callout {
+  margin-top: 32px;
+  margin-top: 2 rem;
+}
+.ntgc-callout p, .ntgc-callout h2, .ntgc-callout h3, .ntgc-callout h4, .ntgc-callout h5 {
+  margin: 0;
+  color: #304060 !important;
+}
+.ntgc-callout * + p, .ntgc-callout * + h2, .ntgc-callout * + h3, .ntgc-callout * + h4, .ntgc-callout * + h5 {
+  margin-top: 16px;
+  margin-top: 1 rem;
+}
+.ntgc-callout + p, .ntgc-callout + h2, .ntgc-callout + h3, .ntgc-callout + h4, .ntgc-callout + h5 {
+  margin-top: 32px;
+  margin-top: 2 rem;
+}
+/**
+ * The callout heading.
+ */
+.ntgc-callout__heading {
+  font-size: 20px;
+  font-size: 1.25rem;
+  line-height: 1.6;
+  margin: 0;
+}
+.ntgc-callout__heading.ntgc-callout__heading--sronly {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+.ntgc-callout__heading.ntgc-callout__heading--sronly + * {
+  margin-top: 0;
+}

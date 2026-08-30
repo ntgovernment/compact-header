@@ -1,0 +1,140 @@
+/* ==========================================================================
+   Squiz Matrix Asset ID: #264202
+   Filename: [264202] - search.scss
+   Description: NTG Search input, submit buttons, facets, and search results
+   ========================================================================== */
+
+.ntgc-search__wrapper {
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+}
+.ntgc-search__label {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+.ntgc-search__text-input {
+  border: 1px solid;
+  border-color: #D3DFE0;
+  -webkit-border-radius: 20px;
+  border-radius: 20px;
+  background: #FFF;
+  width: calc(100% - 3.5rem);
+  height: 2.5rem;
+  font-size: 0.875rem;
+  letter-spacing: calc(0.0014 * 24px);
+  line-height: 2.5rem;
+  padding-left: 1rem;
+  padding-right: 2.5rem;
+  color: #506080;
+  box-shadow: 0 0 0 3px transparent;
+  transition: border 100ms ease, box-shadow 200ms ease;
+}
+.ntgc-search__text-input:hover {
+  outline: none;
+  border-color: #343741;
+}
+.ntgc-search__text-input:focus {
+  outline: none;
+  border-color: #343741;
+  box-shadow: 0 0 0 3px #2E979B;
+}
+.ntgc-search__text-input:active {
+  outline: none;
+  border-color: #343741;
+}
+.ntgc-search__text-input:disabled {
+  background: #F0EFEE;
+}
+.ntgc-search__text-input:disabled:hover {
+  border-color: #D3DFE0;
+  cursor: not-allowed;
+}
+.ntgc-search__text-input.text-input--lg {
+  height: 3.75rem;
+  line-height: 3.75rem;
+  border-radius: 1.875rem;
+  -webkit-border-radius: 1.875rem;
+}
+.ntgc-search__submit {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  border: none;
+  background-color: transparent;
+  padding: 0 0.5rem 0 0.5rem;
+}
+.ntgc-search__submit span {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  border: none;
+  color: #343741;
+}
+.ntgc-search-result .ntgc-tag {
+  display: inline-block;
+}
+.ntgc-search__wrapper--inpage {
+  margin: 0 0 0 0;
+}
+.ntgc-search__wrapper--inpage .ntgc-search__text-input {
+  background: #F5F7F7;
+}
+.ntgc-search__wrapper.is-error.ntgc-search__text-input {
+  border-color: #c43004;
+}
+.ntgc-search-results-wrapper .ntgc-search__text-input {
+  background: #FFFFFF;
+}
+.ntgc-search-results-wrapper .ntgc-search__facet {
+  border-top: 1px solid #DEDEDA;
+  padding-bottom: 2rem;
+}
+.ntgc-search-results-wrapper .ntgc-search__facet .ntgc-search-facet__title {
+  margin: 0;
+  font-size: 0.875rem;
+  color: #343741;
+  line-height: 1.5rem;
+  letter-spacing: 0;
+  font-weight: 600;
+  padding: 1.5rem 0;
+}
+.ntgc-search-results-wrapper .ntgc-search__facet .ntgc-control-input {
+  display: block;
+}
+.ntgc-search-results-wrapper .ntgc-search__facet .ntgc-control-input__label {
+  letter-spacing: 0.024em;
+}
+.ntgc-search-results-wrapper .ntgc-search-results--index {
+  display: block;
+}
+.ntgc-search-results-wrapper .ntgc-search-results--index[data-result-count="0"] {
+  display: none;
+}
+.ntgc-search-results-wrapper .ntgc-search-results--no-results {
+  display: none;
+}
+.ntgc-search-results-wrapper .ntgc-search-results--no-results[data-result-count="0"] {
+  display: block;
+}
+.ntgc-search-results-wrapper[class*=" filter-"] .ntgc-search-result {
+  display: none;
+}
+.ntgc-search-results-wrapper.filter-news .ntgc-search-result[data-content-type="news"] {
+  display: block;
+}
+.ntgc-search-results-wrapper.filter-systems .ntgc-search-result[data-content-type="systems"] {
+  display: block;
+}
+.ntgc-search-results-wrapper.filter-training .ntgc-search-result[data-content-type="training"] {
+  display: block;
+}
+.ntgc-search-results-wrapper.filter-training .ntgc-search-result[data-content-type="events"] {
+  display: block;
+}

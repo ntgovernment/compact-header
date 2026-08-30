@@ -1,0 +1,54 @@
+/* ==========================================================================
+   Squiz Matrix Asset ID: #264161
+   Filename: [264161] - skip-links-module.scss
+   Description: @gov.au/skip-link v2.0.16
+   ========================================================================== */
+
+/*! @gov.au/skip-link v2.0.16 */
+@media print {
+  .au-skip-link__link {
+    background: #fff !important;
+  }
+}
+.au-skip-link {
+  font-size: 20px;
+  font-size: 1.25rem;
+  line-height: 1;
+  font-family: "Roboto", arial, sans-serif;
+  color: #343741;
+}
+.au-skip-link__link {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+.au-skip-link__link:active, .au-skip-link__link:focus {
+  outline: 3px solid #fd7cb1;
+  outline-offset: 2px;
+  top: 16px;
+  top: 1 rem;
+  left: 16px;
+  left: 1 rem;
+  padding: 24px;
+  padding: 1.5 rem;
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: absolute;
+  width: auto;
+  color: #ffffff;
+  background-color: #343741;
+  text-decoration: underline;
+  text-decoration-skip-ink: auto;
+  z-index: 600;
+}
+.au-body .au-skip-link__link:hover, .au-skip-link__link:hover {
+  text-decoration: none;
+  color: #ffffff;
+}

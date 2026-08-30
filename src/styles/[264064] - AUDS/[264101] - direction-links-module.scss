@@ -1,0 +1,84 @@
+/* ==========================================================================
+   Squiz Matrix Asset ID: #264101
+   Filename: [264101] - direction-links-module.scss
+   Description: @gov.au/direction-links v3.0.0
+   ========================================================================== */
+
+/*! @gov.au/direction-links v3.0.0 */
+@media print {
+  .au-direction-link {
+    color: #000 !important;
+  }
+  .au-direction-link__arrow--right:after {
+    content: "→" !important;
+  }
+  .au-direction-link__arrow--left:before {
+    content: "←" !important;
+  }
+  .au-direction-link__arrow--up:after {
+    content: "↑" !important;
+  }
+  .au-direction-link__arrow--down:after {
+    content: "↓" !important;
+  }
+}
+.au-direction-link {
+  font-size: 16px;
+  font-size: 1rem;
+  line-height: 1.5;
+  display: inline-block;
+  font-family: "Roboto", arial, sans-serif;
+  color: #343741;
+  appearance: none;
+  background: transparent;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  text-decoration: underline;
+  text-decoration-skip-ink: auto;
+}
+.au-direction-link:hover {
+  text-decoration: none;
+  color: #343741;
+}
+.au-direction-link:focus {
+  outline: 3px solid #fd7cb1;
+  outline-offset: 2px;
+}
+.au-direction-link::-moz-focus-inner {
+  border: 0;
+}
+.au-direction-link.au-direction-link--dark {
+  color: #FFFFFF;
+}
+.au-direction-link.au-direction-link--dark:hover {
+  color: #FFFFFF;
+}
+.au-direction-link.au-direction-link--dark:focus {
+  outline: 3px solid #fd7cb1;
+}
+.au-direction-link.au-direction-link--dark::-moz-focus-inner {
+  border: 0;
+}
+.au-direction-link__arrow:after {
+  width: 16px;
+  width: 1 rem;
+  height: 16px;
+  height: 1 rem;
+  margin: 0 4px;
+  margin: 0  0.25 rem;
+  content: "→";
+  text-decoration: none;
+  display: inline-block;
+  width: auto;
+  height: auto;
+}
+.au-direction-link__arrow--up:after {
+  content: "↑";
+}
+.au-direction-link__arrow--down:after {
+  content: "↓";
+}
+.au-direction-link__arrow--left:after {
+  content: "←";
+}

@@ -1,0 +1,187 @@
+/* ==========================================================================
+   Squiz Matrix Asset ID: #326289
+   Filename: [326289] - my-profile.scss
+   Description: NTG User profile page, favorites, and avatar changer
+   ========================================================================== */
+
+.ntgc-my-profile .ntg-tabs__content-wrapper .ntgc-data-list {
+  border-bottom: none;
+}
+.ntgc-my-profile #user-favourites .system-list--item {
+  list-style: none;
+}
+.ntgc-my-profile #user-favourites .ntgc-online-system-list__results .au-accordion:first-child .au-accordion__title {
+  padding-top: 0;
+}
+.ntgc-my-profile #user-favourites .ntgc-online-system-list__results .au-accordion:first-child .au-accordion__title:after {
+  margin-top: -0.875rem;
+}
+.ntgc-my-profile #user-favourites .content-page-list {
+  padding-left: 0;
+}
+.ntgc-my-profile #user-favourites .content-page-list li {
+  display: flex;
+  padding: 2rem 0;
+  list-style: none;
+  border-bottom: 1px solid #F0EFEE;
+}
+.ntgc-my-profile #user-favourites .content-page-list--bookmark {
+  text-align: right;
+}
+.ntgc-my-profile #user-favourites .content-page-list--bookmark span {
+  cursor: pointer;
+}
+.ntgc-my-profile #user-favourites .content-page-list--bookmark *[data-toggle="favourite"][data-status="checked"] .fal {
+  color: #2E979B;
+}
+.ntgc-profile {
+  position: absolute;
+  display: flex;
+  left: 0;
+  right: 0;
+  background: #fff;
+  font-size: 1rem;
+  padding: 1.3125rem 2rem;
+  z-index: -9999;
+  transform: translateY(-200%);
+  transition: transform 500ms cubic-bezier(0.65, 0.24, 0.32, 0.92);
+}
+.ntgc-profile:before {
+  content: "";
+  top: -1000px;
+  left: 0;
+  right: 0;
+  height: 1000px;
+  position: absolute;
+}
+.ntgc-profile.active {
+  transform: translateY(0);
+  transition: transform 500ms cubic-bezier(0.65, 0.24, 0.32, 0.92);
+}
+.ntgc-profile.active:after {
+  transform: rotate(180deg);
+}
+.ntgc-profile--heading {
+  display: flex;
+  align-items: center;
+  font-size: 24px;
+  font-weight: bold;
+}
+.ntgc-profile .personal-details .ntgc-card.profile-image > .ntgc-card__inner {
+  padding: 2.5rem 1em;
+  color: white;
+  text-align: center;
+}
+.ntgc-profile .personal-details .ntgc-card.profile-image > .ntgc-card__inner .avatar {
+  font-size: 50px;
+  font-weight: 500;
+  display: block;
+}
+.ntgc-profile .personal-details .ntgc-card.profile-image > .ntgc-card__inner .change-photo {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin-top: 15px;
+  background: #a8a8a8;
+  color: white;
+  font-size: 14px;
+  height: 24px;
+  padding: 2px 0 0 0;
+}
+.ntgc-profile .personal-details .ntgc-data-list {
+  border-bottom: 0;
+}
+.ntgc-profile .personal-details .image-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+.ntgc-profile .personal-details .persona-options select#profileView {
+  width: auto;
+}
+.ntgc-profile .personal-details .persona-options .profile-view-options {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1.25rem;
+}
+.ntgc-profile .personal-details .persona-options .profile-view-options label {
+  line-height: 3rem;
+}
+.ntgc-profile .personal-details .persona-options .switch-btn-list {
+  list-style: none;
+  padding-left: 0;
+}
+.ntgc-profile .personal-details .persona-options .switch-btn-list .switch-name {
+  margin-top: -4px;
+  min-width: auto;
+  display: inline-block;
+  vertical-align: text-top;
+}
+.ntgc-profile .personal-details .persona-options .switch-btn-list li {
+  display: block;
+  margin-bottom: 0.85rem;
+}
+.ntgc-profile .personal-details .persona-options .switch-btn-list li .ntgc-switch {
+  margin-left: 16px;
+}
+.ntgc-profile .personal-details .refreshProfile {
+  font-size: 1rem;
+}
+.ntgc-profile .personal-details .refreshProfile:hover {
+  cursor: pointer;
+  color: #2E979B;
+}
+.ntgc-profile .favourites .ntgc-table__cell {
+  padding: 0.75rem 0.75rem 0.75rem 0;
+}
+.ntgc-profile .ntgc-table-loader-animation tr td {
+  height: auto;
+}
+.ntgc-profile .ntgc-table-loader-animation tr td.td-1 span {
+  height: 12px;
+  width: 110px;
+  padding-top: 10px;
+}
+.ntgc-profile .ntgc-table-loader-animation tr td.td-5 span {
+  height: 24px;
+}
+.ntgc-profile .ntgc-table-loader-animation tr td.td-3 span {
+  padding-top: 10px;
+}
+.ntgc-profile .favourites .ntgc-table__row.deleting {
+  opacity: 0.5;
+}
+.ntgc-profile .favourites .ntgc-table__row .relpos {
+  position: relative;
+  padding-right: 2rem;
+}
+.ntgc-profile .favourites .ntgc-table__row span.bookmark {
+  position: absolute;
+  right: 0.5rem;
+  padding: 0.5rem;
+  top: 0.25rem;
+}
+.ntgc-profile .favourites .ntgc-table__row span.bookmark .fal {
+  color: #DEDEDA;
+  transition: color 200ms ease;
+  font-weight: 400;
+}
+.ntgc-profile .favourites .ntgc-table__row span.bookmark:hover {
+  cursor: pointer;
+}
+.ntgc-profile .favourites .ntgc-table__row span.bookmark:hover .fal {
+  transition: color 200ms ease;
+  color: #2E979B;
+}
+body.shaded--outsideprofile:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: #102040;
+  opacity: 0.4;
+  z-index: 100;
+}

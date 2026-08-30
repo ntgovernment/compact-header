@@ -1,0 +1,169 @@
+/* ==========================================================================
+   Squiz Matrix Asset ID: #989747
+   Filename: [989747] - secondary-navigation.css
+   Description: Agency secondary sub-navigation styles & header inner fix
+   ========================================================================== */
+
+.ntgc-navigation--secondary {
+  background-color: #ECF0F0;
+  padding: 0 calc(2rem - 8px);
+  margin: 0 -2rem;
+}
+.ntgc-navigation--secondary > ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.ntgc-navigation--secondary > ul > li {
+  margin-top: 0 !important;
+  position: relative;
+}
+.ntgc-navigation--secondary > ul > li > a {
+  display: block;
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none;
+  padding: 8px 12px;
+}
+.ntgc-navigation--secondary > ul > li > a.external::after {
+  content: "";
+  font-family: "Font Awesome 5 Pro";
+  font-weight: 300;
+  margin-left: 0.5rem;
+}
+.ntgc-navigation--secondary a.dropdown {
+  background: transparent;
+  border: none;
+  color: #00204E;
+  font-size: 14px;
+  font-weight: 700;
+  padding: 8px 12px;
+}
+.ntgc-navigation--secondary a.dropdown:hover {
+  color: #E35205;
+  cursor: pointer;
+}
+.ntgc-navigation--secondary a.dropdown.active {
+  color: #E35205;
+}
+.ntgc-navigation--secondary a.dropdown::after {
+  content: "";
+  font-family: "Font Awesome 5 Pro";
+  font-weight: 300;
+  margin-left: 0.5rem;
+}
+.ntgc-navigation--secondary a.dropdown.active::after {
+  content: "";
+}
+.ntgc-navigation--secondary a.dropdown + ul {
+  display: none;
+  position: absolute;
+  top: calc(100% + 4px);
+  left: 0;
+  z-index: 1;
+}
+.ntgc-navigation--secondary .dropdown.active + ul {
+  display: block;
+}
+.ntgc-navigation--secondary ul ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  background-color: #ffffff;
+  box-shadow: 0 8px 16px rgba(59, 59, 58, 0.2);
+  width: max-content;
+}
+.ntgc-navigation--secondary ul ul > li {
+  margin-top: 0 !important;
+}
+.ntgc-navigation--secondary ul ul > li > a {
+  display: block;
+  font-size: 14px;
+  font-weight: 400;
+  text-decoration: none;
+  padding: 8px 12px;
+}
+/* Position the dropdown relative to its parent */
+.ntgc-navigation--secondary .level-one > li {
+  position: relative;
+}
+/* Style the dropdown menu */
+.ntgc-navigation--secondary .level-two {
+  position: absolute;
+  min-width: 100%;
+  /* Match parent width minimum */
+  white-space: nowrap;
+  /* Prevent text wrapping if needed */
+}
+@media (min-width: 767px) {
+  .ntgc-navigation--main ul > li.common-links {
+    display: none;
+  }
+}
+@media (max-width: 767px) {
+  /* fix for second level .menu-wrapper positioning */
+  .ntgc-navigation--secondary {
+    display: none;
+  }
+  .ntgc-navigation--main li.common-links {
+    background-color: #ECF0F0 !important;
+  }
+  .ntgc-navigation--main li.common-links li {
+    background-color: #ECF0F0;
+    border-bottom-color: #DCE0E4;
+  }
+  .ntgc-navigation--main li.common-links a.external::after {
+    content: "";
+    font-family: "Font Awesome 5 Pro";
+    font-weight: 300;
+    margin-left: 0.5rem;
+  }
+  .ntgc-navigation--main .au-accordion {
+    margin-top: 0;
+    border-bottom: 1px solid #DCE0E4;
+  }
+  .ntgc-navigation--main .au-accordion .au-accordion__title {
+    background-color: #ECF0F0 !important;
+    font-size: 1rem;
+    padding: 1rem;
+    transition: color 300ms ease;
+  }
+  .ntgc-navigation--main .au-accordion .au-accordion__title::after {
+    background-image: url('data:image/svg+xml,%3Csvg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"%3E%3Cpath d="M8.36195 12.4399C8.16318 12.6387 7.83616 12.6387 7.63739 12.4399L1.48178 6.28429C1.28301 6.08552 1.28301 5.7585 1.48178 5.55973C1.68056 5.36095 2.00757 5.36095 2.20635 5.55973L7.99967 11.353L13.793 5.55973C13.9918 5.36095 14.3188 5.36095 14.5176 5.55973C14.7163 5.7585 14.7163 6.08552 14.5176 6.28429L8.36195 12.4399Z" fill="%2300204e"/%3E%3C/svg%3E');
+    right: 2rem;
+    transition: background-image 300ms ease;
+  }
+  .ntgc-navigation--main .au-accordion .au-accordion__title:hover {
+    color: #E35205;
+    text-decoration: none;
+  }
+  .ntgc-navigation--main .au-accordion .au-accordion__title:hover::after {
+    background-image: url('data:image/svg+xml,%3Csvg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"%3E%3Cpath d="M8.36195 12.4399C8.16318 12.6387 7.83616 12.6387 7.63739 12.4399L1.48178 6.28429C1.28301 6.08552 1.28301 5.7585 1.48178 5.55973C1.68056 5.36095 2.00757 5.36095 2.20635 5.55973L7.99967 11.353L13.793 5.55973C13.9918 5.36095 14.3188 5.36095 14.5176 5.55973C14.7163 5.7585 14.7163 6.08552 14.5176 6.28429L8.36195 12.4399Z" fill="%23e35205"/%3E%3C/svg%3E');
+  }
+  .ntgc-navigation--main .au-accordion .au-accordion__title.au-accordion--open {
+    background-color: #DCE0E4;
+  }
+  .ntgc-navigation--main .au-accordion .au-accordion__body-wrapper {
+    padding: 0;
+  }
+  .ntgc-navigation--main .au-accordion .au-accordion__body-wrapper li {
+    background-color: #DCE0E4;
+    padding-left: 2rem;
+    margin: 0;
+  }
+  .ntgc-navigation--main .au-accordion .au-accordion__body-wrapper a {
+    font-weight: 700;
+    text-decoration: none;
+    transition: color 300ms ease;
+  }
+  .ntgc-navigation--main ul.level-one > li.active .menu-wrapper {
+    left: 98vw;
+  }
+}
+/* fix for extra added ntgc-header__inner */
+.ntgc-header .ntgc-header__inner:nth-of-type(4) {
+  z-index: 9997;
+}

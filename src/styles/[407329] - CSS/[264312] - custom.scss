@@ -1,0 +1,102 @@
+/* ==========================================================================
+   Squiz Matrix Asset ID: #264312
+   Filename: [264312] - custom.scss
+   Description: Custom base styles, body resets, grid rows
+   ========================================================================== */
+
+body {
+  padding: 0;
+  margin: 0;
+  overflow-x: hidden;
+}
+.au-grid .row {
+  display: flex;
+  flex-flow: wrap;
+}
+.au-grid .row .order-first {
+  order: 1;
+}
+.au-grid .row .order-last {
+  order: 13;
+}
+@media (max-width: 767.98px) {
+  [class*="col-"] {
+    width: 100% !important;
+  }
+}
+main > .ntgc-body {
+  padding: 32px 0;
+  padding: 2 rem 0;
+}
+@media (min-width: 768px) {
+  main > .ntgc-body {
+    padding: 64px 0;
+    padding: 4 rem 0;
+  }
+}
+.au-footer .au-link-list--inline li {
+  padding-right: 16px;
+  padding-right: 1 rem;
+}
+.btn-cta-group {
+  margin-top: 16px;
+  margin-top: 1 rem;
+}
+.btn-cta-group .au-btn {
+  margin-top: 16px;
+  margin-top: 1 rem;
+}
+.highlighted-section .col-sm-4 + .col-sm-4 {
+  margin-top: 64px;
+  margin-top: 4 rem;
+}
+@media (min-width: 768px) {
+  .highlighted-section .col-sm-4 + .col-sm-4 {
+    margin-top: 0;
+  }
+}
+.hide_content {
+  display: none;
+}
+.label--block {
+  display: block;
+}
+.empty-required.au-text-input:invalid, .empty-required.au-text-input.au-text-input--dark:invalid {
+  background: transparent;
+  border-color: #9a9ba0;
+}
+.empty-required.au-control-input__input:invalid + .au-control-input__text {
+  background: transparent;
+}
+.empty-required.au-control-input__input:invalid + .au-control-input__text:after {
+  border-color: transparent;
+}
+.ntg-columns .row {
+  margin-top: 24px;
+  margin-top: 1.5 rem;
+}
+@media (max-width: 767.98px) {
+  .ntg-columns [class^="col"]:not(:last-child) {
+    margin-bottom: 24px;
+    margin-bottom: 1.5 rem;
+  }
+}
+figure {
+  margin: 0;
+}
+figure img ~ figcaption {
+  position: relative;
+  margin-top: 1rem;
+}
+figure img ~ figcaption:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 30px;
+  background-color: #2c2d65;
+  height: 2px;
+  width: 6rem;
+}
+.is-pointer:not(.is-keyboard) *:focus {
+  outline: none;
+}

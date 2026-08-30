@@ -1,0 +1,149 @@
+/* ==========================================================================
+   Squiz Matrix Asset ID: #264173
+   Filename: [264173] - text-inputs-module.scss
+   Description: @gov.au/text-inputs v2.1.2
+   ========================================================================== */
+
+/*! @gov.au/text-inputs v2.1.2 */
+@media print {
+  .au-text-input {
+    border-color: #000 !important;
+  }
+  .au-text-input[disabled] {
+    color: #9a9ba0 !important;
+    background-color: #ccc !important;
+    border: 2px solid #ccc !important;
+  }
+  .au-text-input:disabled {
+    color: #9a9ba0 !important;
+    background-color: #ccc !important;
+    border: 2px solid #ccc !important;
+  }
+}
+/**
+ * Generic text input styling.
+ *
+ * Also includes variants:
+ * - invalid
+ * - valid
+ * - :focus
+ * - :disabled/[disabled]
+ */
+.au-text-input {
+  box-sizing: border-box;
+  font-size: 16px;
+  font-size: 1rem;
+  line-height: 1;
+  padding: 8px 16px;
+  padding: 0.5 rem  1 rem;
+  height: 46px;
+  height: 2.875 rem;
+  border: 3px solid #9a9ba0;
+  background-color: #ffffff;
+  font-family: "Roboto", arial, sans-serif;
+  color: #343741;
+  border-radius: 4px;
+  vertical-align: middle;
+  appearance: none;
+  width: 100%;
+  max-width: 205px;
+  max-width: 12.8125 rem;
+  /**
+	 * Block modifier
+	 */
+  /**
+	 * Number input styling.
+	 *
+	 * Numbers are easier to disambiguate from each other (and letters) when set in
+	 * monospace.
+	 */
+}
+.au-text-input.au-text-input--dark:invalid, .au-text-input:invalid {
+  background-color: #fdf2f2;
+  border-color: #d60000;
+}
+.au-text-input.au-text-input--dark.au-text-input--invalid, .au-text-input.au-text-input--invalid {
+  background-color: #fdf2f2;
+  border-color: #d60000;
+}
+.au-text-input.au-text-input--dark.au-text-input--valid, .au-text-input.au-text-input--valid {
+  background-color: #f3faf8;
+  border-color: #0b996c;
+}
+.au-text-input[disabled] {
+  cursor: not-allowed;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=30)";
+  opacity: 0.3;
+}
+.au-text-input:disabled {
+  cursor: not-allowed;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=30)";
+  opacity: 0.3;
+}
+.au-text-input:focus {
+  outline: 3px solid #fd7cb1;
+  outline-offset: 2px;
+}
+.au-text-input::-moz-focus-inner {
+  border: 0;
+}
+.au-text-input:focus {
+  border-radius: 0;
+  background-color: #ffffff;
+}
+.au-text-input.au-text-input--dark {
+  border-color: #FFFFFF;
+}
+.au-text-input.au-text-input--dark[disabled] {
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=30)";
+  opacity: 0.3;
+}
+.au-text-input.au-text-input--dark:disabled {
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=30)";
+  opacity: 0.3;
+}
+.au-text-input.au-text-input--dark:focus {
+  outline: 3px solid #fd7cb1;
+}
+.au-text-input.au-text-input--dark::-moz-focus-inner {
+  border: 0;
+}
+.au-text-input.au-text-input--width-xs {
+  max-width: 69px;
+  max-width: 4.3 rem;
+}
+.au-text-input.au-text-input--width-sm {
+  max-width: 101px;
+  max-width: 6.3 rem;
+}
+.au-text-input.au-text-input--width-md {
+  max-width: 160px;
+  max-width: 10 rem;
+}
+.au-text-input.au-text-input--width-lg {
+  max-width: 288px;
+  max-width: 18 rem;
+}
+.au-text-input.au-text-input--width-xl {
+  max-width: 384px;
+  max-width: 24 rem;
+}
+.au-text-input.au-text-input--block {
+  display: block;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+.au-text-input.au-text-input--number {
+  font-family: "SFMono-Regular", Courier, monospace;
+  letter-spacing: 2px;
+}
+/**
+ * Textarea styling. (Not nested because sass does odd stuff)
+ */
+textarea.au-text-input {
+  font-size: 16px;
+  font-size: 1rem;
+  line-height: 1.5;
+  height: auto;
+  min-height: 6em;
+}

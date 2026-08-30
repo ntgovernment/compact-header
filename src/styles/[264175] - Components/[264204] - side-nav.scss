@@ -1,0 +1,94 @@
+/* ==========================================================================
+   Squiz Matrix Asset ID: #264204
+   Filename: [264204] - side-nav.scss
+   Description: NTG Side navigation accordion & menu styling
+   ========================================================================== */
+
+.ntgc-side-nav {
+  max-width: 360px;
+  padding: 0;
+  margin: 0;
+}
+.ntgc-side-nav li {
+  list-style: none;
+  position: relative;
+  padding: 1rem 3rem 1rem 0;
+  border-top: 1px solid #DEDEDA;
+}
+.ntgc-side-nav li.header {
+  color: #343741;
+  border-top: none;
+  font-weight: 600;
+  font-size: 0.75rem;
+  padding: 0 3rem 1.25rem 0;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+.ntgc-side-nav li.header [class*=" fa-"] {
+  display: none;
+}
+.ntgc-side-nav li:last-child {
+  border-bottom: 1px solid #DEDEDA;
+}
+.ntgc-side-nav li [class*=" fa-"] {
+  position: absolute;
+  top: calc(50% - 0.7rem);
+  right: 0.5rem;
+  transition: all 300ms ease;
+}
+.ntgc-side-nav li:hover a, .ntgc-side-nav li.active a {
+  transition: color 300ms ease;
+  color: #2E979B;
+}
+.ntgc-side-nav li:hover [class*=" fa-"] {
+  color: #2E979B;
+  right: 0rem;
+  transition: all 300ms ease;
+}
+.ntgc-side-nav li.active [class*=" fa-"] {
+  color: #2E979B;
+}
+.ntgc-side-nav li a {
+  display: block;
+  line-height: 1.5rem;
+  text-decoration: none;
+  color: #506080;
+  transition: color 300ms ease;
+}
+@media (max-width: 1024px) {
+  .ntgc-side-nav {
+    padding-bottom: 3rem;
+  }
+  .ntgc-side-nav li.header [class*=" fa-"] {
+    top: 0;
+    right: 0.5rem;
+    color: #2E979B;
+    font-size: 1rem;
+  }
+  .ntgc-side-nav li.header:hover [class*=" fa-"] {
+    top: 0;
+    right: 0.5rem;
+  }
+  .ntgc-side-nav--closed li.header .fa-angle-down {
+    display: block;
+  }
+  .ntgc-side-nav--closed li.header .fa-angle-up {
+    display: none;
+  }
+  .ntgc-side-nav--closed li:not(.header) {
+    display: none;
+    opacity: 0;
+    -webkit-transition: opacity 600ms, display 600ms;
+    transition: opacity 600ms, display 600ms;
+  }
+  .ntgc-side-nav--open li.header .fa-angle-down {
+    display: none;
+  }
+  .ntgc-side-nav--open li.header .fa-angle-up {
+    display: block;
+  }
+  .ntgc-side-nav--open li:not(.header) {
+    display: block;
+    opacity: 1;
+  }
+}

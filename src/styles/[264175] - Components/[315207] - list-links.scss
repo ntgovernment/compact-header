@@ -1,0 +1,51 @@
+/* ==========================================================================
+   Squiz Matrix Asset ID: #315207
+   Filename: [315207] - list-links.scss
+   Description: NTG List links styling
+   ========================================================================== */
+
+.ntgc-list-links {
+  margin-top: 1rem;
+}
+.ntgc-list-links__title {
+  display: block;
+  padding: 0 0 1rem;
+  text-transform: uppercase;
+  font-size: 0.6875rem;
+  font-weight: 700;
+  color: #343741;
+  border-bottom: 1px solid #d0e0e0;
+}
+.ntgc-list-links ul {
+  padding: 0;
+  margin: 0;
+}
+.ntgc-list-links ul > li {
+  list-style: none;
+  border-bottom: 1px solid #d0e0e0;
+}
+.ntgc-list-links ul > li a {
+  display: block;
+  padding: 1rem 3rem 1rem 0;
+  color: #50647C;
+  text-decoration: none;
+  position: relative;
+}
+.ntgc-list-links ul > li a::after {
+  font-family: "Font Awesome 5 Pro";
+  content: "";
+  font-size: 0.9375rem;
+  color: #2E979B;
+  position: absolute;
+  top: 1.1rem;
+  right: 1rem;
+  transition: right 300ms ease;
+}
+.ntgc-list-links ul > li a:hover, .ntgc-list-links ul > li a:active, .ntgc-list-links ul > li a.ntgc-list-links--active {
+  text-decoration: none;
+  color: #2E979B;
+}
+.ntgc-list-links ul > li a:hover::after, .ntgc-list-links ul > li a:active::after, .ntgc-list-links ul > li a.ntgc-list-links--active::after {
+  transition: right 300ms ease;
+  right: 0;
+}

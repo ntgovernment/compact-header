@@ -1,0 +1,50 @@
+/* ==========================================================================
+   Squiz Matrix Asset ID: #264129
+   Filename: [264129] - keyword-list-module.scss
+   Description: @gov.au/keyword-list v3.0.5
+   ========================================================================== */
+
+/*! @gov.au/keyword-list v3.0.5 */
+.au-keyword-list {
+  font-size: 22px;
+  font-size: 1.375rem;
+  line-height: 1.4545454545;
+}
+.au-keyword-list:before, .au-keyword-list:after {
+  content: "";
+  display: table;
+}
+.au-keyword-list:after {
+  clear: both;
+}
+* + .au-keyword-list {
+  margin-top: 16px;
+  margin-top: 1 rem;
+}
+.au-body .au-keyword-list > li {
+  margin-top: 16px;
+  margin-top: 1 rem;
+  float: left;
+  clear: both;
+  list-style: none;
+  margin-left: 0;
+}
+.au-keyword-list > li {
+  font-weight: bold;
+}
+.au-keyword-list > li > a {
+  display: block;
+}
+.au-keyword-list__small {
+  font-size: 16px;
+  font-size: 1rem;
+  line-height: 1;
+  display: block;
+  font-weight: normal;
+}
+.au-body .au-keyword-list__small {
+  color: #343741;
+}
+.au-keyword-list--dark .au-keyword-list__small {
+  color: #FFFFFF;
+}

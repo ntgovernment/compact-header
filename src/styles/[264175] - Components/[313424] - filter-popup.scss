@@ -1,0 +1,51 @@
+/* ==========================================================================
+   Squiz Matrix Asset ID: #313424
+   Filename: [313424] - filter-popup.scss
+   Description: NTG Filter popup modal component
+   ========================================================================== */
+
+.ntgc-filter-popup {
+  position: absolute;
+  background: #FFFFFF;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.16);
+  z-index: 98;
+  padding: 1.75rem;
+}
+.ntgc-filter-popup .ntgc-select, .ntgc-filter-popup input {
+  margin-bottom: 1.5rem;
+}
+.ntgc-filter-popup a.clear-btn {
+  text-decoration: underline !important;
+  padding: 1rem 0 0 0;
+}
+.ntgc-filter-popup a.clear-btn:hover {
+  text-decoration: none !important;
+}
+.ntgc-filter-popup .filter_wrapper .accordion-item {
+  padding: 0 4.5rem 0 0;
+  min-width: 7.25rem;
+}
+.ntgc-filter-popup .filter_wrapper .accordion-item:last-child {
+  padding: 0;
+}
+.ntgc-filter-popup .filter_wrapper .checkbox-heading {
+  display: block;
+  padding-bottom: 1rem;
+  color: #343741;
+}
+@media (max-width: 768px) {
+  .ntgc-filter-popup {
+    position: relative;
+    background: none;
+    box-shadow: none;
+    padding: 0;
+    width: auto;
+  }
+  .ntgc-filter-popup .filter_wrapper .accordion-item {
+    min-width: auto;
+    padding: 0;
+  }
+  .ntgc-filter-popup .filter_wrapper .checkbox-heading {
+    display: none;
+  }
+}

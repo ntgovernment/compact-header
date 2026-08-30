@@ -1,0 +1,58 @@
+/* ==========================================================================
+   Squiz Matrix Asset ID: #264191
+   Filename: [264191] - headings.scss
+   Description: NTG Petal animations for heading backgrounds
+   ========================================================================== */
+
+@keyframes largepetal {
+  0% {
+    opacity: 0.831;
+  }
+  50% {
+    opacity: 0.42;
+  }
+  100% {
+    opacity: 0.831;
+  }
+}
+@keyframes smallpetal {
+  0% {
+    opacity: 0.32;
+  }
+  30% {
+    opacity: 0.05;
+  }
+  70% {
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 0.32;
+  }
+}
+@keyframes outlinepetal {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.3;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+/*
+
+Investigate performance Hit
+
+#Path_1175 {
+    //animation: largepetal 30s 3s ease infinite;
+}
+
+#Path_1516 {
+    //animation: smallpetal 20s 5s ease infinite;
+}
+
+#Path_1515 {
+    //animation: outlinepetal 20s 5s ease infinite;
+}
+*/

@@ -1,0 +1,36 @@
+/* ==========================================================================
+   Squiz Matrix Asset ID: #264133
+   Filename: [264133] - link-list-module.scss
+   Description: @gov.au/link-list v3.0.8
+   ========================================================================== */
+
+/*! @gov.au/link-list v3.0.8 */
+/**
+ * Block of links.
+ */
+.au-link-list {
+  font-size: 16px;
+  font-size: 1rem;
+  line-height: 1.5;
+  display: block;
+  list-style-type: none;
+  margin: 0;
+  padding: 4px 0;
+  padding: 0.25 rem 0;
+}
+.au-body .au-link-list {
+  margin: 0;
+  padding: 4px 0;
+  padding: 0.25 rem 0;
+}
+.au-link-list > li {
+  display: block;
+  margin: 4px;
+  margin: 0.25 rem;
+}
+.au-link-list.au-link-list--inline {
+  display: inline-block;
+}
+.au-link-list.au-link-list--inline > li {
+  display: inline-block;
+}

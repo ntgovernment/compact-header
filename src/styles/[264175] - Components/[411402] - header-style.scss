@@ -1,0 +1,225 @@
+/* ==========================================================================
+   Squiz Matrix Asset ID: #411402
+   Filename: [411402] - header-style.scss
+   Description: NTG Agency Header structure, logos, search bar & mobile menu
+   ========================================================================== */
+
+.ntgc-header {
+  position: relative;
+}
+.ntgc-header .ntgc-header__inner {
+  background: #FFF;
+  position: relative;
+  padding: 0 2rem;
+  margin: 0 -2rem;
+}
+.ntgc-header .ntgc-header__inner:nth-of-type(1) {
+  z-index: 10000;
+  border-bottom: 1px solid #F0EFEE;
+}
+.ntgc-header .ntgc-header__inner:nth-of-type(2) {
+  z-index: 9999;
+}
+.ntgc-header .ntgc-header__inner:nth-of-type(3) {
+  z-index: 9998;
+}
+.ntgc-header .ntgc-header__inner .ntgc-logo {
+  height: 40px;
+  color: #343741;
+}
+.ntgc-header__welcome {
+  margin-top: 5.625rem;
+  margin-bottom: 2.5rem;
+  font-size: 3rem;
+  font-weight: 600;
+  line-height: 3rem;
+}
+.ntgc-header__intro {
+  margin-top: 5.625rem;
+  margin-bottom: 2.5rem;
+}
+.ntgc-header__logo svg {
+  height: 40px;
+  width: 107px;
+}
+.ntgc-header__logo .ntgc-logo {
+  line-height: 1rem;
+  text-decoration: none;
+}
+.ntgc-header__title {
+  font-size: 3rem;
+  font-weight: 600;
+  line-height: 3.5rem;
+  margin: 0;
+  margin-top: 1rem;
+  max-width: 48rem;
+  padding: 0;
+}
+.ntgc-header--graphic {
+  background-position: bottom right;
+  background-repeat: no-repeat;
+  background-position-x: 100%;
+  background-position-y: 90px;
+}
+.ntgc-header--gradient {
+  background: linear-gradient(45deg, #55326d 0%, #007e91 62%, #3d479d 100%);
+}
+.ntgc-header--gradient .ntgc-breadcrumbs li.breadcrumb, .ntgc-header--gradient .ntgc-breadcrumbs li.breadcrumb > a {
+  color: #F0EFEE;
+}
+.ntgc-header--gradient .ntgc-header__title {
+  color: #FFFFFF;
+}
+.ntgc-header--dark {
+  background-color: #343741;
+}
+.ntgc-header--dark .ntgc-breadcrumbs li.breadcrumb, .ntgc-header--dark .ntgc-breadcrumbs li.breadcrumb > a {
+  color: white;
+}
+.ntgc-header--dark .ntgc-breadcrumbs li.breadcrumb > a:hover {
+  color: white;
+  border-color: currentcolor;
+}
+.ntgc-header--dark .ntgc-header__title {
+  color: #FFFFFF;
+}
+.ntgc-header--neutral {
+  background-color: #F0EFEE;
+}
+.ntgc-header--neutral .ntgc-breadcrumbs li.breadcrumb, .ntgc-header--neutral .ntgc-breadcrumbs li.breadcrumb > a {
+  color: #506080;
+}
+.ntgc-header--neutral .ntgc-header__title {
+  color: #343741;
+}
+.ntgc-header--white {
+  background-color: #FFFFFF;
+}
+.ntgc-header--white .ntgc-breadcrumbs li.breadcrumb, .ntgc-header--white .ntgc-breadcrumbs li.breadcrumb > a {
+  color: #BABBB8;
+}
+.ntgc-header--white .ntgc-header__title {
+  color: #343741;
+}
+.ntgc-header--white .header-wrapper {
+  -webkit-box-shadow: 0px -12px 10px 15px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px -12px 10px 15px rgba(0, 0, 0, 0.2);
+}
+.ntgc-header--dark.ntgc-header--graphic {
+  background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3C!-- Generator: Adobe Illustrator 28.7.1, SVG Export Plug-In . SVG Version: 9.03 Build 54978) --%3E%3Csvg version='1.1' id='Layer_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 450 250' style='enable-background:new 0 0 450 250;' xml:space='preserve'%3E%3Cstyle type='text/css'%3E .st0%7Bopacity:0.5;fill:%237C8184;enable-background:new ;%7D%0A%3C/style%3E%3Cg%3E%3Cg id='Layer_1_00000073683101150106118880000012823238961843174584_'%3E%3Cpath class='st0' d='M392,117.6c-8.6,1.5-17.2,15.2-13.7,25.8c5.1,14.7,15.7,38.5,30.9,39c15.2-0.5,25.8-24.3,30.9-39 c2.7-10.8-3.2-22-13.7-25.8c-11.4-2-23.1-2-34.5,0'/%3E%3Cpath class='st0' d='M320.1,169.3c-4.6,8.1,1,23.3,11.1,27.4c14.2,5.1,39.5,11.7,49.1-0.5c9.1-12.2-2.5-36-10.6-49.1 c-6.6-9-19.1-11.2-28.4-5.1C332.6,149.7,325.4,159,320.1,169.3'/%3E%3Cpath class='st0' d='M314,257.5c3,8.6,18.7,13.7,27.9,7.6c12.7-8.1,33.4-24.3,30.4-39.5c-3.5-15.2-28.9-20.3-44.1-22.3 c-11.2-0.2-20.6,8.2-21.8,19.3c0.6,12,3.2,23.8,7.6,35'/%3E%3Cpath class='st0' d='M379.3,317.3c8.6,2.5,22.3-6.1,23.3-17.2c1.5-15.2,2-42.1-11.1-49.1c-13.7-6.1-33.4,10.6-44.6,21.8 c-7.1,8.7-6.6,21.2,1,29.4C357.5,309,368.1,314.1,379.3,317.3'/%3E%3Cpath class='st0' d='M466.5,303.1c7.1-5.1,9.1-21.8,1-29.4c-10.6-11.1-30.9-27.9-44.6-21.8c-13.2,7.1-12.7,33.4-11.1,49.1 c2,11,12.2,18.5,23.3,17.2c11.3-3.2,21.9-8.3,31.4-15.2'/%3E%3Cpath class='st0' d='M510.1,225.1c-0.9-11.3-10.5-19.8-21.8-19.3c-15.2,2-40.5,7.1-44.1,22.3c-3,15.2,17.7,31.4,30.4,39.5 c9.9,4.9,21.8,1.6,27.9-7.6c4.1-11.3,6.6-23,7.6-35'/%3E%3Cpath class='st0' d='M476.6,143.5c-6.6-6.1-22.8-4.1-28.4,5.1c-8.1,13.2-19.8,37-10.6,49.1c9.6,11.7,35,5.6,49.1,0.5 c10-4.8,14.8-16.4,11.1-26.9C492.8,160.6,485.5,151.1,476.6,143.5'/%3E%3Cpath class='st0' d='M432,170.8c-1,6.6-9.6,23.8-3,32.4c7.1,9.1,24.8,4.1,31.4,4.6l-1,0.5c-5.6,3-24.3,7.1-26.3,17.7 c-2.5,11.7,12.7,22.3,16.2,27.9l-0.5-1c-6.1-2.5-20.3-14.7-29.9-10.1c-10.6,5.1-9.1,23.8-11.1,30.4v-1 c-1.5-6.6-1.5-25.3-11.1-30.4c-10.6-5.1-24.3,7.6-30.4,10.1l0.5-0.5c4.1-5.6,18.7-17.2,16.2-27.9c-2.5-11.7-20.8-14.7-26.3-18.2h1 c6.6-0.5,24.8,4.6,31.4-4.6c7.6-9.1-1.5-25.8-2.5-32.4l0.5,1c4.6,5.1,12.2,22.3,22.8,22.3s18.7-17.2,23.3-22.3l-1,1.5L432,170.8z' /%3E%3C/g%3E%3C/g%3E%3C/svg%3E%0A");
+}
+.ntgc-header--neutral.ntgc-header--graphic {
+  background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3C!-- Generator: Adobe Illustrator 28.7.1, SVG Export Plug-In . SVG Version: 9.03 Build 54978) --%3E%3Csvg version='1.1' id='Layer_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 450 250' style='enable-background:new 0 0 450 250;' xml:space='preserve'%3E%3Cstyle type='text/css'%3E .st0%7Bopacity:0.5;fill:%237C8184;enable-background:new ;%7D%0A%3C/style%3E%3Cg%3E%3Cg id='Layer_1_00000073683101150106118880000012823238961843174584_'%3E%3Cpath class='st0' d='M392,117.6c-8.6,1.5-17.2,15.2-13.7,25.8c5.1,14.7,15.7,38.5,30.9,39c15.2-0.5,25.8-24.3,30.9-39 c2.7-10.8-3.2-22-13.7-25.8c-11.4-2-23.1-2-34.5,0'/%3E%3Cpath class='st0' d='M320.1,169.3c-4.6,8.1,1,23.3,11.1,27.4c14.2,5.1,39.5,11.7,49.1-0.5c9.1-12.2-2.5-36-10.6-49.1 c-6.6-9-19.1-11.2-28.4-5.1C332.6,149.7,325.4,159,320.1,169.3'/%3E%3Cpath class='st0' d='M314,257.5c3,8.6,18.7,13.7,27.9,7.6c12.7-8.1,33.4-24.3,30.4-39.5c-3.5-15.2-28.9-20.3-44.1-22.3 c-11.2-0.2-20.6,8.2-21.8,19.3c0.6,12,3.2,23.8,7.6,35'/%3E%3Cpath class='st0' d='M379.3,317.3c8.6,2.5,22.3-6.1,23.3-17.2c1.5-15.2,2-42.1-11.1-49.1c-13.7-6.1-33.4,10.6-44.6,21.8 c-7.1,8.7-6.6,21.2,1,29.4C357.5,309,368.1,314.1,379.3,317.3'/%3E%3Cpath class='st0' d='M466.5,303.1c7.1-5.1,9.1-21.8,1-29.4c-10.6-11.1-30.9-27.9-44.6-21.8c-13.2,7.1-12.7,33.4-11.1,49.1 c2,11,12.2,18.5,23.3,17.2c11.3-3.2,21.9-8.3,31.4-15.2'/%3E%3Cpath class='st0' d='M510.1,225.1c-0.9-11.3-10.5-19.8-21.8-19.3c-15.2,2-40.5,7.1-44.1,22.3c-3,15.2,17.7,31.4,30.4,39.5 c9.9,4.9,21.8,1.6,27.9-7.6c4.1-11.3,6.6-23,7.6-35'/%3E%3Cpath class='st0' d='M476.6,143.5c-6.6-6.1-22.8-4.1-28.4,5.1c-8.1,13.2-19.8,37-10.6,49.1c9.6,11.7,35,5.6,49.1,0.5 c10-4.8,14.8-16.4,11.1-26.9C492.8,160.6,485.5,151.1,476.6,143.5'/%3E%3Cpath class='st0' d='M432,170.8c-1,6.6-9.6,23.8-3,32.4c7.1,9.1,24.8,4.1,31.4,4.6l-1,0.5c-5.6,3-24.3,7.1-26.3,17.7 c-2.5,11.7,12.7,22.3,16.2,27.9l-0.5-1c-6.1-2.5-20.3-14.7-29.9-10.1c-10.6,5.1-9.1,23.8-11.1,30.4v-1 c-1.5-6.6-1.5-25.3-11.1-30.4c-10.6-5.1-24.3,7.6-30.4,10.1l0.5-0.5c4.1-5.6,18.7-17.2,16.2-27.9c-2.5-11.7-20.8-14.7-26.3-18.2h1 c6.6-0.5,24.8,4.6,31.4-4.6c7.6-9.1-1.5-25.8-2.5-32.4l0.5,1c4.6,5.1,12.2,22.3,22.8,22.3s18.7-17.2,23.3-22.3l-1,1.5L432,170.8z' /%3E%3C/g%3E%3C/g%3E%3C/svg%3E%0A");
+}
+.ntgc-header--white.ntgc-header--graphic {
+  background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3C!-- Generator: Adobe Illustrator 28.7.1, SVG Export Plug-In . SVG Version: 9.03 Build 54978) --%3E%3Csvg version='1.1' id='Layer_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 450 250' style='enable-background:new 0 0 450 250;' xml:space='preserve'%3E%3Cstyle type='text/css'%3E .st0%7Bopacity:0.5;fill:%237C8184;enable-background:new ;%7D%0A%3C/style%3E%3Cg%3E%3Cg id='Layer_1_00000073683101150106118880000012823238961843174584_'%3E%3Cpath class='st0' d='M392,117.6c-8.6,1.5-17.2,15.2-13.7,25.8c5.1,14.7,15.7,38.5,30.9,39c15.2-0.5,25.8-24.3,30.9-39 c2.7-10.8-3.2-22-13.7-25.8c-11.4-2-23.1-2-34.5,0'/%3E%3Cpath class='st0' d='M320.1,169.3c-4.6,8.1,1,23.3,11.1,27.4c14.2,5.1,39.5,11.7,49.1-0.5c9.1-12.2-2.5-36-10.6-49.1 c-6.6-9-19.1-11.2-28.4-5.1C332.6,149.7,325.4,159,320.1,169.3'/%3E%3Cpath class='st0' d='M314,257.5c3,8.6,18.7,13.7,27.9,7.6c12.7-8.1,33.4-24.3,30.4-39.5c-3.5-15.2-28.9-20.3-44.1-22.3 c-11.2-0.2-20.6,8.2-21.8,19.3c0.6,12,3.2,23.8,7.6,35'/%3E%3Cpath class='st0' d='M379.3,317.3c8.6,2.5,22.3-6.1,23.3-17.2c1.5-15.2,2-42.1-11.1-49.1c-13.7-6.1-33.4,10.6-44.6,21.8 c-7.1,8.7-6.6,21.2,1,29.4C357.5,309,368.1,314.1,379.3,317.3'/%3E%3Cpath class='st0' d='M466.5,303.1c7.1-5.1,9.1-21.8,1-29.4c-10.6-11.1-30.9-27.9-44.6-21.8c-13.2,7.1-12.7,33.4-11.1,49.1 c2,11,12.2,18.5,23.3,17.2c11.3-3.2,21.9-8.3,31.4-15.2'/%3E%3Cpath class='st0' d='M510.1,225.1c-0.9-11.3-10.5-19.8-21.8-19.3c-15.2,2-40.5,7.1-44.1,22.3c-3,15.2,17.7,31.4,30.4,39.5 c9.9,4.9,21.8,1.6,27.9-7.6c4.1-11.3,6.6-23,7.6-35'/%3E%3Cpath class='st0' d='M476.6,143.5c-6.6-6.1-22.8-4.1-28.4,5.1c-8.1,13.2-19.8,37-10.6,49.1c9.6,11.7,35,5.6,49.1,0.5 c10-4.8,14.8-16.4,11.1-26.9C492.8,160.6,485.5,151.1,476.6,143.5'/%3E%3Cpath class='st0' d='M432,170.8c-1,6.6-9.6,23.8-3,32.4c7.1,9.1,24.8,4.1,31.4,4.6l-1,0.5c-5.6,3-24.3,7.1-26.3,17.7 c-2.5,11.7,12.7,22.3,16.2,27.9l-0.5-1c-6.1-2.5-20.3-14.7-29.9-10.1c-10.6,5.1-9.1,23.8-11.1,30.4v-1 c-1.5-6.6-1.5-25.3-11.1-30.4c-10.6-5.1-24.3,7.6-30.4,10.1l0.5-0.5c4.1-5.6,18.7-17.2,16.2-27.9c-2.5-11.7-20.8-14.7-26.3-18.2h1 c6.6-0.5,24.8,4.6,31.4-4.6c7.6-9.1-1.5-25.8-2.5-32.4l0.5,1c4.6,5.1,12.2,22.3,22.8,22.3s18.7-17.2,23.3-22.3l-1,1.5L432,170.8z' /%3E%3C/g%3E%3C/g%3E%3C/svg%3E%0A");
+}
+.ntgc-header--gradient.ntgc-header--graphic {
+  background: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3C!-- Generator: Adobe Illustrator 28.7.1, SVG Export Plug-In . SVG Version: 9.03 Build 54978) --%3E%3Csvg version='1.1' id='Layer_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 450 250' style='enable-background:new 0 0 450 250;' xml:space='preserve'%3E%3Cstyle type='text/css'%3E .st0%7Bopacity:0.5;fill:%237C8184;enable-background:new ;%7D%0A%3C/style%3E%3Cg%3E%3Cg id='Layer_1_00000073683101150106118880000012823238961843174584_'%3E%3Cpath class='st0' d='M392,117.6c-8.6,1.5-17.2,15.2-13.7,25.8c5.1,14.7,15.7,38.5,30.9,39c15.2-0.5,25.8-24.3,30.9-39 c2.7-10.8-3.2-22-13.7-25.8c-11.4-2-23.1-2-34.5,0'/%3E%3Cpath class='st0' d='M320.1,169.3c-4.6,8.1,1,23.3,11.1,27.4c14.2,5.1,39.5,11.7,49.1-0.5c9.1-12.2-2.5-36-10.6-49.1 c-6.6-9-19.1-11.2-28.4-5.1C332.6,149.7,325.4,159,320.1,169.3'/%3E%3Cpath class='st0' d='M314,257.5c3,8.6,18.7,13.7,27.9,7.6c12.7-8.1,33.4-24.3,30.4-39.5c-3.5-15.2-28.9-20.3-44.1-22.3 c-11.2-0.2-20.6,8.2-21.8,19.3c0.6,12,3.2,23.8,7.6,35'/%3E%3Cpath class='st0' d='M379.3,317.3c8.6,2.5,22.3-6.1,23.3-17.2c1.5-15.2,2-42.1-11.1-49.1c-13.7-6.1-33.4,10.6-44.6,21.8 c-7.1,8.7-6.6,21.2,1,29.4C357.5,309,368.1,314.1,379.3,317.3'/%3E%3Cpath class='st0' d='M466.5,303.1c7.1-5.1,9.1-21.8,1-29.4c-10.6-11.1-30.9-27.9-44.6-21.8c-13.2,7.1-12.7,33.4-11.1,49.1 c2,11,12.2,18.5,23.3,17.2c11.3-3.2,21.9-8.3,31.4-15.2'/%3E%3Cpath class='st0' d='M510.1,225.1c-0.9-11.3-10.5-19.8-21.8-19.3c-15.2,2-40.5,7.1-44.1,22.3c-3,15.2,17.7,31.4,30.4,39.5 c9.9,4.9,21.8,1.6,27.9-7.6c4.1-11.3,6.6-23,7.6-35'/%3E%3Cpath class='st0' d='M476.6,143.5c-6.6-6.1-22.8-4.1-28.4,5.1c-8.1,13.2-19.8,37-10.6,49.1c9.6,11.7,35,5.6,49.1,0.5 c10-4.8,14.8-16.4,11.1-26.9C492.8,160.6,485.5,151.1,476.6,143.5'/%3E%3Cpath class='st0' d='M432,170.8c-1,6.6-9.6,23.8-3,32.4c7.1,9.1,24.8,4.1,31.4,4.6l-1,0.5c-5.6,3-24.3,7.1-26.3,17.7 c-2.5,11.7,12.7,22.3,16.2,27.9l-0.5-1c-6.1-2.5-20.3-14.7-29.9-10.1c-10.6,5.1-9.1,23.8-11.1,30.4v-1 c-1.5-6.6-1.5-25.3-11.1-30.4c-10.6-5.1-24.3,7.6-30.4,10.1l0.5-0.5c4.1-5.6,18.7-17.2,16.2-27.9c-2.5-11.7-20.8-14.7-26.3-18.2h1 c6.6-0.5,24.8,4.6,31.4-4.6c7.6-9.1-1.5-25.8-2.5-32.4l0.5,1c4.6,5.1,12.2,22.3,22.8,22.3s18.7-17.2,23.3-22.3l-1,1.5L432,170.8z' /%3E%3C/g%3E%3C/g%3E%3C/svg%3E%0A") no-repeat 100% 90px, linear-gradient(45deg, #55326d 0%, #007e91 62%, #3d479d 100%);
+}
+.ntgc-header .ntgc-content-tools {
+  display: flex;
+  position: absolute;
+  bottom: 3rem;
+  right: 2rem;
+}
+.ntgc-header .ntgc-content-tools [class*=" fa-"] {
+  font-size: 24px;
+  margin-left: 1.25rem;
+  transition: all 300ms ease;
+}
+.ntgc-header .ntgc-content-tools [class*=" fa-"]:hover {
+  cursor: pointer;
+}
+.ntgc-header--dark .ntgc-content-tools [class*=" fa-"] {
+  color: #d0e0e0;
+}
+.ntgc-header--gradient .ntgc-content-tools [class*=" fa-"] {
+  color: #d0e0e0;
+}
+.ntgc-header--neutral .ntgc-content-tools [class*=" fa-"] {
+  color: #506080;
+}
+.ntgc-header--white .ntgc-content-tools [class*=" fa-"] {
+  color: #506080;
+}
+.ntgc-header .ntgc-search__wrapper {
+  margin: 0 0 0 -5rem;
+}
+.ntgc-header > .header-svg-wrapper {
+  position: absolute;
+  bottom: -6px;
+  right: 0;
+  z-index: 0;
+}
+.ntgc-header .toggle-mobile-nav {
+  display: none;
+}
+.ntgc-header__search-mobile {
+  display: none;
+}
+@media (max-width: 767px) {
+  .ntgc-header .container.header-wrapper {
+    padding: 0;
+  }
+  .ntgc-header .ntgc-header__inner {
+    margin: 0 0;
+    padding: 0 0;
+  }
+  .ntgc-header .ntgc-header__inner > .row {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+  .ntgc-header--dark.ntgc-header--graphic {
+    background-image: none;
+  }
+  .ntgc-header--neutral.ntgc-header--graphic {
+    background-image: none;
+  }
+  .ntgc-header--white.ntgc-header--graphic {
+    background-image: none;
+  }
+  .ntgc-header--gradient.ntgc-header--graphic {
+    background: linear-gradient(45deg, #55326d 0%, #007e91 62%, #3d479d 100%);
+  }
+  .ntgc-header__search, .ntgc-header__avatar, .ntgc-header .ntgc-breadcrumbs {
+    display: none;
+  }
+  .ntgc-header__logo {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .ntgc-header__logo svg {
+    height: 40px;
+  }
+  .ntgc-header__search-mobile {
+    display: block;
+    position: absolute;
+    top: 1.5rem;
+    right: 3.75rem;
+  }
+  .ntgc-header__search-mobile button {
+    border: none;
+    background-color: transparent;
+  }
+  .ntgc-header__search-mobile button .fa-search::before {
+    font-size: 1.5rem;
+  }
+  .ntgc-header__title {
+    max-width: 20rem;
+  }
+  .ntgc-header .toggle-mobile-nav {
+    display: block;
+    position: absolute;
+    top: 1.5rem;
+    right: 1rem;
+  }
+  .ntgc-header .toggle-mobile-nav span.fal {
+    font-size: 1.5rem;
+    color: #343741;
+  }
+  .ntgc-header--sunset {
+    background-position: 70% 100% !important;
+  }
+}

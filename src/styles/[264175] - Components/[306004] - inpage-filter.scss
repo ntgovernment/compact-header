@@ -1,0 +1,117 @@
+/* ==========================================================================
+   Squiz Matrix Asset ID: #306004
+   Filename: [306004] - inpage-filter.scss
+   Description: NTG Inpage filter bar (grid/list switcher, dropdowns)
+   ========================================================================== */
+
+.ntgc-inpage-filter__options {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: 0;
+  display: flex;
+}
+.ntgc-inpage-filter__item {
+  display: inline-block;
+}
+.ntgc-inpage-filter__item a {
+  color: #343741;
+  font-size: 0.875rem;
+  margin-right: 1.25rem;
+  font-weight: 700;
+  text-decoration: none;
+  position: relative;
+  display: inline-block;
+}
+.ntgc-inpage-filter__item a.dropdown, .ntgc-inpage-filter__item .dropdown-m {
+  padding-right: 0.75rem;
+}
+.ntgc-inpage-filter__item a.dropdown::after, .ntgc-inpage-filter__item .dropdown-m::after {
+  font-family: "Font Awesome 5 Pro";
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 0;
+  font-size: 0.5rem;
+  font-weight: 700;
+}
+.ntgc-inpage-filter__display {
+  margin: 0 0 0 0.25rem;
+}
+.ntgc-inpage-filter__display a {
+  text-decoration: none;
+}
+.ntgc-inpage-filter__display a:focus {
+  outline: 0;
+}
+.ntgc-inpage-filter__display a::after {
+  font-family: "Font Awesome 5 Pro";
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: #BABBB8;
+}
+.ntgc-inpage-filter__display a.active::after {
+  color: #2E979B;
+}
+.ntgc-inpage-filter__display--grid {
+  padding: 0 0.75rem 0 0;
+}
+.ntgc-inpage-filter__display--grid::after {
+  content: "";
+}
+.ntgc-inpage-filter__display--list::after {
+  content: "";
+}
+.ntgc-inpage-filter__wrapper--top {
+  padding: 0 0 1.5rem 0;
+  border-bottom: 1px solid #F0EFEE;
+}
+.ntgc-inpage-filter__wrapper--bottom {
+  padding: 1.5rem 0 0 0;
+}
+.ntgc-inpage-filter__wrapper--mobile .ntgc-search__wrapper {
+  width: 100%;
+  margin: 1rem 0 0 0;
+}
+.ntgc-inpage-filter__wrapper--mobile .ntgc-search__wrapper .ntgc-search__submit {
+  right: 16px;
+}
+.ntgc-inpage-filter__wrapper--mobile .filter-btn.open:after, .ntgc-inpage-filter__wrapper--mobile .sort-btn.open:after {
+  content: "";
+}
+.ntgc-inpage-filter__wrapper--mobile .accordion-content .au-accordion .au-accordion__title {
+  font-size: 0.875rem;
+}
+.ntgc-inpage-filter__wrapper--mobile .accordion-content .au-accordion .au-accordion__title:after {
+  width: 0.625rem;
+}
+.ntgc-inpage-filter .au-accordion__title {
+  font-size: 1rem;
+}
+@media (max-width: 768px) {
+  .ntgc-inpage-filter .ntgc-filter-popup {
+    padding-bottom: 2rem;
+  }
+  .ntgc-inpage-filter a.dropdown-m {
+    display: inline-block !important;
+    padding-bottom: 1.5rem;
+  }
+  .ntgc-inpage-filter .dropdown-m.open:after {
+    content: "";
+  }
+  .ntgc-inpage-filter__options {
+    display: block;
+  }
+  .ntgc-inpage-filter__item {
+    display: block;
+  }
+  .ntgc-inpage-filter .ntgc-search__wrapper {
+    width: 100%;
+  }
+  .ntgc-inpage-filter .au-accordion-group .au-accordion .au-accordion__title {
+    font-size: 0.875rem;
+  }
+  .ntgc-inpage-filter .au-accordion-group .au-accordion .au-accordion__title:after {
+    width: 0.625rem;
+  }
+}

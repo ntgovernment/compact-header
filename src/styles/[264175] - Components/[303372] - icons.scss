@@ -1,0 +1,81 @@
+/* ==========================================================================
+   Squiz Matrix Asset ID: #303372
+   Filename: [303372] - icons.scss
+   Description: NTG Petal icons, Font Awesome helpers, and favourites icons
+   ========================================================================== */
+
+[class*=" fa-"] {
+  font-family: "Font Awesome 5 Pro";
+}
+[class*=" fal"] {
+  font-weight: 300;
+}
+[class*=" far"] {
+  font-weight: 400;
+}
+[class*=" fas"] {
+  font-weight: 600;
+}
+.fa-w-16 {
+  width: 1rem;
+}
+.fa-w-14 {
+  width: 0.875rem;
+}
+.fa-w-11 {
+  width: 0.6875rem;
+}
+.ntgc-icon i, .ntgc-icon span, .ntgc-icon [class*=" fa-"] {
+  color: #2E979B;
+  font-style: normal;
+  font-size: 2.5rem;
+}
+.ntgc-body--secondary .ntgc-icon i, .ntgc-body--secondary .ntgc-icon span, .ntgc-body--secondary .ntgc-icon [class*=" fa-"], .ntgc-body--dark .ntgc-icon i, .ntgc-body--dark .ntgc-icon span, .ntgc-body--dark .ntgc-icon [class*=" fa-"] {
+  color: #FFFFFF;
+}
+.ntgc-petal-icon {
+  background-image: url("/?a=303371");
+  width: 4.25rem;
+  height: 4.25rem;
+  display: inline-block;
+  background-repeat: no-repeat;
+}
+.ntgc-petal-icon [class*=" fa-"] {
+  font-style: normal;
+  color: #2E979B;
+  padding: 1rem 0 0.75rem 0;
+}
+.ntgc-petal-icon [class*=" fa-"] {
+  margin: 0 0 0 -0.46rem;
+  font-size: 2.4375rem;
+}
+.ntgc-petal-icon.ntgc-petal-icon--sm {
+  width: 3.375rem;
+  height: 3.375rem;
+}
+.ntgc-petal-icon.ntgc-petal-icon--sm i {
+  padding: 0.625rem 0 0.25rem 0;
+}
+.ntgc-petal-icon.ntgc-petal-icon--sm i::before {
+  margin: 0 0 0 -0.68rem;
+}
+.ntgc-petal-icon--stacked {
+  background-image: url("/?a=303371");
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+*[data-toggle="favourite"][data-status="checked"] .fal, *[data-toggle="favourites"][data-status="checked"] .fal {
+  font-weight: 600;
+}
+*[data-toggle="favourite"][data-status="unchecked"] .fal, *[data-toggle="favourites"][data-status="unchecked"] .fal {
+  font-weight: 300;
+}
+*[data-toggle="favourite"]:hover .fal, *[data-toggle="favourites"]:hover .fal {
+  opacity: 0.5;
+  transition: opacity 300ms ease;
+}

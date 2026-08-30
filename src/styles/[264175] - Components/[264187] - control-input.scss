@@ -1,0 +1,121 @@
+/* ==========================================================================
+   Squiz Matrix Asset ID: #264187
+   Filename: [264187] - control-input.scss
+   Description: NTG Radio and checkbox input controls
+   ========================================================================== */
+
+.ntgc-control-input {
+  display: inline-block;
+  position: relative;
+}
+.ntgc-control-input--d-block {
+  display: block;
+}
+.ntgc-control-input__input {
+  opacity: 0;
+  position: absolute;
+  cursor: pointer;
+  margin: 0;
+}
+.ntgc-control-input__input:disabled {
+  cursor: default;
+}
+.ntgc-control-input__text {
+  font-size: 1rem !important;
+  font-weight: 400 !important;
+  color: #454347;
+  padding: 0rem 0.75rem 1rem 2rem;
+  display: block;
+}
+.ntgc-control-input__text:before, .ntgc-control-input__text:after {
+  width: 1.25rem;
+  height: 1.25rem;
+  content: " ";
+  display: block;
+  position: absolute;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  background-repeat: no-repeat;
+  z-index: 1;
+  border: 0 solid transparent;
+  left: 0;
+  top: 0.125rem;
+}
+.ntgc-control-input__text::after {
+  z-index: 2;
+}
+.ntgc-control-input__input + .ntgc-control-input__text {
+  cursor: pointer;
+}
+.ntgc-control-input__input[type=radio] + .ntgc-control-input__text:before, .ntgc-control-input__input[type=radio] + .ntgc-control-input__text:after {
+  border-radius: 50%;
+}
+.ntgc-control-input__input[type=radio] + .ntgc-control-input__text:before {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle fill='%23BABBB8' cx='16' cy='16' r='16'/%3E%3Ccircle fill='%23fff' cx='16' cy='16' r='14'/%3E%3C/svg%3E");
+}
+.ntgc-control-input__input[type=radio] + .ntgc-control-input__text:after {
+  background-image: none;
+}
+.ntgc-control-input__input[type=radio] + .ntgc-control-input__text:hover::before {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle fill='%232E979B' cx='16' cy='16' r='16'/%3E%3Ccircle fill='%23fff' cx='16' cy='16' r='14'/%3E%3C/svg%3E");
+}
+.ntgc-control-input__input[type=radio]:focus + .ntgc-control-input__text:before {
+  box-shadow: 0 0 0 0.125rem #fd7cb1;
+}
+.ntgc-control-input__input[type=radio]:disabled + .ntgc-control-input__text {
+  cursor: default;
+}
+.ntgc-control-input__input[type=radio]:disabled + .ntgc-control-input__text::after {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle fill='%23F0EFEE' cx='16' cy='16' r='14'/%3E%3C/svg%3E");
+}
+.ntgc-control-input__input[type=radio]:disabled + .ntgc-control-input__text:hover::before {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle fill='%23BABBB8' cx='16' cy='16' r='16'/%3E%3Ccircle fill='%23fff' cx='16' cy='16' r='14'/%3E%3C/svg%3E");
+}
+.ntgc-control-input__input[type=radio]:checked + .ntgc-control-input__text:after {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle fill='%232E979B' cx='16' cy='16' r='11'/%3E%3C/svg%3E");
+}
+.ntgc-control-input__input[type=radio]:checked + .ntgc-control-input__text:before {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle fill='%232E979B' cx='16' cy='16' r='16'/%3E%3Ccircle fill='%23fff' cx='16' cy='16' r='14'/%3E%3C/svg%3E");
+}
+.ntgc-control-input__input[type=radio]:checked:disabled + .ntgc-control-input__text::before {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle fill='%23BABBB8' cx='16' cy='16' r='16'/%3E%3Ccircle fill='%23ecf0f0' cx='16' cy='16' r='14'/%3E%3C/svg%3E");
+}
+.ntgc-control-input__input[type=radio]:checked:disabled + .ntgc-control-input__text::after {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle fill='%23F0EFEE' cx='16' cy='16' r='11'/%3E%3C/svg%3E");
+}
+.ntgc-control-input__input[type=checkbox] + .ntgc-control-input__text::before {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath fill='%23BABBB8' d='M0,0h32v32H0V0z'/%3E%3Cpath fill='%23fff' d='M2,2h28v28H2V2z'/%3E%3C/svg%3E");
+}
+.ntgc-control-input__input[type=checkbox] + .ntgc-control-input__text:after {
+  background-image: none;
+}
+.ntgc-control-input__input[type=checkbox] + .ntgc-control-input__text:hover::before {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath fill='%23343741' d='M0,0h32v32H0V0z'/%3E%3Cpath fill='%23fff' d='M2,2h28v28H2V2z'/%3E%3C/svg%3E");
+}
+.ntgc-control-input__input[type=checkbox]:focus + .ntgc-control-input__text:before {
+  box-shadow: 0 0 0 0.125rem #fd7cb1;
+}
+.ntgc-control-input__input[type=checkbox]:disabled + .ntgc-control-input__text {
+  cursor: default;
+}
+.ntgc-control-input__input[type=checkbox]:disabled + .ntgc-control-input__text::after {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath fill='%23BABBB8' d='M0,0h32v32H0V0z'/%3E%3Cpath fill='%23F0EFEE' d='M2,2h28v28H2V2z'/%3E%3C/svg%3E");
+}
+.ntgc-control-input__input[type=checkbox]:checked + .ntgc-control-input__text:after {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath fill='%23fff' d='M25.6,11.4c0.2-0.2,0.2-0.5,0-0.7l-2.3-2.3c-0.2-0.2-0.5-0.2-0.7,0L14,17l-3.6-3.6c-0.2-0.2-0.5-0.2-0.7,0l-2.3,2.3 c-0.2,0.2-0.2,0.5,0,0.7l6.3,6.3c0.2,0.2,0.5,0.2,0.7,0L25.6,11.4L25.6,11.4z'/%3E%3C/svg%3E");
+}
+.ntgc-control-input__input[type=checkbox]:checked + .ntgc-control-input__text:before {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath fill='%232E979B' d='M0,0h32v32H0V0z'/%3E%3Cpath fill='%232E979B' d='M2,2h28v28H2V2z'/%3E%3C/svg%3E");
+}
+.ntgc-control-input__input[type=checkbox]:checked:hover + .ntgc-control-input__text:after {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath fill='%23fff' d='M25.6,11.4c0.2-0.2,0.2-0.5,0-0.7l-2.3-2.3c-0.2-0.2-0.5-0.2-0.7,0L14,17l-3.6-3.6c-0.2-0.2-0.5-0.2-0.7,0l-2.3,2.3 c-0.2,0.2-0.2,0.5,0,0.7l6.3,6.3c0.2,0.2,0.5,0.2,0.7,0L25.6,11.4L25.6,11.4z'/%3E%3C/svg%3E");
+}
+.ntgc-control-input__input[type=checkbox]:checked:hover + .ntgc-control-input__text:before {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath fill='%232E979B' d='M0,0h32v32H0V0z'/%3E%3Cpath fill='%232E979B' d='M2,2h28v28H2V2z'/%3E%3C/svg%3E");
+}
+.ntgc-control-input__input[type=checkbox]:checked:disabled + .ntgc-control-input__text:after {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath fill='%23BABBB8' d='M25.6,11.4c0.2-0.2,0.2-0.5,0-0.7l-2.3-2.3c-0.2-0.2-0.5-0.2-0.7,0L14,17l-3.6-3.6c-0.2-0.2-0.5-0.2-0.7,0l-2.3,2.3 c-0.2,0.2-0.2,0.5,0,0.7l6.3,6.3c0.2,0.2,0.5,0.2,0.7,0L25.6,11.4L25.6,11.4z'/%3E%3C/svg%3E");
+}
+.ntgc-control-input__input[type=checkbox]:checked:disabled + .ntgc-control-input__text::before {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath fill='%23DEDEDA' d='M0,0h32v32H0V0z'/%3E%3Cpath fill='%23F0EFEE' d='M2,2h28v28H2V2z'/%3E%3C/svg%3E");
+}

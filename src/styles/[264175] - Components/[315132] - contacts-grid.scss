@@ -1,0 +1,120 @@
+/* ==========================================================================
+   Squiz Matrix Asset ID: #315132
+   Filename: [315132] - contacts-grid.scss
+   Description: NTG Phone directory contacts search, results & favourites
+   ========================================================================== */
+
+.ntgc-contact-list__search {
+  margin-top: 3.75rem;
+}
+.ntgc-contact-list__search .favourites-pill {
+  right: 1rem;
+  top: 1rem;
+}
+@media (max-width: 1280px) {
+  .ntgc-contact-list__search .favourites-pill {
+    right: 0;
+  }
+}
+.ntgc-contact-list__search .ntgc-search__wrapper {
+  width: 100%;
+}
+.ntgc-contact-list__search .add-new__wrapper {
+  text-align: right;
+}
+.ntgc-contact-list__search .ntgc-search__text-input {
+  width: calc(100% - 1rem);
+}
+@media (max-width: 1024px) {
+  .ntgc-contact-list__search .add-new__wrapper {
+    text-align: left;
+  }
+}
+.ntgc-contact-list__results {
+  margin-top: 3.75rem;
+}
+.ntgc-contact-list__results .ntgc-tabs__nav {
+  position: relative;
+  border: 1px solid transparent;
+}
+.ntgc-contact-list__results .ntgc-tabs__nav:before {
+  content: "";
+  left: -100vw;
+  width: 300vw;
+  border-bottom: 1px solid #F0EFEE;
+  position: absolute;
+  bottom: -1px;
+  height: 1px;
+}
+.ntgc-contact-list__row {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: auto;
+  align-content: start;
+  padding: 1.75rem 0;
+  border-bottom: 1px solid #DEDEDA;
+}
+.ntgc-contact-list__row .item:not(.ntgc-contact-list__name) {
+  font-size: 14px;
+}
+.ntgc-contact-list__row .item:not(.ntgc-contact-list__name) span {
+  display: block;
+}
+.ntgc-contact-list__row .item:not(.ntgc-contact-list__name) span:nth-of-type(1) {
+  padding-top: 0.25rem;
+}
+.ntgc-contact-list__name {
+  width: 23%;
+  padding-right: 2%;
+}
+.ntgc-contact-list__name span.ntgc-avatar__title {
+  padding-bottom: 0.25rem;
+}
+.ntgc-contact-list__department {
+  width: 28%;
+  padding-right: 2%;
+}
+.ntgc-contact-list__phone {
+  width: 18%;
+  padding-right: 2%;
+}
+.ntgc-contact-list__location {
+  width: 18%;
+  padding-right: 2%;
+}
+.ntgc-contact-list__favourite {
+  position: relative;
+  width: 5%;
+}
+.ntgc-contact-list__favourite .fal, .ntgc-contact-list__favourite .fas {
+  top: calc(50% - 0.75rem);
+  right: 0;
+  position: absolute;
+  color: #208820;
+  font-size: 1rem;
+  opacity: 0;
+  transition: opacity 200ms ease;
+}
+.ntgc-contact-list__favourite .fal {
+  opacity: 1;
+}
+.ntgc-contact-list__favourite:hover {
+  cursor: pointer;
+}
+.ntgc-contact-list__favourite:hover .fal {
+  opacity: 0;
+}
+.ntgc-contact-list__favourite:hover .fas {
+  opacity: 1;
+}
+.ntgc-table__contact [data-toggle=favourite], .ntgc-table__contact [data-toggle=favourites], .ntgc-search-results--phone [data-toggle=favourite], .ntgc-search-results--phone [data-toggle=favourites] {
+  height: 100%;
+}
+.ntgc-table__contact [data-toggle=favourite]:hover, .ntgc-table__contact [data-toggle=favourites]:hover, .ntgc-search-results--phone [data-toggle=favourite]:hover, .ntgc-search-results--phone [data-toggle=favourites]:hover {
+  cursor: pointer;
+}
+.ntgc-table__contact [data-toggle=favourite] span.fal, .ntgc-table__contact [data-toggle=favourites] span.fal, .ntgc-search-results--phone [data-toggle=favourite] span.fal, .ntgc-search-results--phone [data-toggle=favourites] span.fal {
+  color: #2E979B;
+}

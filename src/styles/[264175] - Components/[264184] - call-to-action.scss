@@ -1,0 +1,33 @@
+/* ==========================================================================
+   Squiz Matrix Asset ID: #264184
+   Filename: [264184] - call-to-action.scss
+   Description: NTG CTA link overrides
+   ========================================================================== */
+
+.ntgc-cta-link {
+  margin: 3rem 0;
+  padding: 0.5rem 1rem;
+  border-left: 5px solid #2E979B;
+  font-weight: 600;
+  background: none;
+  transition: color 300ms ease;
+  position: relative;
+  display: inline-block;
+}
+.ntgc-cta-link::after {
+  font-family: "Font Awesome 5 Pro";
+  content: "";
+  color: #2E979B;
+  font-weight: 400;
+  position: absolute;
+  right: -8px;
+  top: 0.5rem;
+  transition: right 300ms ease;
+}
+.ntgc-cta-link:hover {
+  color: #2E979B;
+}
+.ntgc-cta-link:hover::after {
+  right: -16px;
+  transition: right 300ms ease;
+}

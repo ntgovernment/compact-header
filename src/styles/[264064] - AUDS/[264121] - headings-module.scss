@@ -1,0 +1,79 @@
+/* ==========================================================================
+   Squiz Matrix Asset ID: #264121
+   Filename: [264121] - headings-module.scss
+   Description: @gov.au/headings v2.0.11
+   ========================================================================== */
+
+/*! @gov.au/headings v2.0.11 */
+/**
+ * Basic styles for all headings
+ */
+.au-display-xxxl, .au-display-xxl, .au-display-xl, .au-display-lg, .au-display-md, .au-display-sm, .au-display-xs, .au-body h1, .au-body h2, .au-body h3, .au-body h4, .au-body h5, .au-body h6 {
+  font-family: "Roboto", arial, sans-serif;
+  display: block;
+  font-weight: bold;
+  margin: 0;
+}
+/**
+ * Unique selectors and font sizes
+ */
+.au-body .au-display-xxxl, .au-display-xxxl {
+  font-size: 36px;
+  font-size: 2.25rem;
+  line-height: 1.2222222222;
+}
+.au-body h1, .au-body .au-display-xxl, .au-display-xxl {
+  font-size: 30px;
+  font-size: 1.875rem;
+  line-height: 1.2;
+}
+.au-body h2, .au-body .au-display-xl, .au-display-xl {
+  font-size: 26px;
+  font-size: 1.625rem;
+  line-height: 1.2307692308;
+}
+.au-body h3, .au-body .au-display-lg, .au-display-lg {
+  font-size: 22px;
+  font-size: 1.375rem;
+  line-height: 1.2727272727;
+}
+.au-body h4, .au-body .au-display-md, .au-display-md {
+  font-size: 20px;
+  font-size: 1.25rem;
+  line-height: 1.2;
+}
+.au-body h5, .au-body .au-display-sm, .au-display-sm {
+  font-size: 16px;
+  font-size: 1rem;
+  line-height: 1.25;
+}
+.au-body h6, .au-body .au-display-xs, .au-display-xs {
+  font-size: 14px;
+  font-size: 0.875rem;
+  line-height: 1.1428571429;
+}
+/**
+ * Typographic spacing for AU-body only
+ * Larger space for larger headings has been added to improve legibility in large blocks of text.
+ * This provides area's of eye-rest and uses spacing to create visual sections
+ * Also ref. https://github.com/govau/design-system-components/issues/282
+ */
+/**
+ * Default margin-top
+ */
+* + .au-display-xxxl, * + .au-display-xxl, * + .au-display-xl, * + .au-display-lg, * + .au-display-md, * + .au-display-sm, * + .au-display-xs {
+  margin-top: 16px;
+  margin-top: 1 rem;
+}
+.au-body * + h1, .au-body * + .au-display-xxl {
+  margin-top: 48px;
+  margin-top: 3 rem;
+}
+.au-body * + h2, .au-body * + .au-display-xl {
+  margin-top: 48px;
+  margin-top: 3 rem;
+}
+.au-body h1 + h2, .au-body h2 + h3, .au-body .au-display-xxl + h2, .au-body .au-display-xl + h3, .au-body h1 + .au-display-xl, .au-body h2 + .au-display-lg, .au-body .au-display-xxl + .au-display-xl, .au-body .au-display-xl + .au-display-lg, .au-body * + h3, .au-body * + h4, .au-body * + h5, .au-body * + h6, .au-body * + .au-display-md, .au-body * + .au-display-sm, .au-body * + .au-display-xs {
+  margin-top: 24px;
+  margin-top: 1.5 rem;
+}

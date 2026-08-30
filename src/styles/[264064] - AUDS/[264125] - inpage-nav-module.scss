@@ -1,0 +1,57 @@
+/* ==========================================================================
+   Squiz Matrix Asset ID: #264125
+   Filename: [264125] - inpage-nav-module.scss
+   Description: @gov.au/inpage-nav v3.0.6
+   ========================================================================== */
+
+/*! @gov.au/inpage-nav v3.0.6 */
+.au-inpage-nav-links {
+  font-size: 16px;
+  font-size: 1rem;
+  line-height: 1.5;
+  padding-left: 24px;
+  padding-left: 1.5 rem;
+  margin-bottom: 48px;
+  margin-bottom: 3 rem;
+  border-left: 4px solid #343741;
+}
+* + .au-inpage-nav-links {
+  margin-top: 48px;
+  margin-top: 3 rem;
+}
+.au-body .au-inpage-nav-links > ul, .au-body .au-inpage-nav-links > ol {
+  margin-top: 16px;
+  margin-top: 1 rem;
+  list-style-type: none;
+  padding: 0;
+}
+.au-body .au-inpage-nav-links > ul li, .au-body .au-inpage-nav-links > ol li {
+  margin: 0;
+}
+.au-body .au-inpage-nav-links > ul * + li, .au-body .au-inpage-nav-links > ol * + li {
+  margin-top: 8px;
+  margin-top: 0.5 rem;
+  margin-left: 0;
+}
+.au-inpage-nav-links.au-inpage-nav-links--dark {
+  border-color: #FFFFFF;
+}
+.au-inpage-nav-links__heading, .au-body .au-inpage-nav-links__heading {
+  font-weight: bold;
+  font-size: 1em;
+}
+.au-inpage-nav-section {
+  position: relative;
+  padding-right: 128px;
+  padding-right: 8 rem;
+}
+.au-inpage-nav-section-link {
+  font-size: 14px;
+  font-size: 0.875rem;
+  line-height: 1.1428571429;
+  top: 4px;
+  top: 0.25 rem;
+  position: absolute;
+  right: 0;
+  font-weight: normal;
+}

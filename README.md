@@ -22,6 +22,12 @@ Install dependencies:
 npm install
 ```
 
+Compile modular SCSS stylesheets:
+
+```bash
+npm run build:css
+```
+
 Start the dev server:
 
 ```bash
@@ -37,9 +43,10 @@ Vite is configured with HMR enabled so edits to the HTML, CSS, and JS assets upd
 
 ## Build and preview
 
-Create a production build:
+Compile CSS and create a production build:
 
 ```bash
+npm run build:css
 npm run build
 ```
 
@@ -56,13 +63,29 @@ npm run preview
 ├── DET intranet.html
 ├── DET intranet_files/
 │   ├── all.css
-│   ├── audits.js
+│   ├── auds.js
 │   ├── components.js
 │   ├── global-v2.js
 │   ├── jquery-3.4.1.min.js
 │   ├── main.css
 │   ├── status-toolbar.js
 │   └── ...
+├── src/
+│   └── styles/
+│       ├── main.scss                                      # Master SCSS parse file replicate
+│       ├── compiled-main.css                              # Compiled stylesheet referenced by HTML
+│       ├── SQUIZ_MATRIX_ASSET_MAPPING.md                  # Squiz Matrix Asset ID to file mapping
+│       ├── [846097] - CSS/                                # Agency project specific assets
+│       │   ├── [846098] - main.scss
+│       │   ├── custom-header-overrides.scss
+│       │   └── [846100] - base/
+│       ├── [407329] - CSS/                                # Agency shared custom styles
+│       ├── [264304] - base/                               # Design system base utilities
+│       ├── [305442] - Base/                               # AUDS & Bootstrap base
+│       ├── [264064] - AUDS/                               # AU Design System modules
+│       └── [264175] - Components/                         # NTG component overrides
+├── scripts/
+│   └── compile-css.js                                     # SCSS compilation build script
 ├── index.html
 ├── package.json
 ├── vite.config.js
@@ -70,6 +93,14 @@ npm run preview
 ├── README.md
 └── LICENSE
 ```
+
+## Modular SCSS & Squiz Matrix Overrides
+
+The stylesheet is broken down into modular SCSS/CSS partials matching the Squiz Matrix asset tree:
+
+- **Targeted edits**: Modify individual component partials (e.g. `src/styles/[264175] - Components/[411402] - header-style.scss` or `src/styles/[264175] - Components/[305340] - nav-main.scss`).
+- **Compile output**: Run `npm run build:css` to generate both `src/styles/compiled-main.css` and `DET intranet_files/main.css`.
+- **Deploying to Matrix**: Refer to [src/styles/SQUIZ_MATRIX_ASSET_MAPPING.md](src/styles/SQUIZ_MATRIX_ASSET_MAPPING.md) to copy the exact modified file contents directly into the matching asset ID in Squiz Matrix.
 
 ## Important implementation notes
 
@@ -95,6 +126,7 @@ npm run preview
 
 ```bash
 npm install
+npm run build:css
 npm run dev
 npm run build
 npm run preview

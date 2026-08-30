@@ -1,0 +1,241 @@
+/* ==========================================================================
+   Squiz Matrix Asset ID: #400319
+   Filename: [400319] - print.scss
+   Description: Print media styles
+   ========================================================================== */
+
+@media print {
+  /*--- Added 08/02/2023 ---*/
+  /*--- NTG logo and banner ---*/
+  /*-- Headings and font style --*/
+  /*--Table--*/
+  /*--Accordion--*/
+  /*--Page Status Tab--*/
+  body {
+    margin: 0;
+    color: #000;
+    background-color: #fff;
+  }
+  .ntgc-body {
+    font-size: 1.25rem;
+    line-height: 1.9rem;
+  }
+  .noprint {
+    display: none !important;
+  }
+  .print, .d-print {
+    display: block !important;
+  }
+  .ntgc-header__search, .ntgc-header__search-mobile, .ntgc-header__avatar, .ntgc-breadcrumbs .breadcrumb, .ntgc-content-tools, .ntgc-navigation--main, .ntgc-link-to-feedback, .ntgc-jump-menu, .ntgc-video-embed-ct, .ntgc-page-information, .toggle-mobile-nav, .top-page-alert-wrapper, footer {
+    display: none !important;
+  }
+  .ntgc-header, .ntgc-header--neutral, *[class*="ntgc-bg-color--"] {
+    background: none !important;
+  }
+  .ntgc-header__intro {
+    margin: 0;
+  }
+  .ntgc-header__title {
+    max-width: 100% !important;
+    color: #000 !important;
+  }
+  .ntgc-card__inner {
+    padding: 2rem 0 !important;
+  }
+  .ntgc-card .ntgc-btn {
+    position: relative;
+    bottom: 1rem;
+  }
+  * {
+    background-image: none !important;
+    border: none !important;
+  }
+  img, svg {
+    display: none !important;
+  }
+  img.print, svg.print, .print > svg, .print > img, svg#Logo_NTG_Central, svg#Logo_Agency_Intranets {
+    display: block !important;
+    max-width: 100%;
+    transform: scale(1.5) translate(20px, 10px);
+  }
+  .ntgc-header__logo_print {
+    display: block !important;
+  }
+  .ntgc-header__logo.flex {
+    display: block;
+  }
+  .ntgc-logo {
+    width: 100% !important;
+    display: block !important;
+    height: auto;
+    padding-bottom: 3rem;
+  }
+  .ntgc-logo:after {
+    content: " (" attr(url) ")";
+    content: "" !important;
+    bottom: 0;
+    position: absolute;
+    left: 1rem;
+  }
+  .ntgc-card--key-contacts span a[href*="http://"] {
+    display: none;
+  }
+  .ntgc-card--key-contacts .link-print {
+    padding-top: 1.375rem;
+    margin-bottom: -0.75rem;
+  }
+  .ntgc-card--key-contacts .link-print a.ntgc-btn--tertiary {
+    font-size: 1.25rem;
+    font-weight: normal;
+  }
+  *, *::before, *::after {
+    text-shadow: none !important;
+    box-shadow: none !important;
+  }
+  a:not(.btn) {
+    text-decoration: underline;
+  }
+  div[class*=offset-] {
+    margin-left: 0 !important;
+  }
+  .ntgc-py-72 {
+    padding-top: 2.5rem !important;
+    padding-bottom: 2.5rem !important;
+  }
+  a[href]::after {
+    content: " (" attr(href) ")";
+  }
+  abbr[title]::after {
+    content: " (" attr(title) ")";
+  }
+  a[href^="#"]::after, a[href^="javascript:"]::after {
+    content: "";
+  }
+  pre {
+    white-space: pre-wrap !important;
+  }
+  pre, blockquote, ul, table {
+    border: 1px solid #424242;
+    page-break-inside: avoid;
+  }
+  thead {
+    display: table-header-group;
+  }
+  tr, img {
+    page-break-inside: avoid;
+  }
+  p, h2, h3 {
+    orphans: 3;
+    widows: 3;
+  }
+  h2, h3 {
+    page-break-after: avoid;
+  }
+  @page {
+    size: "A4";
+  }
+  body {
+    min-width: 100% !important;
+  }
+  .container {
+    min-width: 100% !important;
+  }
+  *[class*="col-"] {
+    min-width: 100% !important;
+  }
+  .navbar {
+    display: none;
+  }
+  .badge {
+    border: 1px solid #000;
+  }
+  .table {
+    border-collapse: collapse !important;
+  }
+  .table td, .table th {
+    background-color: #FFF !important;
+  }
+  .table-bordered th, .table-bordered td {
+    border: 1px solid #828282 !important;
+  }
+  .table-dark {
+    color: inherit;
+  }
+  .table-dark th, .table-dark td, .table-dark thead th, .table-dark tbody + tbody {
+    border-color: #e5e5e5;
+  }
+  .table .thead-dark th {
+    color: inherit;
+    border-color: #e5e5e5;
+  }
+  svg#Logo_NTG_Central, svg#Logo_Agency_Intranets {
+    display: none !important;
+  }
+  .link-print a {
+    font-size: 100% !important;
+    line-height: 1.5;
+  }
+  .ntgc-btn.ntgc-btn--tertiary::before {
+    content: "";
+  }
+  .ntgc-header__logo {
+    content: url("https://ntgcentral.nt.gov.au/__data/assets/file/0005/264380/logo-ntg-color.svg") !important;
+    height: 80px;
+    margin-bottom: 1rem;
+  }
+  .ntgc-header__intro {
+    margin-bottom: -2.5rem;
+  }
+  .ntgc-header__title {
+    font-size: 2.5rem;
+    margin-top: 0;
+  }
+  .ntgc-body {
+    font-size: 100% !important;
+    line-height: 1.5;
+    color: black !important;
+  }
+  .ntgc-body h2, .ntgc-body h3, .ntgc-body h4, .ntgc-body h5 {
+    margin-top: 2.5rem;
+    margin-bottom: 10px !important;
+  }
+  .ntgc-body a[href^="mailto:"], .ntgc-body a[href^="tel:"] {
+    color: #304060;
+    text-decoration: none;
+  }
+  .ntgc-body a[href^="mailto:"]:after, .ntgc-body a[href^="tel:"]:after {
+    display: none;
+    visibility: hidden;
+  }
+  .ntgc-body a.icon_external:after {
+    content: " (" attr(href) ")";
+    font-family: "Roboto", arial, sans-serif;
+    font-size: 1rem !important;
+  }
+  .ntgc-table {
+    overflow: hidden;
+    margin-bottom: 1rem;
+  }
+  .ntgc-table__wrapper {
+    overflow: hidden;
+    margin-bottom: 1rem;
+    page-break-before: avoid;
+  }
+  .ntgc-table__wrapper.mt-4 {
+    margin-top: 1rem !important;
+  }
+  .ntgc-table__head, .ntgc-table__cell {
+    padding: 0.5rem 0.5rem 0.5rem 0 !important;
+    border-bottom: 1px solid black !important;
+    color: black !important;
+  }
+  .au-accordion .au-accordion__title {
+    padding-bottom: 0;
+  }
+  .ntgc-status--toolbar-container {
+    display: none;
+  }
+  .ntgc-profile {
+    display: none !important;
+  }
+}

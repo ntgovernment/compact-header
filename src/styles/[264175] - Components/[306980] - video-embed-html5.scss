@@ -1,0 +1,54 @@
+/* ==========================================================================
+   Squiz Matrix Asset ID: #306980
+   Filename: [306980] - video-embed-html5.scss
+   Description: NTG HTML5 embedded video player with transcript captions
+   ========================================================================== */
+
+.ntgc-video-embed-ct h1, .ntgc-video-embed-ct h2, .ntgc-video-embed-ct h3, .ntgc-video-embed-ct h4, .ntgc-video-embed-ct h5, .ntgc-video-embed-ct h6 {
+  margin-top: 0;
+}
+.ntgc-video-embed-ct__inner {
+  display: flex;
+}
+.ntgc-video-embed-ct__text--bottom {
+  font-size: 0.875rem !important;
+  font-weight: 400 !important;
+}
+.ntgc-video-embed-ct__text p {
+  max-width: none !important;
+}
+.ntgc-video-embed-ct__iframe iframe .vp-center {
+  display: block !important;
+}
+@media (min-width: 1024px) {
+  .au-grid .ntgc-video-embed-ct__text--top, .ntgc-video-embed-ct__text--top {
+    flex-flow: column wrap;
+  }
+  .au-grid .ntgc-video-embed-ct__text--bottom, .ntgc-video-embed-ct__text--bottom {
+    flex-flow: column-reverse wrap;
+  }
+  .au-grid .ntgc-video-embed-ct__text--bottom h3, .ntgc-video-embed-ct__text--bottom h3 {
+    margin-top: 0;
+  }
+  .au-grid .ntgc-video-embed-ct__text--bottom .ntgc-video-embed__btn, .ntgc-video-embed-ct__text--bottom .ntgc-video-embed__btn {
+    top: -24%;
+  }
+  .au-grid .ntgc-video-embed-ct__text--left, .ntgc-video-embed-ct__text--left {
+    flex-flow: row nowrap;
+  }
+  .au-grid .ntgc-video-embed-ct__text--right, .ntgc-video-embed-ct__text--right {
+    flex-flow: row-reverse nowrap;
+    justify-content: flex-end;
+  }
+  .au-grid .ntgc-video-embed-ct__text--right .video-embed-vimeo, .ntgc-video-embed-ct__text--right .video-embed-vimeo {
+    margin-top: -32px;
+  }
+}
+@media (max-width: 768px) {
+  .ntgc-video-embed-ct__iframe iframe {
+    height: 320px !important;
+  }
+  .ntgc-homepage-video {
+    height: 300px;
+  }
+}

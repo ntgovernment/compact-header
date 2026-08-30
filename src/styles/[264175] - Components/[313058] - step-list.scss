@@ -1,0 +1,61 @@
+/* ==========================================================================
+   Squiz Matrix Asset ID: #313058
+   Filename: [313058] - step-list.scss
+   Description: NTG Numbered vertical step list
+   ========================================================================== */
+
+.ntgc-step-list {
+  list-style: none;
+  counter-reset: step-list-counter;
+  position: relative;
+  padding-right: 1rem;
+}
+.ntgc-step-list > h3, .ntgc-step-list > h3 ~ * {
+  opacity: 0;
+}
+.ntgc-step-list .step-item {
+  position: relative;
+  padding-left: 6.375rem;
+  margin-bottom: 4.5rem;
+}
+.ntgc-step-list .step-item:nth-of-type(1) {
+  margin-top: 3.25rem;
+}
+.ntgc-step-list .step-item > h3, .ntgc-step-list .step-item > h3 ~ * {
+  opacity: 1;
+}
+.ntgc-step-list .step-item > h3 {
+  padding-top: 0;
+  margin-top: 0;
+}
+.ntgc-step-list .step-item::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  bottom: -4.5rem;
+  left: 1.5rem;
+  width: 2px;
+  background: #2E979B;
+}
+.ntgc-step-list .step-item::after {
+  width: 3rem;
+  height: 3rem;
+  line-height: 3rem;
+  text-align: center;
+  border-radius: 50%;
+  background: #343741;
+  counter-increment: step-list-counter;
+  content: counter(step-list-counter);
+  color: #FFFFFF;
+  font-size: 1rem;
+  font-weight: 700;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.ntgc-step-list .step-item:last-child {
+  margin-bottom: 0;
+}
+.ntgc-step-list .step-item:last-child::before {
+  bottom: 100%;
+}

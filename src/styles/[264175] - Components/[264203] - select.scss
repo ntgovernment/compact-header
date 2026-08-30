@@ -1,0 +1,77 @@
+/* ==========================================================================
+   Squiz Matrix Asset ID: #264203
+   Filename: [264203] - select.scss
+   Description: NTG Custom dropdown select element
+   ========================================================================== */
+
+.ntgc-select {
+  box-sizing: border-box;
+  font-size: 16px;
+  font-size: 1rem;
+  line-height: 1.5;
+  padding: 8px 36px 8px 16px;
+  padding: 0.5 rem  2.25 rem  0.5 rem  1 rem;
+  height: 48px;
+  height: 3 rem;
+  position: relative;
+  display: inline-block;
+  text-indent: 0.01px;
+  cursor: pointer;
+  border: 1px solid #DEDEDA;
+  border-radius: 0;
+  vertical-align: middle;
+  appearance: none;
+  width: 100%;
+  max-width: 480px;
+  max-width: 30 rem;
+  font-family: "Roboto", arial, sans-serif;
+  background-image: url("data:image/svg+xml,%3Csvg fill='%23343741' width='1.5em' height='auto' viewBox='0 0 28 12' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.9 1.1L8 7.2l6.1-6.1L16 2.9l-8 8-8-8 1.9-1.8z'/%3E%3Cpath fill='none' d='M2-5.8h24v24H2v-24z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right center;
+  background-size: 1.5em auto;
+}
+.ntgc-select--block {
+  display: block;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.ntgc-select:hover {
+  border-color: #343741;
+}
+.ntgc-select:focus {
+  outline: 3px solid #fd7cb1;
+  border-color: #2E979B;
+}
+.ntgc-select:active {
+  border-color: #DEDEDA;
+}
+.ntgc-select:invalid {
+  border-color: #c43004;
+}
+.ntgc-select[disabled], .ntgc-select:disabled {
+  background-color: #F0EFEE;
+  border-color: #BABBB8;
+  color: #506080;
+  cursor: default;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=30)";
+}
+.ntgc-select[multiple] {
+  background-image: none;
+  height: 100%;
+}
+.ie8 .ntgc-select:after, .ie9 .ntgc-select:after {
+  display: none;
+}
+.ntgc-select::-ms-expand {
+  display: none;
+}
+.ie8 .ntgc-select, .ie9 .ntgc-select {
+  padding-right: 4px;
+  padding-right: 0.25 rem;
+}
+@media (max-width: 768px) {
+  .ntgc-select--block {
+    width: 100%;
+    max-width: 100%;
+  }
+}

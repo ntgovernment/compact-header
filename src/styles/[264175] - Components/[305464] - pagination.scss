@@ -1,0 +1,89 @@
+/* ==========================================================================
+   Squiz Matrix Asset ID: #305464
+   Filename: [305464] - pagination.scss
+   Description: NTG Pagination controls and page numbers
+   ========================================================================== */
+
+.ntgc-pagination {
+  margin: 0 auto;
+  padding: 0;
+  text-align: center;
+  list-style-type: none;
+}
+.ntgc-pagination .ntgc-pagination-item {
+  display: inline-block;
+}
+.ntgc-pagination .ntgc-pagination-item > a {
+  display: inline-block;
+  text-decoration: none;
+  padding: 1.25rem 0.999375rem;
+  line-height: 0;
+}
+.ntgc-pagination .ntgc-pagination-item > a:focus {
+  outline-offset: 0;
+}
+.ntgc-pagination .ntgc-pagination-item > a:active {
+  background: #2E979B;
+  color: #FFFFFF;
+}
+.ntgc-pagination .ntgc-pagination-item > a.ntgc-pagination__link--current {
+  color: #FFFFFF;
+}
+.ntgc-pagination .ntgc-pagination-item > a.ntgc-pagination__btn {
+  padding: 1.21875rem 0.80125rem;
+}
+.ntgc-pagination__link {
+  font-size: 0.875rem;
+  font-weight: 700;
+}
+.ntgc-pagination__link:hover {
+  outline: 1px solid #2E979B;
+}
+.ntgc-pagination__link--current {
+  background: #2E979B;
+}
+.ntgc-pagination__link--current:hover {
+  outline: 0;
+}
+.ntgc-pagination__btn:hover {
+  outline: 1px solid #2E979B;
+}
+.ntgc-pagination__btn:active, .ntgc-pagination__btn:active::before, .ntgc-pagination__btn:active::after {
+  color: #FFFFFF;
+}
+.ntgc-pagination__btn--left {
+  cursor: pointer;
+}
+.ntgc-pagination__btn--left::before {
+  font-family: "Font Awesome 5 Pro";
+  color: #2E979B;
+  content: "";
+}
+.ntgc-pagination__btn--left:active {
+  background: #2E979B !important;
+}
+.ntgc-pagination__btn--right::after {
+  font-family: "Font Awesome 5 Pro";
+  color: #2E979B;
+  content: "";
+}
+.ntgc-pagination__btn--right:active {
+  background: #2E979B !important;
+}
+.ntgc-pagination__btn--more {
+  font-weight: 700;
+}
+.ntgc-pagination__btn--more::before {
+  content: "...";
+  font-size: 0.875rem;
+}
+.ntgc-pagination__btn.disabled::before, .ntgc-pagination__btn.disabled::after {
+  color: #BABBB8;
+}
+.ntgc-pagination__btn.disabled:hover {
+  outline: none;
+  cursor: default;
+}
+.dataTables_paginate .pagination.ntgc-pagination {
+  display: inline-block;
+}

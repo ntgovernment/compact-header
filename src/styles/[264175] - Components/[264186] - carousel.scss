@@ -1,0 +1,13 @@
+/* ==========================================================================
+   Squiz Matrix Asset ID: #264186
+   Filename: [264186] - carousel.scss
+   Description: NTG Carousel image overrides
+   ========================================================================== */
+
+h2 + .ntg-carousel__wrapper {
+  margin-top: 24px;
+  margin-top: 1.5 rem;
+}
+.ntg-carousel img {
+  margin-top: 0;
+}

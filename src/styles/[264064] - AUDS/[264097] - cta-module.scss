@@ -1,0 +1,84 @@
+/* ==========================================================================
+   Squiz Matrix Asset ID: #264097
+   Filename: [264097] - cta-module.scss
+   Description: @gov.au/cta-link v2.2.0
+   ========================================================================== */
+
+/*! @gov.au/cta-link v2.2.0 */
+@media print {
+  .au-cta-link {
+    color: #000 !important;
+  }
+  .au-cta-link:after {
+    background-image: none !important;
+    content: " > " !important;
+    border: none !important;
+    transform: rotate(0deg) !important;
+  }
+}
+.au-cta-link {
+  font-size: 20px;
+  font-size: 1.25rem;
+  line-height: 1.6;
+  margin-top: 16px;
+  margin-top: 1 rem;
+  font-weight: bold;
+  font-family: "Roboto", arial, sans-serif;
+  color: #343741;
+  appearance: none;
+  background: transparent;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  text-decoration: underline;
+  text-decoration-skip-ink: auto;
+}
+.au-cta-link:focus {
+  outline: 3px solid #fd7cb1;
+  outline-offset: 2px;
+}
+.au-cta-link::-moz-focus-inner {
+  border: 0;
+}
+.au-cta-link:after {
+  content: " ";
+  width: 16px;
+  width: 1 rem;
+  height: 16px;
+  height: 1 rem;
+  margin: 0 4px 0 3px;
+  margin: 0  0.25 rem 0  0.2 rem;
+  transition: margin 0.2s ease;
+  display: inline-block;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 128 128'%3E%3Cpath fill='%23343741' d='M128 64l-64 64-16-16 64-64'/%3E%3Cpath fill='%23343741' d='M128 64l-16 16-64-64L64 0'/%3E%3C/svg%3E");
+}
+.ie8 .au-cta-link:after, .lt-ie8 .au-cta-link:after {
+  content: " > ";
+}
+.au-cta-link:hover {
+  color: #343741;
+  text-decoration: none;
+}
+.au-cta-link:hover:after {
+  margin-left: 6px;
+  margin-left: 0.4 rem;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 128 128'%3E%3Cpath fill='%23343741' d='M128 64l-64 64-16-16 64-64'/%3E%3Cpath fill='%23343741' d='M128 64l-16 16-64-64L64 0'/%3E%3C/svg%3E");
+}
+.au-cta-link.au-cta-link--dark {
+  color: #FFFFFF;
+}
+.au-cta-link.au-cta-link--dark:focus {
+  outline: 3px solid #fd7cb1;
+}
+.au-cta-link.au-cta-link--dark::-moz-focus-inner {
+  border: 0;
+}
+.au-cta-link.au-cta-link--dark:after {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 128 128'%3E%3Cpath fill='%23FFFFFF' d='M128 64l-64 64-16-16 64-64'/%3E%3Cpath fill='%23FFFFFF' d='M128 64l-16 16-64-64L64 0'/%3E%3C/svg%3E");
+}
+.au-cta-link.au-cta-link--dark:hover {
+  color: #FFFFFF;
+}
+.au-cta-link.au-cta-link--dark:hover:after {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 128 128'%3E%3Cpath fill='%23FFFFFF' d='M128 64l-64 64-16-16 64-64'/%3E%3Cpath fill='%23FFFFFF' d='M128 64l-16 16-64-64L64 0'/%3E%3C/svg%3E");
+}

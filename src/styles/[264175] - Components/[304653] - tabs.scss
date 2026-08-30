@@ -1,0 +1,57 @@
+/* ==========================================================================
+   Squiz Matrix Asset ID: #304653
+   Filename: [304653] - tabs.scss
+   Description: NTG Tabs navigation header
+   ========================================================================== */
+
+.ntgc-tabs__nav {
+  padding-left: 0;
+  border-bottom: 1px solid #F0EFEE;
+}
+.ntgc-tabs__item {
+  display: inline-block;
+  list-style: none;
+  margin: 0 1.75rem -0.0625rem 0;
+  padding: 0 0 0.5rem 0;
+  cursor: pointer;
+}
+.ntgc-tabs__link {
+  text-decoration: none !important;
+  color: #343741 !important;
+  font-weight: 700;
+}
+.ntgc-tabs__link:hover {
+  color: #2E979B !important;
+}
+.ntgc-tabs__link:hover .ntgc-counter {
+  color: #343741;
+}
+.ntgc-tabs__link:focus {
+  outline: 0 !important;
+}
+.ntgc-tabs__link .ntgc-counter {
+  margin: 0 0 0 0.5rem;
+}
+.ntgc-tabs__active {
+  border-bottom: 4px solid #2E979B;
+}
+.ntgc-tabs__active .ntgc-counter {
+  background: #343741;
+  color: #FFFFFF;
+}
+.ntgc-tabs__active .ntgc-counter:hover {
+  color: #FFFFFF;
+}
+.ntgc-tabs__item.ntgc-tabs__active:hover .ntgc-counter {
+  color: #FFFFFF;
+}
+@media (max-width: 768px) {
+  .ntgc-tabs__nav {
+    white-space: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+  }
+  .ntgc-tabs__item {
+    float: none;
+  }
+}

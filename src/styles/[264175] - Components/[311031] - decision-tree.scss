@@ -1,0 +1,284 @@
+/* ==========================================================================
+   Squiz Matrix Asset ID: #311031
+   Filename: [311031] - decision-tree.scss
+   Description: NTG Decision Tree wizard styles & form questions
+   ========================================================================== */
+
+.ntgc-decision-tree {
+  overflow-y: hidden;
+  padding-left: 4rem;
+  margin: 3rem 0 0 0;
+  counter-reset: decision-tree-counter;
+}
+.ntgc-decision-tree #questions {
+  border-bottom: 1px solid #BABBB8;
+}
+.ntgc-decision-tree input[type=radio] {
+  position: absolute;
+  top: 0;
+  left: -9999px;
+  opacity: 0;
+}
+.ntgc-decision-tree input + label {
+  display: inline-block;
+  appearance: none;
+  padding: 0.75rem 1.75rem;
+  border: 4px solid transparent;
+  border-radius: 1.75rem;
+  cursor: pointer;
+  vertical-align: middle;
+  transition: background 200ms ease;
+  background: #FFFFFF;
+  color: #343741;
+  box-shadow: 0px 0px 0px 1px #343741 inset;
+  transition: color 200ms ease;
+  -moz-background-clip: padding;
+  /* Firefox 3.6 */
+  -webkit-background-clip: padding;
+  background-clip: padding-box;
+  /* Safari 4? Chrome 6? */
+  /* Firefox 4, Safari 5, Opera 10, IE 9 */
+}
+.ntgc-decision-tree input + label:hover {
+  background-color: #304060;
+  color: #FFFFFF;
+}
+.ntgc-decision-tree input + label:focus {
+  border: 4px solid #fd7cb1;
+}
+.ntgc-decision-tree input + label:active {
+  background: #FFFFFF;
+  color: #343741;
+  border: 4px solid transparent;
+}
+.ntgc-decision-tree input:checked + label {
+  background: #343741;
+  border: 4px solid transparent;
+  color: #FFFFFF;
+  -moz-background-clip: padding;
+  /* Firefox 3.6 */
+  -webkit-background-clip: padding;
+  background-clip: padding-box;
+  /* Safari 4? Chrome 6? */
+  /* Firefox 4, Safari 5, Opera 10, IE 9 */
+}
+.ntgc-decision-tree input:checked:focus + label {
+  border-color: #fd7cb1;
+  outline: 0;
+}
+.ntgc-decision-tree input:focus + label {
+  border-color: #fd7cb1;
+  outline: 0;
+}
+.ntgc-decision-tree input[type="reset"] {
+  margin: 1.875rem 0 0 3rem;
+}
+.ntgc-decision-tree select {
+  box-sizing: border-box;
+  font-size: 16px;
+  font-size: 1rem;
+  line-height: 1.5;
+  padding: 8px 36px 8px 16px;
+  padding: 0.5 rem  2.25 rem  0.5 rem  1 rem;
+  height: 48px;
+  height: 3 rem;
+  position: relative;
+  display: inline-block;
+  text-indent: 0.01px;
+  cursor: pointer;
+  border: 1px solid #DEDEDA;
+  border-radius: 0;
+  vertical-align: middle;
+  appearance: none;
+  width: 100%;
+  max-width: 480px;
+  max-width: 30 rem;
+  font-family: "Roboto", arial, sans-serif;
+  background-image: url("data:image/svg+xml,%3Csvg fill='%23343741' width='1.5em' height='auto' viewBox='0 0 28 12' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.9 1.1L8 7.2l6.1-6.1L16 2.9l-8 8-8-8 1.9-1.8z'/%3E%3Cpath fill='none' d='M2-5.8h24v24H2v-24z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right center;
+  background-size: 1.5em auto;
+}
+.ntgc-decision-tree select--block {
+  display: block;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.ntgc-decision-tree select:hover {
+  border-color: #343741;
+}
+.ntgc-decision-tree select:focus {
+  outline: 3px solid #fd7cb1;
+  border-color: #2E979B;
+}
+.ntgc-decision-tree select:active {
+  border-color: #DEDEDA;
+}
+.ntgc-decision-tree select:invalid {
+  border-color: #c43004;
+}
+.ntgc-decision-tree select[disabled], .ntgc-decision-tree select:disabled {
+  background-color: #F0EFEE;
+  border-color: #BABBB8;
+  color: #506080;
+  cursor: default;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=30)";
+}
+.ie8 .ntgc-decision-tree select:after, .ie9 .ntgc-decision-tree select:after {
+  display: none;
+}
+.ntgc-decision-tree select::-ms-expand {
+  display: none;
+}
+.ie8 .ntgc-decision-tree select, .ie9 .ntgc-decision-tree select {
+  padding-right: 4px;
+  padding-right: 0.25 rem;
+}
+.ntgc-decision-tree .sq_question_wrapper, .ntgc-decision-tree .sq_result_bodycopy {
+  position: relative;
+  padding: 0.75rem 1.5rem 3rem 3rem;
+}
+.ntgc-decision-tree .sq_question_wrapper {
+  display: block;
+  position: relative;
+}
+.ntgc-decision-tree .sq_question_wrapper label {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #343741;
+}
+.ntgc-decision-tree .sq_question_wrapper ul {
+  padding: 0 !important;
+  margin: 0 !important;
+  list-style: none !important;
+}
+.ntgc-decision-tree .sq_question_wrapper ul li {
+  list-style: none !important;
+  padding: 0;
+  margin: 0;
+  display: inline-block;
+  position: relative;
+}
+.ntgc-decision-tree .sq_question_wrapper ul li::before {
+  display: none !important;
+}
+.ntgc-decision-tree .sq_question_wrapper ul label {
+  font-size: 0.875rem;
+  margin: 16px 0;
+}
+.ntgc-decision-tree .sq_question_wrapper::before {
+  content: "";
+  position: absolute;
+  /* 50% of parents left padding, minus 4px for the border on the circle, minus 2 px for the width of the line */
+  left: calc(-2rem - 6px - 2px);
+  bottom: 100%;
+  top: -99999px;
+  /* The line */
+  border-left: 2px solid #2E979B;
+}
+.ntgc-decision-tree .sq_question_wrapper::after {
+  counter-increment: decision-tree-counter;
+  content: counter(decision-tree-counter);
+  position: absolute;
+  top: 0;
+  text-align: center;
+  width: 1.5rem;
+  padding: 0.625rem;
+  left: -4rem;
+  border-radius: 100%;
+  border: 2px solid #000;
+  background: #343741;
+  color: #FFFFFF;
+  font-size: 1rem;
+  font-weight: 700;
+  z-index: 2;
+}
+.ntgc-decision-tree .sq_result_bodycopy h1, .ntgc-decision-tree .sq_result_bodycopy h2, .ntgc-decision-tree .sq_result_bodycopy h3, .ntgc-decision-tree .sq_result_bodycopy h4, .ntgc-decision-tree .sq_result_bodycopy h5, .ntgc-decision-tree .sq_result_bodycopy h6 {
+  margin: 0;
+}
+.ntgc-decision-tree .sq_result_bodycopy::before {
+  content: "";
+  position: absolute;
+  /* 50% of parents left padding, minus 4px for the border on the circle, minus 2 px for the width of the line */
+  left: calc(-2rem - 6px - 2px);
+  bottom: 100%;
+  top: -99999px;
+  /* The line */
+  border-left: 2px solid #2E979B;
+}
+.ntgc-decision-tree .sq_result_bodycopy::after {
+  font-family: "Font Awesome 5 Pro", "FontAwesome";
+  font-weight: 700;
+  content: "";
+  position: absolute;
+  top: 0;
+  text-align: center;
+  width: 1.5rem;
+  padding: 0.625rem;
+  left: -4rem;
+  border-radius: 100%;
+  border: 2px solid #000;
+  background: #343741;
+  color: #FFFFFF;
+  font-size: 1rem;
+  z-index: 2;
+}
+.ntgc-decision-tree .sq-form-field {
+  margin: 15px 0px 10px 0px;
+}
+.ntgc-decision-tree table {
+  font-size: 16px;
+  font-size: 1rem;
+  line-height: 1.5;
+  font-family: "Roboto", arial, sans-serif;
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+  margin: 0 0 1.5rem 0;
+  color: #304060;
+  border: none;
+}
+.ntgc-decision-tree table .ntgc-table__caption {
+  font-size: 20px;
+  font-size: 1.25rem;
+  line-height: 1.6;
+  font-weight: bold;
+  text-align: left;
+  display: table-caption;
+  padding-bottom: 8px;
+  padding-bottom: 0.5 rem;
+}
+.ntgc-decision-tree table thead {
+  display: table-header-group;
+  border-bottom: 1px solid #F0EFEE;
+  font-size: 0.6875rem;
+  font-weight: 700;
+}
+.ntgc-decision-tree table thead th {
+  text-align: left;
+  padding: 1rem 1rem 1rem 0;
+  text-transform: uppercase;
+}
+.ntgc-decision-tree table tr {
+  display: table-row;
+}
+.ntgc-decision-tree table tbody {
+  display: table-row-group;
+}
+.ntgc-decision-tree table tbody th {
+  padding: 1rem 1rem 1rem 0;
+  text-align: left;
+  border-bottom: 1px solid #F0EFEE;
+  font-weight: bold;
+}
+.ntgc-decision-tree table td {
+  padding: 1.5rem 1.5rem 1.5rem 0;
+  text-align: left;
+  border-bottom: 1px solid #ededed;
+  font-size: 0.875rem;
+  font-weight: 400;
+}
+.ntgc-decision-tree table td.ntgc-table__cell--numeric {
+  text-align: right;
+  font-variant: tabular-nums;
+}

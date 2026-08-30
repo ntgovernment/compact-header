@@ -1,0 +1,107 @@
+/* ==========================================================================
+   Squiz Matrix Asset ID: #264085
+   Filename: [264085] - callout-module.scss
+   Description: @gov.au/callout v3.0.2
+   ========================================================================== */
+
+/*! @gov.au/callout v3.0.2 */
+@media print {
+  .au-callout {
+    border-left-width: 16px !important;
+    border-left-width: 1 rem !important;
+    border: 1px solid #000 !important;
+    color: #000 !important;
+    background-color: transparent !important;
+  }
+}
+/**
+ * The generic callout.
+ */
+.au-callout {
+  font-size: 16px;
+  font-size: 1rem;
+  line-height: 1.5;
+  padding: 24px;
+  padding: 1.5 rem;
+  border-left: 4px solid #9a9ba0;
+  border-left: 0.25 rem solid #9a9ba0;
+  font-family: "Roboto", arial, sans-serif;
+  color: #343741;
+  background-color: whitesmoke;
+  word-wrap: break-word;
+}
+* + .au-callout {
+  margin-top: 32px;
+  margin-top: 2 rem;
+}
+.au-callout p {
+  margin: 0;
+}
+.au-callout * + p {
+  margin-top: 16px;
+  margin-top: 1 rem;
+}
+.au-callout + p {
+  margin-top: 32px;
+  margin-top: 2 rem;
+}
+.au-callout.au-callout--dark {
+  color: #FFFFFF;
+  border-color: #a2a1a3;
+  background-color: #3b393d;
+}
+.au-callout.au-callout--alt {
+  background-color: #e0e0e0;
+}
+.au-callout.au-callout--dark.au-callout--alt {
+  background-color: #262528;
+}
+/**
+ * The callout heading.
+ */
+.au-callout__heading {
+  font-size: 20px;
+  font-size: 1.25rem;
+  line-height: 1.6;
+  margin: 0;
+}
+.au-callout__heading.au-callout__heading--sronly {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+.au-callout__heading.au-callout__heading--sronly + * {
+  margin-top: 0;
+}
+/**
+ * The calendar event callout
+ */
+.au-callout--calendar-event {
+  background-color: whitesmoke;
+}
+.au-callout--calendar-event__lede {
+  font-size: 16px;
+  font-size: 1rem;
+  line-height: 1;
+  margin: 0;
+}
+.au-callout--calendar-event__time, .au-callout--calendar-event__name {
+  font-size: 26px;
+  font-size: 1.625rem;
+  line-height: 1.2307692308;
+}
+.au-callout--calendar-event__time {
+  font-weight: bold;
+}
+.au-callout--calendar-event__lede, .au-callout--calendar-event__time, .au-callout--calendar-event__name {
+  display: block;
+}
+* + .au-callout--calendar-event__time, * + .au-callout--calendar-event__name, * + .au-callout--calendar-event__lede {
+  margin-top: 8px;
+  margin-top: 0.5 rem;
+}

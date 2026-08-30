@@ -1,0 +1,859 @@
+/* ==========================================================================
+   Squiz Matrix Asset ID: #313423
+   Filename: [313423] - bootstrap-custom.scss
+   Description: NTGC padding/margin scales (ntgc-p-*, ntgc-m-*), responsive orders, font weights, filetype icons
+   ========================================================================== */
+
+.ntgc-p-8 {
+  padding: 0.5rem !important;
+}
+.ntgc-p-16 {
+  padding: 1rem !important;
+}
+.ntgc-p-24 {
+  padding: 1.5rem !important;
+}
+.ntgc-p-32 {
+  padding: 2rem !important;
+}
+.ntgc-p-48 {
+  padding: 3rem !important;
+}
+.ntgc-p-72 {
+  padding: 4.5rem !important;
+}
+.ntgc-p-144 {
+  padding: 9rem !important;
+}
+.ntgc-pt-8 {
+  padding-top: 0.5rem !important;
+}
+.ntgc-pt-16 {
+  padding-top: 1rem !important;
+}
+.ntgc-pt-24 {
+  padding-top: 1.5rem !important;
+}
+.ntgc-pt-32 {
+  padding-top: 2rem !important;
+}
+.ntgc-pt-48 {
+  padding-top: 3rem !important;
+}
+.ntgc-pt-72 {
+  padding-top: 4.5rem !important;
+}
+.ntgc-pt-144 {
+  padding-top: 9rem !important;
+}
+.ntgc-pb-8 {
+  padding-bottom: 0.5rem !important;
+}
+.ntgc-pb-16 {
+  padding-bottom: 1rem !important;
+}
+.ntgc-pb-24 {
+  padding-bottom: 1.5rem !important;
+}
+.ntgc-pb-32 {
+  padding-bottom: 2rem !important;
+}
+.ntgc-pb-48 {
+  padding-bottom: 3rem !important;
+}
+.ntgc-pb-72 {
+  padding-bottom: 4.5rem !important;
+}
+.ntgc-pb-144 {
+  padding-bottom: 9rem !important;
+}
+.ntgc-pl-8 {
+  padding-left: 0.5rem !important;
+}
+.ntgc-pl-16 {
+  padding-left: 1rem !important;
+}
+.ntgc-pl-24 {
+  padding-left: 1.5rem !important;
+}
+.ntgc-pl-32 {
+  padding-left: 2rem !important;
+}
+.ntgc-pl-48 {
+  padding-left: 3rem !important;
+}
+.ntgc-pl-72 {
+  padding-left: 4.5rem !important;
+}
+.ntgc-pl-144 {
+  padding-left: 9rem !important;
+}
+.ntgc-pr-8 {
+  padding-left: 0.5rem !important;
+}
+.ntgc-pr-16 {
+  padding-right: 1rem !important;
+}
+.ntgc-pr-24 {
+  padding-right: 1.5rem !important;
+}
+.ntgc-pr-32 {
+  padding-right: 2rem !important;
+}
+.ntgc-pr-48 {
+  padding-right: 3rem !important;
+}
+.ntgc-pr-72 {
+  padding-right: 4.5rem !important;
+}
+.ntgc-pr-144 {
+  padding-right: 9rem !important;
+}
+.ntgc-py-8 {
+  padding-top: 0.5rem !important;
+  padding-bottom: 0.5rem !important;
+}
+.ntgc-py-16 {
+  padding-top: 1rem !important;
+  padding-bottom: 1rem !important;
+}
+.ntgc-py-24 {
+  padding-top: 1.5rem !important;
+  padding-bottom: 1.5rem !important;
+}
+.ntgc-py-32 {
+  padding-top: 2rem !important;
+  padding-bottom: 2rem !important;
+}
+.ntgc-py-48 {
+  padding-top: 3rem !important;
+  padding-bottom: 3rem !important;
+}
+.ntgc-py-72 {
+  padding-top: 4.5rem !important;
+  padding-bottom: 4.5rem !important;
+}
+.ntgc-py-144 {
+  padding-top: 9rem !important;
+  padding-bottom: 9rem !important;
+}
+.ntgc-px-8 {
+  padding-left: 0.5rem !important;
+  padding-right: 0.5rem !important;
+}
+.ntgc-px-16 {
+  padding-left: 1rem !important;
+  padding-right: 1rem !important;
+}
+.ntgc-px-24 {
+  padding-left: 1.5rem !important;
+  padding-right: 1.5rem !important;
+}
+.ntgc-px-32 {
+  padding-left: 2rem !important;
+  padding-right: 2rem !important;
+}
+.ntgc-px-48 {
+  padding-left: 3rem !important;
+  padding-right: 3rem !important;
+}
+.ntgc-px-72 {
+  padding-left: 4.5rem !important;
+  padding-right: 4.5rem !important;
+}
+.ntgc-px-144 {
+  padding-left: 9rem !important;
+  padding-right: 9rem !important;
+}
+.ntgc-m-8 {
+  margin: 0.5rem !important;
+}
+.ntgc-m-16 {
+  margin: 1rem !important;
+}
+.ntgc-m-24 {
+  margin: 1.5rem !important;
+}
+.ntgc-m-32 {
+  margin: 2rem !important;
+}
+.ntgc-m-48 {
+  margin: 3rem !important;
+}
+.ntgc-m-72 {
+  margin: 4.5rem !important;
+}
+.ntgc-m-144 {
+  margin: 9rem !important;
+}
+.ntgc-mt-8 {
+  margin-top: 0.5rem !important;
+}
+.ntgc-mt-16 {
+  margin-top: 1rem !important;
+}
+.ntgc-mt-24 {
+  margin-top: 1.5rem !important;
+}
+.ntgc-mt-32 {
+  margin-top: 2rem !important;
+}
+.ntgc-mt-48 {
+  margin-top: 3rem !important;
+}
+.ntgc-mt-72 {
+  margin-top: 4.5rem !important;
+}
+.ntgc-mt-144 {
+  margin-top: 9rem !important;
+}
+.ntgc-mb-8 {
+  margin-bottom: 0.5rem !important;
+}
+.ntgc-mb-16 {
+  margin-bottom: 1rem !important;
+}
+.ntgc-mb-24 {
+  margin-bottom: 1.5rem !important;
+}
+.ntgc-mb-32 {
+  margin-bottom: 2rem !important;
+}
+.ntgc-mb-48 {
+  margin-bottom: 3rem !important;
+}
+.ntgc-mb-72 {
+  margin-bottom: 4.5rem !important;
+}
+.ntgc-mb-144 {
+  margin-bottom: 9rem !important;
+}
+.ntgc-ml-8 {
+  margin-left: 0.5rem !important;
+}
+.ntgc-ml-16 {
+  margin-left: 1rem !important;
+}
+.ntgc-ml-24 {
+  margin-left: 1.5rem !important;
+}
+.ntgc-ml-32 {
+  margin-left: 2rem !important;
+}
+.ntgc-ml-48 {
+  margin-left: 3rem !important;
+}
+.ntgc-ml-72 {
+  margin-left: 4.5rem !important;
+}
+.ntgc-ml-144 {
+  margin-left: 9rem !important;
+}
+.ntgc-mr-8 {
+  margin-right: 0.5rem !important;
+}
+.ntgc-mr-16 {
+  margin-right: 1rem !important;
+}
+.ntgc-mr-24 {
+  margin-right: 1.5rem !important;
+}
+.ntgc-mr-32 {
+  margin-right: 2rem !important;
+}
+.ntgc-mr-48 {
+  margin-right: 3rem !important;
+}
+.ntgc-mr-72 {
+  margin-right: 4.5rem !important;
+}
+.ntgc-mr-144 {
+  margin-right: 9rem !important;
+}
+.ntgc-my-8 {
+  margin-top: 0.5rem !important;
+  margin-bottom: 0.5rem !important;
+}
+.ntgc-my-16 {
+  margin-top: 1rem !important;
+  margin-bottom: 1rem !important;
+}
+.ntgc-my-24 {
+  margin-top: 1.5rem !important;
+  margin-bottom: 1.5rem !important;
+}
+.ntgc-my-32 {
+  margin-top: 2rem !important;
+  margin-bottom: 2rem !important;
+}
+.ntgc-my-48 {
+  margin-top: 3rem !important;
+  margin-bottom: 3rem !important;
+}
+.ntgc-my-72 {
+  margin-top: 4.5rem !important;
+  margin-bottom: 4.5rem !important;
+}
+.ntgc-my-144 {
+  margin-top: 9rem !important;
+  margin-bottom: 9rem !important;
+}
+.ntgc-mx-8 {
+  margin-left: 0.5rem !important;
+  margin-right: 0.5rem !important;
+}
+.ntgc-mx-16 {
+  margin-left: 1rem !important;
+  margin-right: 1rem !important;
+}
+.ntgc-mx-24 {
+  margin-left: 1.5rem !important;
+  margin-right: 1.5rem !important;
+}
+.ntgc-mx-32 {
+  margin-left: 2rem !important;
+  margin-right: 2rem !important;
+}
+.ntgc-mx-48 {
+  margin-left: 3rem !important;
+  margin-right: 3rem !important;
+}
+.ntgc-mx-72 {
+  margin-left: 4.5rem !important;
+  margin-right: 4.5rem !important;
+}
+.ntgc-mx-144 {
+  margin-left: 9rem !important;
+  margin-right: 9rem !important;
+}
+.d-none {
+  display: none !important;
+}
+.d-block {
+  display: block !important;
+}
+@media (max-width: 375px) {
+  .d-xs-none {
+    display: none !important;
+  }
+  .d-xs-block {
+    display: block !important;
+  }
+}
+@media (max-width: 768px) {
+  .d-sm-none {
+    display: none !important;
+  }
+  .d-sm-block {
+    display: block !important;
+  }
+}
+@media (max-width: 1024px) {
+  .d-md-none {
+    display: none !important;
+  }
+  .d-md-block {
+    display: block !important;
+  }
+}
+@media (max-width: 1280px) {
+  .d-lg-none {
+    display: none !important;
+  }
+  .d-lg-block {
+    display: block !important;
+  }
+}
+.order-first {
+  -ms-flex-order: -1;
+  order: -1;
+}
+.order-last {
+  -ms-flex-order: 13;
+  order: 13;
+}
+.order-0 {
+  -ms-flex-order: 0;
+  order: 0;
+}
+.order-1 {
+  -ms-flex-order: 1;
+  order: 1;
+}
+.order-2 {
+  -ms-flex-order: 2;
+  order: 2;
+}
+.order-3 {
+  -ms-flex-order: 3;
+  order: 3;
+}
+.order-4 {
+  -ms-flex-order: 4;
+  order: 4;
+}
+.order-5 {
+  -ms-flex-order: 5;
+  order: 5;
+}
+.order-6 {
+  -ms-flex-order: 6;
+  order: 6;
+}
+.order-7 {
+  -ms-flex-order: 7;
+  order: 7;
+}
+.order-8 {
+  -ms-flex-order: 8;
+  order: 8;
+}
+.order-9 {
+  -ms-flex-order: 9;
+  order: 9;
+}
+.order-10 {
+  -ms-flex-order: 10;
+  order: 10;
+}
+.order-11 {
+  -ms-flex-order: 11;
+  order: 11;
+}
+.order-12 {
+  -ms-flex-order: 12;
+  order: 12;
+}
+.offset-1 {
+  margin-left: 8.333333%;
+}
+.offset-2 {
+  margin-left: 16.666667%;
+}
+.offset-3 {
+  margin-left: 25%;
+}
+.offset-4 {
+  margin-left: 33.333333%;
+}
+.offset-5 {
+  margin-left: 41.666667%;
+}
+.offset-6 {
+  margin-left: 50%;
+}
+.offset-7 {
+  margin-left: 58.333333%;
+}
+.offset-8 {
+  margin-left: 66.666667%;
+}
+.offset-9 {
+  margin-left: 75%;
+}
+.offset-10 {
+  margin-left: 83.333333%;
+}
+.offset-11 {
+  margin-left: 91.666667%;
+}
+@media (min-width: 768px) {
+  .order-sm-first {
+    -ms-flex-order: -1;
+    order: -1;
+  }
+  .order-sm-last {
+    -ms-flex-order: 13;
+    order: 13;
+  }
+  .order-sm-0 {
+    -ms-flex-order: 0;
+    order: 0;
+  }
+  .order-sm-1 {
+    -ms-flex-order: 1;
+    order: 1;
+  }
+  .order-sm-2 {
+    -ms-flex-order: 2;
+    order: 2;
+  }
+  .order-sm-3 {
+    -ms-flex-order: 3;
+    order: 3;
+  }
+  .order-sm-4 {
+    -ms-flex-order: 4;
+    order: 4;
+  }
+  .order-sm-5 {
+    -ms-flex-order: 5;
+    order: 5;
+  }
+  .order-sm-6 {
+    -ms-flex-order: 6;
+    order: 6;
+  }
+  .order-sm-7 {
+    -ms-flex-order: 7;
+    order: 7;
+  }
+  .order-sm-8 {
+    -ms-flex-order: 8;
+    order: 8;
+  }
+  .order-sm-9 {
+    -ms-flex-order: 9;
+    order: 9;
+  }
+  .order-sm-10 {
+    -ms-flex-order: 10;
+    order: 10;
+  }
+  .order-sm-11 {
+    -ms-flex-order: 11;
+    order: 11;
+  }
+  .order-sm-12 {
+    -ms-flex-order: 12;
+    order: 12;
+  }
+  .offset-sm-0 {
+    margin-left: 0;
+  }
+  .offset-sm-1 {
+    margin-left: 8.333333%;
+  }
+  .offset-sm-2 {
+    margin-left: 16.666667%;
+  }
+  .offset-sm-3 {
+    margin-left: 25%;
+  }
+  .offset-sm-4 {
+    margin-left: 33.333333%;
+  }
+  .offset-sm-5 {
+    margin-left: 41.666667%;
+  }
+  .offset-sm-6 {
+    margin-left: 50%;
+  }
+  .offset-sm-7 {
+    margin-left: 58.333333%;
+  }
+  .offset-sm-8 {
+    margin-left: 66.666667%;
+  }
+  .offset-sm-9 {
+    margin-left: 75%;
+  }
+  .offset-sm-10 {
+    margin-left: 83.333333%;
+  }
+  .offset-sm-11 {
+    margin-left: 91.666667%;
+  }
+}
+@media (min-width: 1024px) {
+  .order-md-first {
+    -ms-flex-order: -1;
+    order: -1;
+  }
+  .order-md-last {
+    -ms-flex-order: 13;
+    order: 13;
+  }
+  .order-md-0 {
+    -ms-flex-order: 0;
+    order: 0;
+  }
+  .order-md-1 {
+    -ms-flex-order: 1;
+    order: 1;
+  }
+  .order-md-2 {
+    -ms-flex-order: 2;
+    order: 2;
+  }
+  .order-md-3 {
+    -ms-flex-order: 3;
+    order: 3;
+  }
+  .order-md-4 {
+    -ms-flex-order: 4;
+    order: 4;
+  }
+  .order-md-5 {
+    -ms-flex-order: 5;
+    order: 5;
+  }
+  .order-md-6 {
+    -ms-flex-order: 6;
+    order: 6;
+  }
+  .order-md-7 {
+    -ms-flex-order: 7;
+    order: 7;
+  }
+  .order-md-8 {
+    -ms-flex-order: 8;
+    order: 8;
+  }
+  .order-md-9 {
+    -ms-flex-order: 9;
+    order: 9;
+  }
+  .order-md-10 {
+    -ms-flex-order: 10;
+    order: 10;
+  }
+  .order-md-11 {
+    -ms-flex-order: 11;
+    order: 11;
+  }
+  .order-md-12 {
+    -ms-flex-order: 12;
+    order: 12;
+  }
+  .offset-md-0 {
+    margin-left: 0;
+  }
+  .offset-md-1 {
+    margin-left: 8.333333%;
+  }
+  .offset-md-2 {
+    margin-left: 16.666667%;
+  }
+  .offset-md-3 {
+    margin-left: 25%;
+  }
+  .offset-md-4 {
+    margin-left: 33.333333%;
+  }
+  .offset-md-5 {
+    margin-left: 41.666667%;
+  }
+  .offset-md-6 {
+    margin-left: 50%;
+  }
+  .offset-md-7 {
+    margin-left: 58.333333%;
+  }
+  .offset-md-8 {
+    margin-left: 66.666667%;
+  }
+  .offset-md-9 {
+    margin-left: 75%;
+  }
+  .offset-md-10 {
+    margin-left: 83.333333%;
+  }
+  .offset-md-11 {
+    margin-left: 91.666667%;
+  }
+}
+@media (min-width: 1280px) {
+  .order-lg-first {
+    -ms-flex-order: -1;
+    order: -1;
+  }
+  .order-lg-last {
+    -ms-flex-order: 13;
+    order: 13;
+  }
+  .order-lg-0 {
+    -ms-flex-order: 0;
+    order: 0;
+  }
+  .order-lg-1 {
+    -ms-flex-order: 1;
+    order: 1;
+  }
+  .order-lg-2 {
+    -ms-flex-order: 2;
+    order: 2;
+  }
+  .order-lg-3 {
+    -ms-flex-order: 3;
+    order: 3;
+  }
+  .order-lg-4 {
+    -ms-flex-order: 4;
+    order: 4;
+  }
+  .order-lg-5 {
+    -ms-flex-order: 5;
+    order: 5;
+  }
+  .order-lg-6 {
+    -ms-flex-order: 6;
+    order: 6;
+  }
+  .order-lg-7 {
+    -ms-flex-order: 7;
+    order: 7;
+  }
+  .order-lg-8 {
+    -ms-flex-order: 8;
+    order: 8;
+  }
+  .order-lg-9 {
+    -ms-flex-order: 9;
+    order: 9;
+  }
+  .order-lg-10 {
+    -ms-flex-order: 10;
+    order: 10;
+  }
+  .order-lg-11 {
+    -ms-flex-order: 11;
+    order: 11;
+  }
+  .order-lg-12 {
+    -ms-flex-order: 12;
+    order: 12;
+  }
+  .offset-lg-0 {
+    margin-left: 0;
+  }
+  .offset-lg-1 {
+    margin-left: 8.333333%;
+  }
+  .offset-lg-2 {
+    margin-left: 16.666667%;
+  }
+  .offset-lg-3 {
+    margin-left: 25%;
+  }
+  .offset-lg-4 {
+    margin-left: 33.333333%;
+  }
+  .offset-lg-5 {
+    margin-left: 41.666667%;
+  }
+  .offset-lg-6 {
+    margin-left: 50%;
+  }
+  .offset-lg-7 {
+    margin-left: 58.333333%;
+  }
+  .offset-lg-8 {
+    margin-left: 66.666667%;
+  }
+  .offset-lg-9 {
+    margin-left: 75%;
+  }
+  .offset-lg-10 {
+    margin-left: 83.333333%;
+  }
+  .offset-lg-11 {
+    margin-left: 91.666667%;
+  }
+}
+.border-0 {
+  border: none !important;
+}
+.font {
+  font-family: "Roboto", arial, sans-serif;
+}
+.font--light {
+  font-weight: 400;
+  font-style: normal;
+}
+.font--normal {
+  font-weight: 500;
+  font-style: normal;
+}
+.font--italic {
+  font-weight: 500;
+  font-style: italic;
+}
+.font--bold {
+  font-weight: 600;
+  font-style: normal;
+}
+.font--bold-italic {
+  font-weight: 600;
+  font-style: italic;
+}
+.font--small {
+  font-size: 0.875rem;
+}
+@media (max-width: 768px) {
+  .landing-page__topic-list.ntgc-pt-72 {
+    padding-top: 0 !important;
+  }
+  .landing-page__topic-list .ntgc-mt-8 {
+    margin-top: 0 !important;
+  }
+  .landing-page__topic-list .ntgc-list-links {
+    display: none;
+  }
+}
+.ntgc-page-not-found__illustration {
+  display: none;
+  height: 300px;
+  width: 100%;
+  position: relative;
+}
+.ntgc-page-not-found__illustration .svg-background {
+  position: absolute;
+  top: -1.5rem;
+  left: -3rem;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 110%;
+  width: 110%;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+@media (min-width: 1024px) {
+  .ntgc-page-not-found__illustration {
+    display: block;
+  }
+}
+main a.icon_external:after, .ntgc-body a.icon_external:after {
+  content: "";
+  padding-left: 5px;
+}
+main a[href$=".pdf"] > span.link-icon::after, main a[href$=".PDF"] > span.link-icon::after, .ntgc-body a[href$=".pdf"] > span.link-icon::after, .ntgc-body a[href$=".PDF"] > span.link-icon::after {
+  content: "";
+}
+main a[href$=".docx"] > span.link-icon::after, main a[href$=".DOCX"] > span.link-icon::after, main a[href$=".doc"] > span.link-icon::after, main a[href$=".DOC"] > span.link-icon::after, main a[href$=".dotx"] > span.link-icon::after, main a[href$=".DOTX"] > span.link-icon::after, main a[href$=".dot"] > span.link-icon::after, main a[href$=".DOT"] > span.link-icon::after, main a[href$=".docm"] > span.link-icon::after, main a[href$=".DOCM"] > span.link-icon::after, main a[href$=".dotm"] > span.link-icon::after, main a[href$=".DOTM"] > span.link-icon::after, .ntgc-body a[href$=".docx"] > span.link-icon::after, .ntgc-body a[href$=".DOCX"] > span.link-icon::after, .ntgc-body a[href$=".doc"] > span.link-icon::after, .ntgc-body a[href$=".DOC"] > span.link-icon::after, .ntgc-body a[href$=".dotx"] > span.link-icon::after, .ntgc-body a[href$=".DOTX"] > span.link-icon::after, .ntgc-body a[href$=".dot"] > span.link-icon::after, .ntgc-body a[href$=".DOT"] > span.link-icon::after, .ntgc-body a[href$=".docm"] > span.link-icon::after, .ntgc-body a[href$=".DOCM"] > span.link-icon::after, .ntgc-body a[href$=".dotm"] > span.link-icon::after, .ntgc-body a[href$=".DOTM"] > span.link-icon::after {
+  content: "";
+}
+main a[href$=".xlsx"] > span.link-icon:after, main a[href$=".XLSX"] > span.link-icon:after, main a[href$=".xls"] > span.link-icon:after, main a[href$=".XLS"] > span.link-icon:after, main a[href$=".xlsm"] > span.link-icon:after, main a[href$=".XLSM"] > span.link-icon:after, main a[href$=".xlsb"] > span.link-icon:after, main a[href$=".XLSB"] > span.link-icon:after, main a[href$=".xltm"] > span.link-icon:after, main a[href$=".XLTM"] > span.link-icon:after, main a[href$=".xlt"] > span.link-icon:after, main a[href$=".XLT"] > span.link-icon:after, main a[href$=".xltx"] > span.link-icon:after, main a[href$=".XLTX"] > span.link-icon:after, .ntgc-body a[href$=".xlsx"] > span.link-icon:after, .ntgc-body a[href$=".XLSX"] > span.link-icon:after, .ntgc-body a[href$=".xls"] > span.link-icon:after, .ntgc-body a[href$=".XLS"] > span.link-icon:after, .ntgc-body a[href$=".xlsm"] > span.link-icon:after, .ntgc-body a[href$=".XLSM"] > span.link-icon:after, .ntgc-body a[href$=".xlsb"] > span.link-icon:after, .ntgc-body a[href$=".XLSB"] > span.link-icon:after, .ntgc-body a[href$=".xltm"] > span.link-icon:after, .ntgc-body a[href$=".XLTM"] > span.link-icon:after, .ntgc-body a[href$=".xlt"] > span.link-icon:after, .ntgc-body a[href$=".XLT"] > span.link-icon:after, .ntgc-body a[href$=".xltx"] > span.link-icon:after, .ntgc-body a[href$=".XLTX"] > span.link-icon:after {
+  content: "";
+}
+main a[href$=".csv"] > span.link-icon::after, main a[href$=".CSV"] > span.link-icon::after, .ntgc-body a[href$=".csv"] > span.link-icon::after, .ntgc-body a[href$=".CSV"] > span.link-icon::after {
+  content: "";
+}
+main a[href$=".ppt"] > span.link-icon::after, main a[href$=".PPT"] > span.link-icon::after, main a[href$=".pptx"] > span.link-icon::after, main a[href$=".PPTX"] > span.link-icon::after, main a[href$=".pptm"] > span.link-icon::after, main a[href$=".PPTM"] > span.link-icon::after, main a[href$=".potx"] > span.link-icon::after, main a[href$=".POTX"] > span.link-icon::after, main a[href$=".potm"] > span.link-icon::after, main a[href$=".POTM"] > span.link-icon::after, main a[href$=".pot"] > span.link-icon::after, main a[href$=".POT"] > span.link-icon::after, main a[href$=".ppsx"] > span.link-icon::after, main a[href$=".PPSX"] > span.link-icon::after, main a[href$=".ppsm"] > span.link-icon::after, main a[href$=".PPSM"] > span.link-icon::after, main a[href$=".pps"] > span.link-icon::after, main a[href$=".PPS"] > span.link-icon::after, .ntgc-body a[href$=".ppt"] > span.link-icon::after, .ntgc-body a[href$=".PPT"] > span.link-icon::after, .ntgc-body a[href$=".pptx"] > span.link-icon::after, .ntgc-body a[href$=".PPTX"] > span.link-icon::after, .ntgc-body a[href$=".pptm"] > span.link-icon::after, .ntgc-body a[href$=".PPTM"] > span.link-icon::after, .ntgc-body a[href$=".potx"] > span.link-icon::after, .ntgc-body a[href$=".POTX"] > span.link-icon::after, .ntgc-body a[href$=".potm"] > span.link-icon::after, .ntgc-body a[href$=".POTM"] > span.link-icon::after, .ntgc-body a[href$=".pot"] > span.link-icon::after, .ntgc-body a[href$=".POT"] > span.link-icon::after, .ntgc-body a[href$=".ppsx"] > span.link-icon::after, .ntgc-body a[href$=".PPSX"] > span.link-icon::after, .ntgc-body a[href$=".ppsm"] > span.link-icon::after, .ntgc-body a[href$=".PPSM"] > span.link-icon::after, .ntgc-body a[href$=".pps"] > span.link-icon::after, .ntgc-body a[href$=".PPS"] > span.link-icon::after {
+  content: "";
+}
+main a[href$=".rtf"] > span.link-icon::after, main a[href$=".RTF"] > span.link-icon::after, .ntgc-body a[href$=".rtf"] > span.link-icon::after, .ntgc-body a[href$=".RTF"] > span.link-icon::after {
+  content: "";
+}
+main a[href$=".svg"] > span.link-icon::after, main a[href$=".SVG"] > span.link-icon::after, main a[href$=".png"] > span.link-icon::after, main a[href$=".PNG"] > span.link-icon::after, main a[href$=".jpg"] > span.link-icon::after, main a[href$=".JPG"] > span.link-icon::after, main a[href$=".jpeg"] > span.link-icon::after, main a[href$=".JPEG"] > span.link-icon::after, main a[href$=".gif"] > span.link-icon::after, main a[href$=".GIF"] > span.link-icon::after, .ntgc-body a[href$=".svg"] > span.link-icon::after, .ntgc-body a[href$=".SVG"] > span.link-icon::after, .ntgc-body a[href$=".png"] > span.link-icon::after, .ntgc-body a[href$=".PNG"] > span.link-icon::after, .ntgc-body a[href$=".jpg"] > span.link-icon::after, .ntgc-body a[href$=".JPG"] > span.link-icon::after, .ntgc-body a[href$=".jpeg"] > span.link-icon::after, .ntgc-body a[href$=".JPEG"] > span.link-icon::after, .ntgc-body a[href$=".gif"] > span.link-icon::after, .ntgc-body a[href$=".GIF"] > span.link-icon::after {
+  content: "";
+}
+main a[href$=".zip"] > span.link-icon::after, main a[href$=".ZIP"] > span.link-icon::after, .ntgc-body a[href$=".zip"] > span.link-icon::after, .ntgc-body a[href$=".ZIP"] > span.link-icon::after {
+  content: "";
+}
+main a[href$=".wav"] > span.link-icon::after, main a[href$=".WAV"] > span.link-icon::after, .ntgc-body a[href$=".wav"] > span.link-icon::after, .ntgc-body a[href$=".WAV"] > span.link-icon::after {
+  content: "";
+}
+main a[href$=".mp3"] > span.link-icon::after, main a[href$=".MP3"] > span.link-icon::after, .ntgc-body a[href$=".mp3"] > span.link-icon::after, .ntgc-body a[href$=".MP3"] > span.link-icon::after {
+  content: "";
+}
+main a.icon_external:after, main span.link-icon:after, .ntgc-body a.icon_external:after, .ntgc-body span.link-icon:after {
+  display: inline;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  font-family: "Font Awesome 5 Pro";
+  font-weight: 400;
+  font-size: 1rem;
+}

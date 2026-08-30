@@ -1,0 +1,105 @@
+/* ==========================================================================
+   Squiz Matrix Asset ID: #264188
+   Filename: [264188] - direction-links.scss
+   Description: NTG Back-to-top and floating feedback buttons
+   ========================================================================== */
+
+a.ntgc-link-to-top {
+  position: absolute;
+  top: -24px;
+  right: 32px;
+  background: #2E979B;
+  border-radius: 100%;
+  width: 3rem;
+  height: 3rem;
+  box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.16);
+  text-align: center;
+  display: inline-block;
+  text-decoration: none;
+  transition: all 300ms ease;
+  font-size: 1.25rem;
+}
+a.ntgc-link-to-top [class*=" fa-"] {
+  content: "";
+  font-family: "Font Awesome 5 Pro";
+  font-size: 1rem;
+  color: #FFFFFF;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  line-height: 3rem;
+  text-decoration: none;
+}
+a.ntgc-link-to-top:hover {
+  background-color: #2E979B;
+}
+a.ntgc-link-to-top:hover [class*=" fa-"] {
+  color: #FFFFFF;
+}
+a.ntgc-link-to-top:focus {
+  background-color: #2E979B;
+  outline: none;
+}
+a.ntgc-link-to-top:focus [class*=" fa-"] {
+  color: #FFFFFF;
+}
+a.ntgc-link-to-top:active {
+  background-color: #343741;
+  outline: none;
+}
+a.ntgc-link-to-top:active [class*=" fa-"] {
+  color: #FFFFFF;
+}
+a.ntgc-link-to-top[disabled], a.ntgc-link-to-top[disabled]:hover, a.ntgc-link-to-top[disabled]:focus, a.ntgc-link-to-top[disabled]:active {
+  border: 1px solid #B0B2B7;
+  width: 46px;
+  height: 46px;
+  background-color: #F0EFEE;
+}
+a.ntgc-link-to-top[disabled]:hover {
+  cursor: not-allowed;
+}
+a.ntgc-link-to-top[disabled] [class*=" fa-"], a.ntgc-link-to-top[disabled]:hover [class*=" fa-"], a.ntgc-link-to-top[disabled]:focus [class*=" fa-"], a.ntgc-link-to-top[disabled]:active [class*=" fa-"] {
+  color: #B0B2B7;
+}
+a.ntgc-link-to-feedback {
+  position: fixed;
+  top: 50%;
+  -ms-transform: rotate(90deg);
+  -webkit-transform: rotate(90deg);
+  transform: rotate(90deg);
+  right: -57px;
+  width: 150px;
+  z-index: 99;
+  transition: all 150ms ease;
+  text-decoration: none;
+  text-align: center;
+  background: #2E979B;
+  box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.16);
+  padding: 0.625rem 0;
+  font-family: "Roboto", arial, sans-serif;
+  color: #FFFFFF;
+  letter-spacing: 0.072em;
+}
+a.ntgc-link-to-feedback:hover {
+  background: #2E979B;
+}
+@media (min-width: 1280px) {
+  .ntgc-footer a.ntgc-link-to-top {
+    position: fixed;
+    top: auto;
+    bottom: 2rem;
+    right: 2rem;
+  }
+}
+@media (max-width: 768px) {
+  a.ntgc-link-to-feedback {
+    display: none;
+  }
+}
+/*
+-----------------------------
+Decision tree
+-----------------------------
+*/
