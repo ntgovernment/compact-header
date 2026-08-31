@@ -28,7 +28,7 @@ This directory structure recreates the individual modular stylesheets from Squiz
 | `846105` | `[846097] - CSS/[846100] - base/[846105] - custom.scss` | Agency project specific overrides (document search, onboarding) |
 | `989747` | `[846097] - CSS/[846100] - base/[989747] - secondary-navigation.css` | Secondary navigation dropdowns & sub-menus |
 | `989777` | `[846097] - CSS/custom-header-overrides.scss` | Custom header overrides (real parse file imports this LAST, after `989747`) |
-| Pending | `compact-header.scss` | Local final-import prototype override for full-width header bands, compact desktop navigation, and secondary accordion desktop suppression |
+| Pending | `compact-header.scss` | Local final-import prototype override for transparent desktop header rows, compact navigation, and secondary-menu presentation |
 
 ---
 
@@ -167,6 +167,8 @@ the nester as read-only in the same sense as the folders above — edits happen 
 
 Key structural/behavioural notes (see `/memories/repo/squiz-matrix-header-nester.md` for full detail):
 - Secondary nav links render from asset `#846112` metadata JSON; only shown if it has entries.
+- Secondary nav folder entries render their dropdown trigger with `href="#"`; ordinary and external
+  links retain their configured destination URLs.
 - Inline JS clones the secondary nav's links into a `li.common-links` "Common links" dropdown inside
   the main mobile nav (`secondaryNavMobile()`), and toggles `.dropdown.active` on click
   (`secondaryNavDropdown()`) — both matched by CSS already in `[989747] - secondary-navigation.css`.
@@ -177,8 +179,10 @@ Key structural/behavioural notes (see `/memories/repo/squiz-matrix-header-nester
 
 The local header fixture includes `.ntgc-header__utility-band` and
 `.ntgc-header__navigation-band` wrappers, plus `--utility`, `--main`, and `--profile` inner
-modifiers. The bands provide the full-width header background and divider borders while their
-inner `.container` elements retain page alignment.
+modifiers. At desktop widths, both bands are transparent so the parent `.ntgc-header` background
+and graphic remain visible. Only the utility band's lower border remains, separating the secondary
+and main rows; the navigation band's lower border is removed. Their inner `.container` elements
+retain page alignment.
 
 Before release, apply this structural markup to nester `#989753`. Publish
 `compact-header.scss` as a new editable Matrix CSS asset, update the pending mapping entry with
@@ -189,6 +193,10 @@ main-menu drawer.
 
 Current `@media (min-width: 769px)` overrides in `compact-header.scss` (Row 1 = logo/main-nav/
 search/avatar):
+- **Transparent navigation rows**: the utility band, navigation band, `--main` inner wrapper,
+  `.ntgc-navigation--main`, and its `::before`/`::after` width extensions are transparent. The
+  navigation band's lower border is removed while the utility band's divider is retained. These
+  overrides are desktop-only so the mobile main-menu panels remain opaque white.
 - **Band width**: both `.ntgc-header__utility-band` and `.ntgc-header__navigation-band`
   `.header-wrapper` are forced to `width: 100%; max-width: 1530px;` — the `width: 100%` is
   required because AUDS's `.au-grid .container` sets an explicit `width: 1256px` at the
@@ -214,6 +222,10 @@ search/avatar):
   edges align with the utility/navigation band rows above it.
 
 Outside the media query (applies at all breakpoints):
+- **Secondary external-link icons**: `.ntgc-navigation--secondary` links retain the `.external`
+  class and destination URL, but their generated `::after` Font Awesome icon is removed with
+  `content: none`. The selector is limited to the secondary menu, so external-link indicators in
+  page content are unaffected.
 - **Intro top margin**: `.ntgc-header__intro { margin-top: 2.5rem; }` overrides
   `header-style.scss`'s `margin-top: 5.625rem` so it matches that same rule's
   `margin-bottom: 2.5rem`.

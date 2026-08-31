@@ -40,12 +40,26 @@
   background-color: transparent;
 }
 
+.ntgc-header .ntgc-navigation--secondary > ul > li > a.external::after {
+  content: none;
+}
+
 /* Matches header-style.scss's margin-bottom: 2.5rem (was 5.625rem). */
 .ntgc-header__intro {
   margin-top: 2.5rem;
 }
 
 @media (min-width: 769px) {
+  .ntgc-header .ntgc-header__utility-band,
+  .ntgc-header .ntgc-header__navigation-band,
+  .ntgc-header .ntgc-header__inner--main {
+    background-color: transparent;
+  }
+
+  .ntgc-header .ntgc-header__navigation-band {
+    border-bottom: 0;
+  }
+
   .ntgc-header .ntgc-navigation--secondary > ul > .au-accordion {
     display: none;
   }
@@ -119,10 +133,15 @@
     fill: #FFFFFF !important;
   }
 
+  .ntgc-header .ntgc-header__inner--main .ntgc-logo:hover svg path,
+  .ntgc-header .ntgc-header__inner--main .ntgc-logo:hover svg text {
+    fill: #2E979B !important;
+  }
+
   .ntgc-header .ntgc-header__inner--main .ntgc-navigation--main,
   .ntgc-header .ntgc-header__inner--main .ntgc-navigation--main::before,
   .ntgc-header .ntgc-header__inner--main .ntgc-navigation--main::after {
-    background-color: #343741;
+    background-color: transparent;
   }
 
   .ntgc-header .ntgc-header__inner--main .ntgc-navigation--main ul.level-one {
@@ -133,6 +152,13 @@
   .ntgc-header .ntgc-header__inner--main .ntgc-navigation--main ul.level-one > li > a,
   .ntgc-header .ntgc-header__inner--main .ntgc-navigation--main ul.level-one > li > a.dropdown::before {
     color: #FFFFFF;
+  }
+
+  .ntgc-header .ntgc-header__inner--main .ntgc-navigation--main ul.level-one > li > a:hover,
+  .ntgc-header .ntgc-header__inner--main .ntgc-navigation--main ul.level-one > li > a:hover.dropdown::before,
+  .ntgc-header .ntgc-header__inner--main .ntgc-navigation--main ul.level-one > li.active > a,
+  .ntgc-header .ntgc-header__inner--main .ntgc-navigation--main ul.level-one > li.active > a.dropdown::before {
+    color: #2E979B;
   }
 
   .ntgc-header .ntgc-header__inner--main .ntgc-navigation--main ul.level-one > li > a {
@@ -169,5 +195,10 @@
   .ntgc-header .ntgc-header__inner--main .ntgc-avatar--current-user .ntgc-avatar__title a,
   .ntgc-header .ntgc-header__inner--main .profile-firstname {
     color: #FFFFFF;
+  }
+
+  .ntgc-header .ntgc-header__inner--main .ntgc-avatar--current-user .ntgc-avatar__title a:hover,
+  .ntgc-header .ntgc-header__inner--main .profile-firstname:hover {
+    color: #2E979B;
   }
 }
