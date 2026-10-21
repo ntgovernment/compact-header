@@ -13,6 +13,7 @@
 
 
     <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
@@ -103,9 +104,11 @@
 
     <script>
         (function () {
-            var isLocalDev = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1';
+            var host = window.location.hostname;
+            var isLocalDev = host === 'localhost' || host === '127.0.0.1';
+            var isGithubPages = host === 'ntgovernment.github.io';
 
-            if (!isLocalDev) {
+            if (!isLocalDev && !isGithubPages) {
                 return;
             }
 
@@ -157,7 +160,7 @@
             padding: 0.9rem 1rem !important;
         }
     </style>
-  <link rel="stylesheet" crossorigin href="/compact-header/assets/detIntranet-c-ieEhlf.css">
+  <link rel="stylesheet" crossorigin href="/compact-header/assets/detIntranet-DnxqsAK9.css">
 </head>
 
 <body class="au-grid" data-user="770097"><input type="hidden" name="token"
@@ -196,7 +199,8 @@
                                         <span class="fal fa-chevron-down" aria-hidden="true"></span>
                                     </button>
                                     <ul class="ntgc-navigation--utility__submenu" id="online-systems-menu">
-                                        <li><a href="https://internal.nt.gov.au/education/support-and-resources/ict">All online systems</a></li>
+                                        <li><a href="https://internal.nt.gov.au/education/support-and-resources/ict">All
+                                                online systems</a></li>
                                         <li><a href="#">eLearn</a></li>
                                         <li><a href="#">myBiz</a></li>
                                         <li><a href="#">SAMS</a></li>

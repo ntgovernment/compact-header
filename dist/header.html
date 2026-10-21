@@ -13,25 +13,19 @@
                 <div class="col-xs-12">
                     <nav class="ntgc-navigation--utility" aria-label="Quick links navigation">
                         <ul class="ntgc-navigation--utility__list">
-                            <li><a href="https://ntgcentral.nt.gov.au/">NTG Central</a></li>
                             <li><a href="https://phones.nt.gov.au/">NTG Directory</a></li>
                             <li><a href="https://ntgcentral.nt.gov.au/policy-library">NTG Policy Library</a></li>
                             <li><a href="https://myhr.nt.gov.au/">MyHR</a></li>
-                            <li><a href="https://internal-forms.nt.gov.au/Produce">MyForms</a></li>
+                            <li><a href="https://myforms.nt.gov.au/">MyForms</a></li>
                             <li><a href="https://ntgcentral.nt.gov.au/ntgov-noticeboard/all-items">Noticeboard</a></li>
                             <li class="ntgc-utility-dropdown">
-                                <button class="ntgc-navigation--utility__trigger" type="button"
-                                    aria-expanded="false" aria-controls="online-systems-menu">
+                                <button class="ntgc-navigation--utility__trigger" type="button" aria-expanded="false"
+                                    aria-controls="online-systems-menu">
                                     Online systems
                                     <span class="fal fa-chevron-down" aria-hidden="true"></span>
                                 </button>
                                 <ul class="ntgc-navigation--utility__submenu" id="online-systems-menu">
-                                    <li><a href="%globals_site_url%/support-and-resources/ict">All online systems</a></li>
-                                    <li><a href="#">eLearn</a></li>
-                                    <li><a href="#">myBiz</a></li>
-                                    <li><a href="#">SAMS</a></li>
-                                    <li><a href="#">Education Directory</a></li>
-                                    <li><a href="#">Schools Central</a></li>
+                                    <li><a href="https://ntgcentral.nt.gov.au/online-systems">All online systems</a></li>
                                 </ul>
                             </li>
                         </ul>
@@ -47,7 +41,7 @@
                 <div class="col-xs-12 col-md-3">
 
                     <!--@@ Text logo for screen readers @@-->
-                    <div class="sr-only d-none">DET Intranet</div>
+                    <div class="sr-only d-none">NTG Central</div>
 
                     <!--@@ SVG logo for everybody else @@-->
                     <div class="flex flex--left ntgc-py-16 ntgc-header__logo">
@@ -78,9 +72,9 @@
                                 <path
                                     d="M24.8,10.8c-.2,1.3-1.9,4.7-.6,6.4,1.4,1.8,4.9.8,6.2.9l-.2.1c-1.1.6-4.8,1.4-5.2,3.5-.5,2.3,2.5,4.4,3.2,5.5l-.1-.2c-1.2-.5-4-2.9-5.9-2-2.1,1-1.8,4.7-2.2,6v-.2c-.3-1.3-.3-5-2.2-6-2.1-1-4.8,1.5-6,2l.1-.1c.8-1.1,3.7-3.4,3.2-5.5-.5-2.3-4.1-2.9-5.2-3.6h.2c1.3-.1,4.9.9,6.2-.9,1.5-1.8-.3-5.1-.5-6.4l.1.2c.9,1,2.4,4.4,4.5,4.4,2.3,0,3.7-3.4,4.6-4.4Z"
                                     style="fill:#102040" /><text transform="translate(47.979 17.998)"
-                                    style="isolation:isolate;font-size:14px;fill:#102040;font-family:neue-haas-grotesk-display;font-weight:600">DET</text><text
+                                    style="isolation:isolate;font-size:14px;fill:#102040;font-family:neue-haas-grotesk-display;font-weight:600">NTG</text><text
                                     transform="translate(47.979 31.998)"
-                                    style="isolation:isolate;font-size:14px;fill:#102040;font-family:neue-haas-grotesk-display;font-weight:500">INTRANET</text>
+                                    style="isolation:isolate;font-size:14px;fill:#102040;font-family:neue-haas-grotesk-display;font-weight:500">CENTRAL</text>
                             </svg>
                         </a>
 
@@ -97,7 +91,8 @@
 
                 <div class="col-xs-12 col-md-9 ntgc-header__main-navigation-shell">
                     <div class="ntgc-header__main-navigation-row">
-                        <div class="ntgc-header__main-navigation-links">
+                        <div class="ntgc-header__main-navigation-links ntgc-header__inline-main-menu"
+                            data-mainmenu-inline-slot="true">
                             <!--@@ Shared REST resource main navigation menu @@-->
                             %globals_asset_contents_raw:895508%
                         </div>
@@ -167,8 +162,7 @@
 
                     %begin_globals_asset_is_homepage%
                     <h1 class="ntgc-header__title px-0">
-                        Department of
-                        <span class="ntgc-color--secondary-light">Education and Training</span>
+                        NTG Central
                     </h1>
                     %else_globals%
 

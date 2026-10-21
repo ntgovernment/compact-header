@@ -1,82 +1,40 @@
 (function () {
   function moveMainMenuInline() {
     var mainMenu = document.getElementById("mainmenu");
-    if (!mainMenu) {
-      return;
-    }
-
     var inlineSlot = document.querySelector(
       ".ntgc-header [data-mainmenu-inline-slot='true']",
     );
-    if (!inlineSlot) {
-      return;
-    }
-
-    if (!inlineSlot.contains(mainMenu)) {
+    if (mainMenu && inlineSlot && !inlineSlot.contains(mainMenu)) {
       inlineSlot.appendChild(mainMenu);
-    }
-
-    var legacyMainNavRow = document.querySelector(
-      ".ntgc-header .ntgc-header__inner--main-nav-figma",
-    );
-    if (legacyMainNavRow) {
-      legacyMainNavRow.style.display = "none";
     }
   }
 
-  function removeDuplicateUtilityLinksFromMainMenu() {
-    var mainMenu = document.getElementById("mainmenu");
-    if (!mainMenu) {
-      return;
-    }
-
+  function removeDuplicateUtilityLinks(mainMenu) {
     var utilityLinkPatterns = [
       "phones.nt.gov.au",
       "ntgcentral.nt.gov.au/policy-library",
       "ntgcentral.nt.gov.au/ntgov-noticeboard/all-items",
+      "myhr.nt.gov.au",
+      "myforms.nt.gov.au",
+      "ntgcentral.nt.gov.au/online-systems",
     ];
 
-    var topLevelItems = mainMenu.querySelectorAll("ul.level-one > li");
-    topLevelItems.forEach(function (li) {
-      var anchor = li.querySelector(":scope > a");
-      if (!anchor) {
-        return;
-      }
-
-      var href = anchor.getAttribute("href") || "";
-      var isDuplicateUtility = utilityLinkPatterns.some(function (pattern) {
+    mainMenu.querySelectorAll("ul.level-one > li").forEach(function (item) {
+      var link = item.querySelector(":scope > a");
+      var href = link ? link.getAttribute("href") || "" : "";
+      var isUtilityLink = utilityLinkPatterns.some(function (pattern) {
         return href.indexOf(pattern) !== -1;
       });
 
-      if (li.classList.contains("ml-auto") || isDuplicateUtility) {
-        li.remove();
+      if (item.classList.contains("ml-auto") || isUtilityLink) {
+        item.remove();
       }
     });
   }
 
-  function closeAllMainMenuPanels(mainMenu) {
-    var openItems = mainMenu.querySelectorAll("ul.level-one > li.active");
-    openItems.forEach(function (li) {
-      li.classList.remove("active");
-      var link = li.querySelector(":scope > a.dropdown");
-      if (link) {
-        link.setAttribute("aria-expanded", "false");
-      }
-    });
-  }
-
-  function alignMainMenuPanelsToViewport(mainMenu) {
+  function alignMainMenuPanels(mainMenu) {
     var isDesktop = window.matchMedia("(min-width: 1024px)").matches;
-    var navContainer = mainMenu.querySelector(".ntgc-navigation--main");
-    if (!navContainer) {
-      return;
-    }
-
     var panels = mainMenu.querySelectorAll(".menu-wrapper");
-    var navRect = navContainer.getBoundingClientRect();
-    var viewportCenter = window.innerWidth / 2;
-    var leftOffset = viewportCenter - navRect.left;
-
     panels.forEach(function (panel) {
       if (!isDesktop) {
         panel.style.left = "";
@@ -84,156 +42,83 @@
         return;
       }
 
-      panel.style.left = leftOffset + "px";
+      var viewportCenter = window.innerWidth / 2;
+      var navRect = mainMenu.getBoundingClientRect();
+      panel.style.left = viewportCenter - navRect.left + "px";
       panel.style.right = "auto";
     });
   }
 
-  function initMainMenuClickToggle() {
-    var mainMenu = document.getElementById("mainmenu");
-    if (!mainMenu) {
-      return;
-    }
-
-    var isDesktop = function () {
-      return window.matchMedia("(min-width: 1024px)").matches;
-    };
-
-    var dropdownLinks = mainMenu.querySelectorAll(
-      "ul.level-one > li > a.dropdown",
-    );
-
-    alignMainMenuPanelsToViewport(mainMenu);
-
-    dropdownLinks.forEach(function (link) {
-      link.setAttribute("aria-expanded", "false");
-
-      link.addEventListener("click", function (event) {
-        if (!isDesktop()) {
-          return;
+  function closeUtilityDropdowns(utilityNav) {
+    utilityNav
+      .querySelectorAll(".ntgc-utility-dropdown.is-open")
+      .forEach(function (dropdown) {
+        dropdown.classList.remove("is-open");
+        var trigger = dropdown.querySelector(
+          ".ntgc-navigation--utility__trigger",
+        );
+        if (trigger) {
+          trigger.setAttribute("aria-expanded", "false");
         }
-
-        var item = link.parentElement;
-        if (!item) {
-          return;
-        }
-
-        event.preventDefault();
-        var isOpen = item.classList.contains("active");
-        closeAllMainMenuPanels(mainMenu);
-
-        if (!isOpen) {
-          item.classList.add("active");
-          link.setAttribute("aria-expanded", "true");
-        }
-
-        alignMainMenuPanelsToViewport(mainMenu);
       });
-    });
-
-    document.addEventListener("click", function (event) {
-      if (!isDesktop()) {
-        return;
-      }
-
-      if (mainMenu.contains(event.target)) {
-        return;
-      }
-
-      closeAllMainMenuPanels(mainMenu);
-    });
-
-    document.addEventListener("keydown", function (event) {
-      if (event.key === "Escape") {
-        closeAllMainMenuPanels(mainMenu);
-      }
-    });
-
-    window.addEventListener("resize", function () {
-      if (!isDesktop()) {
-        closeAllMainMenuPanels(mainMenu);
-      }
-
-      alignMainMenuPanelsToViewport(mainMenu);
-    });
-
-    window.addEventListener("load", function () {
-      alignMainMenuPanelsToViewport(mainMenu);
-    });
   }
 
-  function closeAllUtilityDropdowns(container) {
-    var dropdowns = container.querySelectorAll(
-      ".ntgc-utility-dropdown.is-open",
-    );
-    dropdowns.forEach(function (dropdown) {
-      dropdown.classList.remove("is-open");
-      var trigger = dropdown.querySelector(
-        ".ntgc-navigation--utility__trigger[aria-expanded]",
-      );
-      if (trigger) {
-        trigger.setAttribute("aria-expanded", "false");
-      }
-    });
-  }
-
-  function initUtilityMenuDropdowns() {
+  function initUtilityDropdowns() {
     var utilityNav = document.querySelector(".ntgc-navigation--utility");
     if (!utilityNav) {
       return;
     }
 
-    var dropdowns = utilityNav.querySelectorAll(".ntgc-utility-dropdown");
-    if (!dropdowns.length) {
-      return;
-    }
-
-    dropdowns.forEach(function (dropdown) {
-      var trigger = dropdown.querySelector(
-        ".ntgc-navigation--utility__trigger",
-      );
-      if (!trigger) {
-        return;
-      }
-
-      trigger.setAttribute("aria-expanded", "false");
-
-      trigger.addEventListener("click", function () {
-        var isOpen = dropdown.classList.contains("is-open");
-        closeAllUtilityDropdowns(utilityNav);
-
-        if (!isOpen) {
-          dropdown.classList.add("is-open");
-          trigger.setAttribute("aria-expanded", "true");
+    utilityNav
+      .querySelectorAll(".ntgc-utility-dropdown")
+      .forEach(function (dropdown) {
+        var trigger = dropdown.querySelector(
+          ".ntgc-navigation--utility__trigger",
+        );
+        if (!trigger) {
+          return;
         }
+
+        trigger.setAttribute("aria-expanded", "false");
+        trigger.addEventListener("click", function () {
+          var shouldOpen = !dropdown.classList.contains("is-open");
+          closeUtilityDropdowns(utilityNav);
+          if (shouldOpen) {
+            dropdown.classList.add("is-open");
+            trigger.setAttribute("aria-expanded", "true");
+          }
+        });
       });
-    });
 
     document.addEventListener("click", function (event) {
-      if (utilityNav.contains(event.target)) {
-        return;
+      if (!utilityNav.contains(event.target)) {
+        closeUtilityDropdowns(utilityNav);
       }
-
-      closeAllUtilityDropdowns(utilityNav);
     });
 
     document.addEventListener("keydown", function (event) {
       if (event.key === "Escape") {
-        closeAllUtilityDropdowns(utilityNav);
+        closeUtilityDropdowns(utilityNav);
       }
     });
   }
 
-  function initHeaderMainMenuPlacement() {
+  function initHeader() {
     moveMainMenuInline();
-    removeDuplicateUtilityLinksFromMainMenu();
-    initMainMenuClickToggle();
-    initUtilityMenuDropdowns();
+    var mainMenu = document.getElementById("mainmenu");
+    if (mainMenu) {
+      removeDuplicateUtilityLinks(mainMenu);
+      alignMainMenuPanels(mainMenu);
+      window.addEventListener("resize", function () {
+        alignMainMenuPanels(mainMenu);
+      });
+    }
+    initUtilityDropdowns();
   }
 
   if (document.readyState === "loading") {
-    document.addEventListener("DOMContentLoaded", initHeaderMainMenuPlacement);
+    document.addEventListener("DOMContentLoaded", initHeader);
   } else {
-    initHeaderMainMenuPlacement();
+    initHeader();
   }
 })();

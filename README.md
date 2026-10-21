@@ -1,6 +1,6 @@
 # compact-header
 
-Small Vite workspace for iterating on the DET compact header while preserving a tokenized Squiz export.
+Vite workspace for the NTG Central compact header, with a local preview shell and a tokenized Squiz export.
 
 ## Purpose
 
@@ -9,7 +9,7 @@ This repository supports two related outputs:
 - Local browser preview via the archived intranet snapshot in `DET intranet.html`
 - Deployable tokenized Squiz header copied from `src/nester/header.html` to `dist/header.html`
 
-The preview page is used to test look-and-feel and behavior quickly, while `dist/header.html` is the build artifact intended for CMS import.
+The archived preview is useful for checking shared design-system behavior, while `dist/header.html` is the CMS import artifact.
 
 ## Requirements
 
@@ -45,6 +45,7 @@ npm run preview
 - `npm run build:pages`
   - Builds with a GitHub Pages-compatible base path
   - Auto-detects repo name from `origin` and sets base as `/<repo>/`
+  - Copies preview assets, header sources, and webfonts into `dist/`
   - Writes `dist/.nojekyll`
 - `npm run deploy:pages`
   - Runs the GitHub Pages build flow
@@ -99,7 +100,7 @@ GITHUB_PAGES_BASE=/compact-header/ npm run deploy:pages
 - `src/nester/header.css`
   - Maintained header-specific styles (utility row, nav row, responsive behavior)
 - `src/nester/header.js`
-  - Maintained header-specific behavior used during preview
+  - Places the shared main menu in the header slot, removes duplicate utility links, aligns panels, and controls the utility dropdown
 - `DET intranet.html`
   - Local preview shell and archived page context
   - Includes the nester CSS/JS assets for development testing
@@ -107,55 +108,24 @@ GITHUB_PAGES_BASE=/compact-header/ npm run deploy:pages
   - Legacy/alternate header snapshot in repo root
   - Not used by build scripts
 
-## Current Header Baseline (Aug 2026)
+## Current Header Baseline
 
-The current compact-header implementation intentionally diverges from legacy defaults in `DET intranet_files/main.css`.
+The maintained template is branded for NTG Central and uses the established NTG palette, including primary navy `#102040`; do not copy the archived preview's charcoal/teal overrides.
 
-- Utility row
-  - Background: `#343741`
-  - Bottom border: `1px solid #506080`
-  - Horizontal padding: `20px`
-  - Online systems utility dropdown
-    - Trigger interaction: click-to-toggle
-    - Close behavior: outside click and Escape key
-    - Current submenu items: eLearn, myBiz, SAMS, Education Directory, Schools Central
-    - Dropdown top offset: `calc(100% + 2px)`
-    - Dropdown border radius: `0`
-    - Item hover/focus visuals: transparent background with text color `#2e979b` (matches `.ntgc-color--secondary-light`)
-- Primary shell (`.container.header-wrapper.ntgc-header__primary-shell`)
-  - Background: `#343642` (explicitly opaque on shell and immediate inner rows)
-  - Uses `position: relative`, `z-index: 300`, and `isolation: isolate` so dropdown lightbox layers do not affect it
-  - Carries the full-width bottom border (`1px solid #506080`)
-- Logo and layout sizing
-  - Primary/header width baseline: `1642px` in maintained header layout rules
-  - Logo SVG width: `170px`
-  - Search bar width: `246px`
-- Intro section
-  - Top margin: `40px`
-  - Horizontal padding: `20px`
-  - Non-header-wrapper container max width: `1642px`
-- Main navigation dropdown (`.menu-wrapper`)
-  - Width: `1232px`
-  - Horizontally centered to viewport when opened (not centered to each level-one item)
-  - Desktop top offset: `calc(100% + 14px)`
-  - Lightbox pseudo-layer starts at panel top and extends downward only
-
-### Important Implementation Note
-
-Viewport-centered dropdown behavior is controlled by both:
-
-- `src/nester/header.css` (desktop positioning rules)
-- `src/nester/header.js` (`alignMainMenuPanelsToViewport` recalculates panel left offset on init/click/resize/load)
-
-If either side is changed in isolation, dropdown centering or placement can regress.
+- Utility links: NTG Directory, NTG Policy Library, MyHR, MyForms, Noticeboard, and Online systems.
+- MyForms destination: `https://myforms.nt.gov.au/`.
+- Online systems currently links to `https://ntgcentral.nt.gov.au/online-systems`.
+- The utility dropdown toggles on click, closes on outside click or Escape, and keeps `aria-expanded` synchronized.
+- `data-mainmenu-inline-slot="true"` marks the shared-menu insertion point. The header script places the menu, removes duplicate utility links, aligns panels, and controls only the utility dropdown; shared site scripts own main-menu interactions.
+- Keep Squiz placeholders in `src/nester/header.html`. Existing asset IDs may be installation-specific and must be checked against NTG Central before CMS import.
 
 ## Expected Workflow
 
 1. Edit `src/nester/header.html` for structural/header markup changes.
 2. Edit `src/nester/header.css` and `src/nester/header.js` for style and behavior.
-3. Validate in local preview using `npm run dev`.
-4. Produce export with `npm run build`.
-5. Confirm `dist/header.html` contains expected tokenized markup.
+3. Validate the preview using `npm run dev` at desktop and mobile widths.
+4. Run `npm run build` to regenerate `dist/header.html`; use `npm run build:pages` to regenerate the complete local Pages output without publishing.
+5. Confirm the export contains the expected labels, destinations, and Squiz tokens. Verify token and asset IDs in the target CMS before import.
 
 ## Conventions
 
@@ -178,9 +148,8 @@ Header changes do not appear in preview:
 
 Dropdown panels are no longer centered to the screen:
 
-- Confirm `src/nester/header.js` still includes `alignMainMenuPanelsToViewport`
-- Confirm that function is still called on init, menu click, resize, and load
-- Confirm desktop `.menu-wrapper` rules in `src/nester/header.css` still use the maintained `1232px` width and active-state left/right overrides
+- Confirm `src/nester/header.js` calls `alignMainMenuPanels` on initialization and resize
+- Confirm the active-state visibility and centering rules in `src/nester/header.css` remain in sync
 
 Lightbox effect shades header areas above dropdowns:
 
@@ -190,7 +159,7 @@ Lightbox effect shades header areas above dropdowns:
 Online systems utility dropdown does not open or close correctly:
 
 - Confirm utility dropdown markup exists in both `src/nester/header.html` and `DET intranet.html`
-- Confirm `src/nester/header.js` still initializes `initUtilityMenuDropdowns`
+- Confirm `src/nester/header.js` still initializes `initUtilityDropdowns`
 - Confirm submenu styles still target `.ntgc-navigation--utility__submenu` and open state still uses `.ntgc-utility-dropdown.is-open`
 
 `dist/header.html` is missing or stale:

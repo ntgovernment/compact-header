@@ -2,7 +2,7 @@
 
 ## Repository Intent
 
-- This repository is a compact header workspace around `DET intranet.html`
+- This repository maintains the NTG Central compact header alongside an archived `DET intranet.html` preview shell
 - Maintain a tokenized Squiz header source in `src/nester/header.html`
 - Treat `DET intranet_files/` as legacy imported assets unless the task is explicitly about migrating or patching them
 - Prefer placing maintained header code in `src/nester/` (currently active) and keep `src/js/` + `src/css/` for future generalized extraction
@@ -12,6 +12,7 @@
 - `npm install`
 - `npm run dev`
 - `npm run build`
+- `npm run build:pages` (builds/restores local Pages output without publishing)
 - `npm run preview`
 
 ## Editing Guidance
@@ -31,19 +32,19 @@
 ## Current Header Guardrails
 
 - Keep compact-header overrides in `src/nester/header.css` and behavior hooks in `src/nester/header.js`; do not reintroduce dependency on editing legacy `DET intranet_files/main.css` for maintained behavior.
-- Keep dropdown panels (`.menu-wrapper`) centered to the viewport (screen center), not to each level-one menu item.
-- Preserve the JS-based panel alignment function (`alignMainMenuPanelsToViewport`) and its init/click/resize/load hooks when editing menu behavior.
-- Keep dropdown panel width at `1232px` unless a task explicitly requests a change.
-- Keep utility row and primary-shell visual baseline unless explicitly changed by task:
-	- Utility: `#343741` with `1px solid #506080` bottom border and `20px` horizontal padding.
-	- Primary shell: opaque `#343642`, full-width border, and stacking isolation (`position: relative`, `z-index`, `isolation`) to avoid lightbox bleed.
-- Keep lightbox pseudo-layer behavior constrained so it starts at the top of `.menu-wrapper` and extends downward only.
+- Preserve NTG Central branding colors, especially navy `#102040`; do not reintroduce archived charcoal/teal overrides.
+- Keep the six approved utility labels and their NTG Central destinations synchronized with the Funnelback preview.
+- Keep the Online systems dropdown accessible (`aria-expanded`) and close it on outside click and Escape.
+- Keep the inline main-menu slot in the Squiz template and avoid installing a second main-menu click controller; shared site scripts own main-menu interactions.
+- Keep closed `.menu-wrapper` panels hidden and active panels centered to the viewport.
+- Preserve Squiz placeholders and verify existing asset IDs in the NTG Central target before CMS import.
 
 ## Validation
 
 - For runtime changes, verify with `npm run dev` or `npm run build`
 - For documentation-only changes, verify that commands and paths match the current repository state
 - For header export changes, confirm `dist/header.html` is regenerated from `src/nester/header.html`
+- For Pages asset restoration, use `npm run build:pages`; do not use the deploy command for validation.
 
 ## Git Conventions
 

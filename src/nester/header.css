@@ -1,5 +1,5 @@
 .ntgc-header .ntgc-header__inner.ntgc-header__inner--utility {
-  background: #343741;
+  background: #102040;
   border-bottom: 1px solid #506080;
   min-height: 36px;
   display: flex;
@@ -88,7 +88,7 @@
   margin: 0;
   list-style: none;
   background: #fff;
-  border: 1px solid #d6dbe3;
+  border: 1px solid #d3dfe0;
   border-radius: 0;
   box-shadow: 0 14px 36px rgba(15, 25, 45, 0.22);
   opacity: 0;
@@ -109,7 +109,7 @@
 .ntgc-navigation--utility__submenu a {
   display: block;
   width: 100%;
-  color: #23354f;
+  color: #102040;
   padding: 8px 14px;
   font-size: 13px;
   line-height: 18px;
@@ -117,8 +117,8 @@
 
 .ntgc-navigation--utility__submenu a:hover,
 .ntgc-navigation--utility__submenu a:focus-visible {
-  color: #2e979b;
-  background: transparent;
+  color: #107810;
+  background: #ecf0f0;
 }
 
 .ntgc-utility-dropdown.is-open > .ntgc-navigation--utility__submenu {
@@ -137,7 +137,7 @@
 
 .ntgc-header__inner--primary-figma,
 .ntgc-header__inner--main-nav-figma {
-  background: #343741;
+  background: #fff;
   padding: 16px 0;
 }
 
@@ -151,12 +151,12 @@
 }
 
 .ntgc-header .container.header-wrapper.ntgc-header__primary-shell {
-  background-color: #343642;
+  background-color: #fff;
   position: relative;
   z-index: 300;
   isolation: isolate;
   border-bottom: 1px solid #506080;
-  color: #fff;
+  color: #102040;
 }
 
 .ntgc-header
@@ -166,7 +166,7 @@
   .container.header-wrapper.ntgc-header__primary-shell
   > .ntgc-header__inner
   > .row {
-  background-color: #343642;
+  background-color: #fff;
   color: inherit;
 }
 
@@ -175,7 +175,7 @@
   > .ntgc-header__inner:nth-child(2)
   > .row
   > div {
-  color: #2f3f56;
+  color: #102040;
 }
 
 .ntgc-header
@@ -193,7 +193,7 @@
   > .row
   > div
   a {
-  color: #2f3f56;
+  color: #102040;
 }
 
 .ntgc-header
@@ -208,7 +208,7 @@
   .container.header-wrapper.ntgc-header__primary-shell
   > .ntgc-header__inner:nth-child(2)
   h3 {
-  color: #1f2f46;
+  color: #102040;
 }
 
 .ntgc-header
@@ -219,7 +219,7 @@
   .container.header-wrapper.ntgc-header__primary-shell
   > .ntgc-header__inner:nth-child(2)
   .refreshProfile {
-  color: #2ba8b8;
+  color: #208820;
 }
 
 body > header > div.container.header-wrapper > div:nth-child(2) > div > div {
@@ -268,7 +268,7 @@ body > header > div.container.header-wrapper > div:nth-child(2) > div > div {
 
 .ntgc-header__inner--primary-figma .ntgc-logo svg path,
 .ntgc-header__inner--primary-figma .ntgc-logo svg text {
-  fill: #fff !important;
+  fill: #102040 !important;
 }
 
 .ntgc-header__main-navigation-row {
@@ -286,7 +286,7 @@ body > header > div.container.header-wrapper > div:nth-child(2) > div > div {
 .ntgc-header__inline-main-menu .ntgc-navigation--main,
 .ntgc-header__inline-main-menu .ntgc-navigation--main:before,
 .ntgc-header__inline-main-menu .ntgc-navigation--main:after {
-  background: #343642;
+  background: #fff;
 }
 
 .ntgc-header__main-navigation-links .ntgc-navigation--main ul.level-one,
@@ -360,7 +360,7 @@ body > header > div.container.header-wrapper > div:nth-child(2) > div > div {
   ul.level-one
   > li
   > a {
-  color: #fff;
+  color: #102040;
   font-weight: 700;
   line-height: 20px;
 }
@@ -371,7 +371,7 @@ body > header > div.container.header-wrapper > div:nth-child(2) > div > div {
   > li
   > a
   span {
-  color: #fff;
+  color: #102040;
 }
 
 .ntgc-header__main-navigation-tools {
@@ -476,7 +476,7 @@ body > header > div.container.header-wrapper > div:nth-child(2) > div > div {
 }
 
 .ntgc-header__main-navigation-tools .ntgc-avatar {
-  border: 1px solid #d0e0e0;
+  border: 1px solid #d3dfe0;
   border-radius: 19px;
   padding: 2px;
 }
@@ -486,17 +486,17 @@ body > header > div.container.header-wrapper > div:nth-child(2) > div > div {
 }
 
 .ntgc-header #refreshMyProfile {
-  color: #fff;
+  color: #102040;
 }
 
 .ntgc-header
   #refreshMyProfile
   > span.ntgc-avatar__icon.ntgc-avatar__icon--medium.ntgc-avatar__icon-user {
-  border: 1px solid #fff;
+  border: 1px solid #102040;
 }
 
 .ntgc-header__inner.ntgc-header__inner--primary.ntgc-header__inner--primary-figma {
-  background: #343741;
+  background: #fff;
   border-bottom: 0;
 }
 
